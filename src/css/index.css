@@ -1,113 +1,80 @@
 @font-face {
-    font-family: PixelSplitter-Bold;
-    src: url(../resources/fonts/PixelSplitter-Bold.ttf);
+    font-family: Monaco;
+    src: url(../resources/fonts/Monaco.ttf);
 }
 
 html {
-    position: relative;
-    min-height: 100%;
-}
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
-.title {
-    margin-top: 5%;
-    font-size: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-family: PixelSplitter-Bold, sans-serif;
-}
-
-.gameIdtextFieldDiv {
+.editor {
     display: block;
-    margin-top: 2%;
-    text-align: center;
+    width: 300vw;
+    height: 70vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    margin-top: -5vh;
+    background: #4A4A4A;
 }
 
-.gameIdtextField {
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 20px;
-    font-family: PixelSplitter-Bold, sans-serif;
+.innerEditor {
+    display: block;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-top: 7vh;
 }
 
-.leaderboardTable {
-    margin: 5% auto;
-    padding-bottom: 5%;
-    width: 30%;
-    text-align: center;
-    font-size: 30px;
-    font-family: PixelSplitter-Bold, sans-serif;
-}
-
-table {
-    border-collapse: separate;
-    border-spacing: 50px 0;
-}
-
-td {
-    padding: 10px 0;
-}
-
-th {
-    text-align: center;
-    padding: 10px 0;
+.typedText {
+    font-family: Monaco, sans-serif;
+    font-size: 2em;
     color: white;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    margin-left: -1vw;
-    margin-bottom: -10px;
-    height: 8vh;
-    background-color: #171516;
+.blueSyntax {
+    color: #50E3C2;
 }
 
-.links {
-    display: inline-block;
+.greenSyntax {
+    color: #7ED321;
 }
 
-.links div {
-    display: inline-block;
+.orangeSyntax {
+    color: #F9B42D;
 }
 
-.github {
-   margin-left: 3vw;
+/**
+ * Make cursor blink
+ */
+.Typist .Cursor--blinking {
+    opacity: 1;
+    -webkit-animation: blink 1s linear infinite;
+    animation: blink 1s linear infinite;
 }
 
-.travis {
-    margin-left: 1.5vw;
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.links div img {
-    margin-top: 2vh;
-
-    width: 5vh;
-    height: 5vh;
-}
-
-.background {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    z-index: -1000;
-}
-
-.background img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    min-width: 50%;
-    min-height: 50%;
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
