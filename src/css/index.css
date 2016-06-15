@@ -1,0 +1,113 @@
+@font-face {
+    font-family: PixelSplitter-Bold;
+    src: url(../resources/fonts/PixelSplitter-Bold.ttf);
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.title {
+    margin-top: 5%;
+    font-size: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: PixelSplitter-Bold, sans-serif;
+}
+
+.gameIdtextFieldDiv {
+    display: block;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.gameIdtextField {
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-family: PixelSplitter-Bold, sans-serif;
+}
+
+.leaderboardTable {
+    margin: 5% auto;
+    padding-bottom: 5%;
+    width: 30%;
+    text-align: center;
+    font-size: 30px;
+    font-family: PixelSplitter-Bold, sans-serif;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 50px 0;
+}
+
+td {
+    padding: 10px 0;
+}
+
+th {
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    margin-left: -1vw;
+    margin-bottom: -10px;
+    height: 8vh;
+    background-color: #171516;
+}
+
+.links {
+    display: inline-block;
+}
+
+.links div {
+    display: inline-block;
+}
+
+.github {
+   margin-left: 3vw;
+}
+
+.travis {
+    margin-left: 1.5vw;
+}
+
+.links div img {
+    margin-top: 2vh;
+
+    width: 5vh;
+    height: 5vh;
+}
+
+.background {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1000;
+}
+
+.background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}

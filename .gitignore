@@ -1,0 +1,6 @@
+# Project files and folders
+build
+node_modules
+
+# IDE files and folders
+.idea
