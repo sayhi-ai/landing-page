@@ -1,5 +1,5 @@
 import React from "react"
-import ReactDOM from "react-dom"
+import Collapse from "react-collapse"
 import Typist from 'react-typist'
 
 export default class Signup extends React.Component {
@@ -7,6 +7,7 @@ export default class Signup extends React.Component {
         super();
         this.state = {
             editorHeight: "70vh",
+            collapseIsOpened: false,
             messenger: null
         }
     }
@@ -23,12 +24,14 @@ export default class Signup extends React.Component {
     onTypingDone() {
         this.setState({
             editorHeight: "25vh",
-            messenger: 
+            messenger:
+            <Collapse isOpened={false} fixedHeight={"70vw"}>
                 <div className="messenger">
                     <div className="messenger-border">
-                        
+
                     </div>
                 </div>
+            </Collapse>
         })
     }
 
