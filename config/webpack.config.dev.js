@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    entry: "./src/js/index.js",
+    entry:"./src/js/index.js",
     module: {
         loaders: [
             {test: /\.s?css$/, loader: "style-loader!css-loader"},
