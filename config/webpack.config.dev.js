@@ -8,7 +8,7 @@ module.exports = {
             {test: /\.s?css$/, loader: "style-loader!css-loader"},
             {test: /\.less$/, loader: "style!css!less"},
             {test: /\.ttf$|\.eot$|\.svg$|\.woff$|\.woff2$/, loader: "url-loader?limit=100000"},
-            {test: /\.jpe?g$|\.png$/, loader: "file-loader"},
+            {test: /\.jpe?g$|\.png$|\.svg$/, loader: "file-loader"},
             {
                 test: /\.jsx?$/,
                 exclude: /(node_modules)|rankingWorker.js/,

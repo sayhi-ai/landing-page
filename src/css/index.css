@@ -2,6 +2,8 @@ html {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -18,12 +20,13 @@ body {
 }
 
 .pageSection {
-
+    padding: 0;
 }
 
 .pageContainer {
+    display: block;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100vw;
+    height: 100vh;
 }

@@ -1,0 +1,22 @@
+.cleanCodeLeft {
+    display: inline-block;
+    width: 60vw;
+    height: 100vh;
+    background-color: #4A4A4A;
+    z-index: 0;
+}
+
+.transitionSVG {
+    display: inline-block;
+    height: 100vh;
+    margin-left:52vw;
+    z-index: 99;
+}
+
+.cleanCodeRight {
+    display: inline-block;
+    width: 40vw;
+    height: 100vh;
+    background-color: #49C6FF;
+    z-index: 0;
+}

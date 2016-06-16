@@ -6,6 +6,7 @@ import "../css/index.css"
 import "../css/signup.css"
 import "../css/bootstrap.css"
 import "../css/freelancer.css"
+import "../css/cleancodepage.css"
 
 import "../less/freelancer.less"
 import "../less/mixins.less"
