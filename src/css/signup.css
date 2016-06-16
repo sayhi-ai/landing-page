@@ -61,7 +61,19 @@
     overflow-y: hidden;
     margin-left: -5vw;
     margin-right: -5vw;
-    background: red;
+    background: #49C6FF;
+}
+
+.messenger-border {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-width: 50px 2000px 0 0;
+    border-color: red;
+    border-style: solid;
+    content: '';
 }
 
 /**

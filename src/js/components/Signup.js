@@ -2,20 +2,33 @@ import React from "react"
 import ReactDOM from "react-dom"
 import Typist from 'react-typist'
 
-var Signup = React.createClass({
+export default class Signup extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            messenger: null
+        }
+    }
 
-    delayGen(mean, std, {line, lineIdx, charIdx, defDelayGenerator}) {
+    static delayGen(mean, std, {line, lineIdx, charIdx, defDelayGenerator}) {
         if (lineIdx === 4 && charIdx === 1) {
             return 1000
         } else if (lineIdx === 5 && charIdx === line.length - 1) {
             return 1000
         }
         return defDelayGenerator(mean - 20)
-    },
+    }
 
     onTypingDone() {
-        var node = ReactDOM.findDOMNode(this)
-    },
+        this.setState({
+            messenger: 
+                <div className="messenger">
+                    <div className="messenger-border">
+                
+                    </div>
+                </div>
+        })
+    }
 
     render() {
 
@@ -24,7 +37,7 @@ var Signup = React.createClass({
                 <div className="editor">
                     <div className="innerEditor">
                         <Typist className="typedText" cursor={{element: '|', hideWhenDone: true}}
-                                delayGenerator={this.delayGen} onTypingDone={this.onTypingDone}>
+                                delayGenerator={Signup.delayGen} onTypingDone={this.onTypingDone.bind(this)}>
                             bot.<span className="blueSyntax">is</span>(<span className="orangeSyntax">"Bro"</span>); 
                             <span className="greenSyntax"> //Bot will talk like a bro</span>
                             <br/>
@@ -32,12 +45,8 @@ var Signup = React.createClass({
                         </Typist>
                     </div>
                 </div>
-                <div className="messenger">
-    
-                </div>
+                {this.state.messenger}
             </div>
         )
     }
-})
-
-export default Signup
+}
