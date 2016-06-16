@@ -4,7 +4,9 @@
 import React from 'react'
 
 export default class NavBarTitle extends React.Component {
-
+    constructor() {
+        super();
+    }
     render() {
         var style = {
             cursor: "auto",
@@ -14,7 +16,7 @@ export default class NavBarTitle extends React.Component {
             fontWeight: "bold"
         }
         return (
-            <div {style}>
+            <div style={style}>
                 {this.props.children}
             </div>
         )
