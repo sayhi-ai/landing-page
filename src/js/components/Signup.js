@@ -6,6 +6,7 @@ export default class Signup extends React.Component {
     constructor() {
         super();
         this.state = {
+            editorHeight: "70vh",
             messenger: null
         }
     }
@@ -21,10 +22,11 @@ export default class Signup extends React.Component {
 
     onTypingDone() {
         this.setState({
+            editorHeight: "25vh",
             messenger: 
                 <div className="messenger">
                     <div className="messenger-border">
-                
+                        
                     </div>
                 </div>
         })
@@ -32,9 +34,21 @@ export default class Signup extends React.Component {
 
     render() {
 
+        var editorStyle = {
+            display: "block",
+            width: "300vw",
+            height: this.state.editorHeight,
+            overflowX: "hidden",
+            overflowY: "hidden",
+            marginLeft: "-5vw",
+            marginRight: "-5vw",
+            marginTop: "-5vh",
+            background: "#4A4A4A"
+        }
+
         return (
             <div className="signup">
-                <div className="editor">
+                <div style={editorStyle}>
                     <div className="innerEditor">
                         <Typist className="typedText" cursor={{element: '|', hideWhenDone: true}}
                                 delayGenerator={Signup.delayGen} onTypingDone={this.onTypingDone.bind(this)}>
