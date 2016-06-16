@@ -63,6 +63,17 @@
 }
 
 /**
+ * Triangle
+ */
+.triangle {
+    width: 0px;
+    height: 0px;
+    border-left: 100vw solid transparent;
+    border-top: 60px solid #4A4A4A;
+    display: block;
+}
+
+/**
  * Messenger
  */
 .messenger {

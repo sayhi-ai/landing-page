@@ -2,7 +2,6 @@
  * Created by renebrandel on 6/16/16.
  */
 import React from "react"
-import ReactDOM from "react-dom"
 import ChatBubble from "./ChatBubble"
 
 export default class Chat extends React.Component {
