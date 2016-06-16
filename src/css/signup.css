@@ -1,0 +1,87 @@
+@font-face {
+    font-family: Monaco;
+    src: url(../resources/fonts/Monaco.ttf);
+}
+
+/**
+ * Editor
+ */
+.editor {
+    display: block;
+    width: 300vw;
+    height: 70vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    margin-top: -5vh;
+    background: #4A4A4A;
+}
+
+.innerEditor {
+    display: block;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-top: 7vh;
+}
+
+/**
+ * Code animation
+ */
+.typedText {
+    font-family: Monaco, sans-serif;
+    font-size: 2em;
+    color: white;
+}
+
+.blueSyntax {
+    color: #50E3C2;
+}
+
+.greenSyntax {
+    color: #7ED321;
+}
+
+.orangeSyntax {
+    color: #F9B42D;
+}
+
+/**
+ * Messenger
+ */
+.messenger {
+
+}
+
+/**
+ * Make cursor blink
+ */
+.Typist .Cursor--blinking {
+    opacity: 1;
+    -webkit-animation: blink 1s linear infinite;
+    animation: blink 1s linear infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

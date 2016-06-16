@@ -59,8 +59,6 @@
     "build:dev:watch": "webpack --config config/webpack.config.dev.js --watch",
     "server:dev": "webpack-dev-server --content-base src",
     "server:prod": "webpack-dev-server --content-base build",
-    "deploy": "gh-pages-deploy",
-    "clean-source": "rimraf README.md src webroot package.json",
     "lint": "eslint ."
   }
 }
