@@ -5,14 +5,14 @@ import React from "react"
 
 export default class ChatBubble extends React.Component {
     constructor() {
-
+        super()
     }
 
     render() {
-        var name = "bubble " + this.props.direction; //me or you
+        let name = "bubble " + this.props.direction; //me or you
         return (
             <div className={name}>
-                {this.props.text}
+                {this.props.children}
             </div>
         )
     }

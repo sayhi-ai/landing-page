@@ -6,16 +6,17 @@ import ChatBubble from "./ChatBubble"
 
 export default class Chat extends React.Component {
     constructor() {
-
+        super()
     }
 
     render() {
-        var bubbles = []
-        this.props.chats.forEach((chat) => {
-            var direction = chat.direction
-            var text = chat.text
+        let bubbles = []
+        this.props.chats.map((chat, i) => {
+            let direction = chat.direction
+            let text = chat.text
             bubbles.push(
-                <ChatBubble {direction} {text}>
+                <ChatBubble direction={direction} key={i}>
+                    {text}
                 </ChatBubble>
             )
         })

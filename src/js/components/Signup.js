@@ -1,6 +1,7 @@
 import React from "react"
 import Collapse from "react-collapse"
 import Typist from 'react-typist'
+import Chat from './Chat'
 
 export default class Signup extends React.Component {
     constructor() {
@@ -47,8 +48,11 @@ export default class Signup extends React.Component {
                 <Collapse isOpened={this.state.messageCollapseIsOpened} fixedHeight={"70vw"}>
                     <div className="messenger">
                         <div className="messenger-border">
-
                         </div>
+
+                        <Chat chats={[ {text:"hi", direction:"me"}]}>
+
+                        </Chat>
                     </div>
                 </Collapse>
             </div>
