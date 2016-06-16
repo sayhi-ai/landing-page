@@ -1,6 +1,3 @@
-/**
- * Created by renebrandel on 6/16/16.
- */
 import React from "react"
 
 export default class Contact extends React.Component {

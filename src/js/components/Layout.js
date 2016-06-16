@@ -1,10 +1,7 @@
-/**
- * Created by renebrandel on 6/16/16.
- */
 import React from "react"
 import NavBar from "./NavBar"
 import Header from "./Header"
-import Portfolio from "./Portfolio"
+import CleanCodePage from "./pages/CleanCodePage"
 import About from "./About"
 import Contact from "./Contact"
 import Footer from "./Footer"
@@ -20,7 +17,7 @@ export default class Layout extends React.Component {
                 <NavBar/>
                 <MobileScrollButton/>
                 <Header/>
-                <Portfolio/>
+                <CleanCodePage/>
                 <About/>
                 <Contact/>
                 <Footer/>
