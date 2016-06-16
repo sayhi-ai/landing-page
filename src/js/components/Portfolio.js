@@ -1,6 +1,3 @@
-/**
- * Created by renebrandel on 6/16/16.
- */
 import React from "react"
 import cabin from "../../resources/img/portfolio/cabin.png"
 import cake from "../../resources/img/portfolio/cake.png"
