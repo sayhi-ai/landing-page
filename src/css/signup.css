@@ -13,7 +13,19 @@
 .editor {
     display: block;
     width: 300vw;
-    height: 70vh;
+    height: 25vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    margin-top: -5vh;
+    background: #4A4A4A;
+}
+
+.editorBottom {
+    display: block;
+    width: 300vw;
+    height: 75vh;
     overflow-x: hidden;
     overflow-y: hidden;
     margin-left: -5vw;

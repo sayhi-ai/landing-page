@@ -4,7 +4,7 @@ import Signup from "./Signup";
 var Layout = React.createClass({
     render() {
         return (
-            <div>
+            <div className="layout">
                 <Signup/>
             </div>
         )

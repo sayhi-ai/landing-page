@@ -6,9 +6,8 @@ export default class Signup extends React.Component {
     constructor() {
         super();
         this.state = {
-            editorHeight: "70vh",
-            collapseIsOpened: false,
-            messenger: null
+            messageCollapseIsOpened: false,
+            editorCollapseIsOpened: true
         }
     }
 
@@ -23,35 +22,15 @@ export default class Signup extends React.Component {
 
     onTypingDone() {
         this.setState({
-            editorHeight: "25vh",
-            messenger:
-            <Collapse isOpened={false} fixedHeight={"70vw"}>
-                <div className="messenger">
-                    <div className="messenger-border">
-
-                    </div>
-                </div>
-            </Collapse>
+            messageCollapseIsOpened: true,
+            editorCollapseIsOpened: false
         })
     }
 
     render() {
-
-        var editorStyle = {
-            display: "block",
-            width: "300vw",
-            height: this.state.editorHeight,
-            overflowX: "hidden",
-            overflowY: "hidden",
-            marginLeft: "-5vw",
-            marginRight: "-5vw",
-            marginTop: "-5vh",
-            background: "#4A4A4A"
-        }
-
         return (
             <div className="signup">
-                <div style={editorStyle}>
+                <div className="editor">
                     <div className="innerEditor">
                         <Typist className="typedText" cursor={{element: '|', hideWhenDone: true}}
                                 delayGenerator={Signup.delayGen} onTypingDone={this.onTypingDone.bind(this)}>
@@ -62,7 +41,16 @@ export default class Signup extends React.Component {
                         </Typist>
                     </div>
                 </div>
-                {this.state.messenger}
+                <Collapse isOpened={this.state.editorCollapseIsOpened} fixedHeight={"75vw"}>
+                    <div className="editorBottom"></div>
+                </Collapse>
+                <Collapse isOpened={this.state.messageCollapseIsOpened} fixedHeight={"70vw"}>
+                    <div className="messenger">
+                        <div className="messenger-border">
+
+                        </div>
+                    </div>
+                </Collapse>
             </div>
         )
     }
