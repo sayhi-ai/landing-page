@@ -1,6 +1,7 @@
 /**
  * Created by renebrandel on 6/16/16.
  */
+import Const from "../constants/SignUpConstants"
 var Dispatcher = require('./Dispatcher');
 var assign = require('object-assign');
 

@@ -8,6 +8,8 @@ export default class CleanCodePage extends React.Component {
             <PageContainer>
                 <div class="cleanCodeLeft">
 
+                </div>
+                <div class="cleanCodeMiddle">
                     <div class="transitionSVG">
                         <Isvg src="../../../resources/img/transition.svg"/>
                     </div>
