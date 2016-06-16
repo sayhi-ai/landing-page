@@ -1,4 +1,5 @@
 import React from "react"
+import ReactDOM from "react-dom"
 import Typist from 'react-typist'
 
 var Signup = React.createClass({
@@ -13,24 +14,26 @@ var Signup = React.createClass({
     },
 
     onTypingDone() {
-        var node = React.findDOMNode(this)
+        var node = ReactDOM.findDOMNode(this)
     },
 
     render() {
 
         return (
-            <div className="editor">
-                <div className="innerEditor">
-                    <Typist className="typedText" cursor={{element: '|', hideWhenDone: true}}
-                            delayGenerator={this.delayGen} onTypingDone={this.onTypingDone}>
-                        bot.<span className="blueSyntax">is</span>(<span className="orangeSyntax">"Bro"</span>); 
-                        <span className="greenSyntax"> //Bot will talk like a bro</span>
-                        <br/>
-                        bot.<span className="blueSyntax">say</span>(<span className="orangeSyntax">"EarlyAccess"</span>);
-                    </Typist>
+            <div className="signup">
+                <div className="editor">
+                    <div className="innerEditor">
+                        <Typist className="typedText" cursor={{element: '|', hideWhenDone: true}}
+                                delayGenerator={this.delayGen} onTypingDone={this.onTypingDone}>
+                            bot.<span className="blueSyntax">is</span>(<span className="orangeSyntax">"Bro"</span>); 
+                            <span className="greenSyntax"> //Bot will talk like a bro</span>
+                            <br/>
+                            bot.<span className="blueSyntax">say</span>(<span className="orangeSyntax">"EarlyAccess"</span>);
+                        </Typist>
+                    </div>
                 </div>
                 <div className="messenger">
-
+    
                 </div>
             </div>
         )

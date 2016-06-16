@@ -3,6 +3,10 @@
     src: url(../resources/fonts/Monaco.ttf);
 }
 
+.signup {
+
+}
+
 /**
  * Editor
  */
@@ -50,7 +54,14 @@
  * Messenger
  */
 .messenger {
-
+    display: block;
+    width: 300vw;
+    height: 70vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    background: red;
 }
 
 /**
