@@ -7,9 +7,18 @@ import Contact from "./Contact"
 import Footer from "./Footer"
 import Favicon from "react-favicon"
 import MobileScrollButton from "./MobileScrollButton"
+import SignUp from "./pages/SignUp"
 import favicon from "../../resources/img/favicon.png"
+import Smooch from "smooch"
 
 export default class Layout extends React.Component {
+    constructor() {
+        super()
+        Smooch.init({
+            appToken: "3d081wby5cpnrvud7dw9vbwrm"
+        })
+        console.log(Smooch.isOpened())
+    }
     render() {
         return (
             <div id="page-top" className="index">
@@ -20,6 +29,7 @@ export default class Layout extends React.Component {
                 <CleanCodePage/>
                 <About/>
                 <Contact/>
+                <SignUp />
                 <Footer/>
             </div>
         )
