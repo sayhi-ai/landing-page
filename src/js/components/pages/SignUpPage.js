@@ -25,10 +25,10 @@ export default class Contact extends React.Component {
                                     <h3>Beta users get a FREE 2 MONTHS trial</h3>
                                 </div>
                                 <div>
-                                    <div className="name">
+                                    <div className="name-field">
                                         <TextField floatingLabelText="Name" fullWidth={true}/>
                                     </div>
-                                    <div className="email">
+                                    <div className="email-field">
                                         <TextField floatingLabelText="Email" type="email" fullWidth={true}/>
                                     </div>
 
