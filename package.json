@@ -76,7 +76,7 @@
     "build:prod": "webpack --config config/webpack.config.prod.js",
     "build:dev": "webpack --config config/webpack.config.dev.js",
     "build:dev:watch": "webpack --config config/webpack.config.dev.js --watch",
-    "server:dev": "webpack-dev-server --content-base src",
+    "server:dev": "webpack-dev-server --content-base dev",
     "server:prod": "webpack-dev-server --content-base build",
     "lint": "eslint ."
   }

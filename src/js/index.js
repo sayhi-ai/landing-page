@@ -14,4 +14,6 @@ import "../less/variables.less"
 
 import Layout from "./components/Layout"
 
+require('file?name=[name].[ext]!../index.html');
+
 ReactDOM.render(<Layout/>, document.getElementById('root'));
