@@ -17,18 +17,38 @@
 }
 
 .name {
-    width: 25%;
-    display: inline-block;
+    margin: 0 auto;
+    width: 80%;
+    display: block;
 }
 
 .email {
-    width: 40%;
-    margin-left: 5%;
-    display: inline-block;
+    margin: 0 auto;
+    width: 80%;
+    display: block;
 }
 
 .sign-up-button {
-    width: 25%;
-    margin-left: 5%;
-    display: inline-block;
+    width: 80%;
+    display: block;
+    margin: 24px auto;
+}
+
+@media screen and (min-width: 768px) {
+    .name {
+        width: 25%;
+        display: inline-block;
+    }
+
+    .email {
+        width: 40%;
+        margin-left: 5%;
+        display: inline-block;
+    }
+
+    .sign-up-button {
+        width: 25%;
+        margin-left: 5%;
+        display: inline-block;
+    }
 }

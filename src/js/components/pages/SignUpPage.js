@@ -18,7 +18,7 @@ export default class Contact extends React.Component {
                 <div className="outer">
                     <div className="middle">
                         <MuiThemeProvider>
-                            <Paper className="login-wrapper" zDepth={5}>
+                            <Paper className="login-wrapper text-center" zDepth={5}>
                                 <div className="text-center">
                                     <h2>Sign Up for Beta</h2>
                                     <hr className="star-primary"/>
