@@ -1,0 +1,54 @@
+.login-wrapper {
+    display: inline-block;
+    padding: 5vh 5vw;
+}
+
+.outer {
+    display: table;
+    height: 100%;
+    width: 100%;
+    background-image: url("../resources/img/package.png");
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+    horiz-align: center;
+}
+
+.name-field {
+    margin: 0 auto;
+    width: 80%;
+    display: block;
+}
+
+.email-field {
+    margin: 0 auto;
+    width: 80%;
+    display: block;
+}
+
+.sign-up-button {
+    width: 80%;
+    display: block;
+    margin: 24px auto;
+}
+
+@media screen and (min-width: 768px) {
+    .name-field {
+        width: 25%;
+        display: inline-block;
+    }
+
+    .email-field {
+        width: 40%;
+        margin-left: 5%;
+        display: inline-block;
+    }
+
+    .sign-up-button {
+        width: 25%;
+        margin-left: 5%;
+        display: inline-block;
+    }
+}

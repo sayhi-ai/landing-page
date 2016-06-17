@@ -134,3 +134,12 @@ header .intro-text .skills {
 .pageSection {
     padding: 0;
 }
+
+.pageContainer {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100vw;
+    height: 75vh;
+    text-align: center;
+}
