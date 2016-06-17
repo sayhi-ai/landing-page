@@ -16,6 +16,7 @@ import "../less/variables.less"
 
 import Layout from "./components/Layout"
 
+// Copy the index.html file
 require('file?name=[name].[ext]!../index.html');
 
 ReactDOM.render(<Layout/>, document.getElementById('root'));

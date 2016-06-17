@@ -13,12 +13,6 @@
     background-color: #49C6FF;
 }
 
-.transitionSVG {
-    display: inline-block;
-    height: inherit;
-    width: inherit;
-}
-
 .cleanCodeRight {
     display: inline-block;
     width: 35vw;

@@ -14,7 +14,7 @@ import "../../../css/signuppage.css"
 export default class Contact extends React.Component {
     render() {
         return (
-            <PageContainer className="material-background">
+            <PageContainer padding={this.props.padding} className="material-background">
                 <div className="outer">
                     <div className="middle">
                         <MuiThemeProvider>

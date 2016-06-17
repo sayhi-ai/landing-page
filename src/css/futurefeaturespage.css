@@ -3,13 +3,22 @@
 }
 
 .upcomingFeatures {
-
+    width:25vw;
+    height: 70vh;
 }
 
 .emotionFeature {
-
+    width:25vw;
+    height: 70vh;
 }
 
-.deepLearning {
+.feature {
+    display: inline-block;
+    width: 25vw;
+    height: 70vh;
+}
 
+.featureImage {
+    width:25vw;
+    height: 70vh;
 }

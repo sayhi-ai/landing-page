@@ -29,7 +29,7 @@ export default class Layout extends React.Component {
                 <VarietyCodePage padding="5%"/>
                 <CleanCodePage padding="0"/>
                 <FutureFeaturesPage padding="5%"/>
-                <SignUpPage />
+                <SignUpPage padding="0"/>
                 <Footer/>
             </div>
         )
