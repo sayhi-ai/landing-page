@@ -5,7 +5,7 @@ export default class CleanCodePage extends React.Component {
     
     render() {
         return (
-            <PageContainer>
+            <PageContainer padding={this.props.padding}>
                 <div class="cleanCodeLeft">
 
                 </div>

@@ -14,7 +14,7 @@ export default class Header extends React.Component {
                             <img className="img-responsive" src={favicon} alt=""/>
                                 <div className="intro-text">
                                     <span className="skills">Let's</span>
-                                    <span className="name">Make Your Bot . Cool</span>
+                                    <span className="name">Bring your bot to life</span>
                                     <hr className="star-light"/>
                                     <span className="skills">Bots speaking like Humans</span>
                                 </div>

@@ -2,8 +2,8 @@ import React from "react"
 import NavBar from "./NavBar"
 import Header from "./Header"
 import CleanCodePage from "./pages/CleanCodePage"
-import About from "./About"
-import Contact from "./Contact"
+import VarietyCodePage from "./pages/VarietyCodePage"
+import FutureFeaturesPage from "./pages/FutureFeaturesPage"
 import Footer from "./Footer"
 import Favicon from "react-favicon"
 import MobileScrollButton from "./MobileScrollButton"
@@ -17,9 +17,9 @@ export default class Layout extends React.Component {
                 <NavBar/>
                 <MobileScrollButton/>
                 <Header/>
-                <CleanCodePage/>
-                <About/>
-                <Contact/>
+                <VarietyCodePage padding="5%"/>
+                <CleanCodePage padding="0"/>
+                <FutureFeaturesPage padding="5%"/>
                 <Footer/>
             </div>
         )
