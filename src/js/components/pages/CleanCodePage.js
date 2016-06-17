@@ -1,6 +1,8 @@
 import React from "react"
-import Isvg from "react-inlinesvg"
 import PageContainer from "../PageContainer"
+import InlineSVG from 'svg-inline-react';
+import transition from "../../../resources/img/transition.svg"
+
 export default class CleanCodePage extends React.Component {
     
     render() {
@@ -11,7 +13,7 @@ export default class CleanCodePage extends React.Component {
                 </div>
                 <div class="cleanCodeMiddle">
                     <div class="transitionSVG">
-                        <Isvg src="../../../resources/img/transition.svg"/>
+                        <img src={transition}/>
                     </div>
                 </div>
                 <div class="cleanCodeRight">

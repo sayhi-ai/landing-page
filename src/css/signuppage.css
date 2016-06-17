@@ -13,7 +13,7 @@
 .middle {
     display: table-cell;
     vertical-align: middle;
-    horiz-align: center;
+    text-align: center;
 }
 
 .name-field {
