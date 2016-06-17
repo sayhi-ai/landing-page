@@ -42,13 +42,11 @@
     "react-flux": "^1.0.1",
     "react-fontawesome": "^1.1.0",
     "react-height": "^2.1.0",
-    "react-inlinesvg": "^0.5.3",
     "react-motion": "^0.4.4",
     "react-typist": "^0.3.0",
     "smooch": "^2.8.1",
     "style-loader": "^0.13.1",
     "svg-inline-loader": "^0.4.1",
-    "svg-inline-react": "^1.0.1",
     "url-loader": "^0.5.7"
   },
   "devDependencies": {
