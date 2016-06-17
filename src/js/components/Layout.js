@@ -17,7 +17,6 @@ export default class Layout extends React.Component {
         Smooch.init({
             appToken: "3d081wby5cpnrvud7dw9vbwrm"
         })
-        console.log(Smooch.isOpened())
     }
     render() {
         return (

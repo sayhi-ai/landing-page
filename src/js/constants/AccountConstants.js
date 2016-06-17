@@ -3,5 +3,5 @@
  */
 export default SignUpConstants = {
     SIGN_UP : 0,
-    LOG_IN : 1
+    SIGN_IN : 1
 }
