@@ -7,7 +7,7 @@ import Contact from "./Contact"
 import Footer from "./Footer"
 import Favicon from "react-favicon"
 import MobileScrollButton from "./MobileScrollButton"
-import SignUp from "./pages/SignUp"
+import SignUpPage from "./pages/SignUpPage"
 import favicon from "../../resources/img/favicon.png"
 import Smooch from "smooch"
 
@@ -27,8 +27,7 @@ export default class Layout extends React.Component {
                 <Header/>
                 <CleanCodePage/>
                 <About/>
-                <Contact/>
-                <SignUp />
+                <SignUpPage />
                 <Footer/>
             </div>
         )
