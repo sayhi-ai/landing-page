@@ -12,7 +12,7 @@ export default class CleanCodePage extends React.Component {
         }
         return (
             <PageContainer padding={this.props.padding}>
-                <div class="cleanCodeLeft">
+                <div className="cleanCodeLeft">
 
                 </div>
                 <div class="cleanCodeMiddle">

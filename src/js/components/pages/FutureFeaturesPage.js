@@ -10,15 +10,15 @@ export default class FutureFeaturesPage extends React.Component {
         return (
             <PageContainer padding={this.props.padding}>
                 <h1 className='title'>Upcoming Features</h1>
-                <div className="upcomingFeatures">
+                <div className="upcoming-features">
                     <div className="feature">
-                        <img className="featureImage" src={image} alt=""/>
+                        <img className="feature-image" src={image} alt=""/>
                     </div>
                     <div className="feature">
-                        <img className="featureImage" src={image} alt=""/>
+                        <img className="feature-image" src={image} alt=""/>
                     </div>
                     <div className="feature">
-                        <img className="featureImage" src={image} alt=""/>
+                        <img className="feature-image" src={image} alt=""/>
                     </div>
                 </div>
             </PageContainer>

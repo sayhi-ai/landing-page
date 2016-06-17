@@ -2,9 +2,10 @@
     margin: 0 !important;
 }
 
-.upcomingFeatures {
-    width:25vw;
-    height: 70vh;
+.upcoming-features {
+    display: table;
+    height: 100%;
+    width: 100%;
 }
 
 .emotionFeature {
@@ -13,12 +14,13 @@
 }
 
 .feature {
-    display: inline-block;
-    width: 25vw;
-    height: 70vh;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 
-.featureImage {
-    width:25vw;
-    height: 70vh;
+.feature-image {
+    display: block;
+    width: 10px;
+    height: 10px;
 }

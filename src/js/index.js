@@ -8,6 +8,7 @@ import "../css/bootstrap.css"
 import "../css/freelancer.css"
 import "../css/cleancodepage.css"
 import "../css/varietycodepage.css"
+import "../css/futurefeaturespage.css"
 
 // import less
 import "../less/freelancer.less"
