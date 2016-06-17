@@ -6,19 +6,15 @@ export default class CleanCodePage extends React.Component {
 
     render() {
 
-        const style = {
-            height: "100%",
-            width: "10vw"
-        }
         return (
             <PageContainer padding={this.props.padding}>
                 <div className="cleanCodeLeft">
 
                 </div>
-                <div class="cleanCodeMiddle">
-                    <i style={style} dangerouslySetInnerHTML={{__html:transition}} />
+                <div className="cleanCodeMiddle">
+                    <i dangerouslySetInnerHTML={{__html:transition}}/>
                 </div>
-                <div class="cleanCodeRight">
+                <div className="cleanCodeRight">
 
                 </div>
             </PageContainer>)

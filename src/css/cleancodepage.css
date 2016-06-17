@@ -6,6 +6,20 @@
     z-index: 0;
 }
 
+.outside {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.inside {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+
 .cleanCodeMiddle {
     width:10vw;
     height:inherit;
