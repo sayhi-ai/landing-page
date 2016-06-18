@@ -11,7 +11,6 @@ import "../../../css/signuppage.css"
 export default class Contact extends React.Component {
     render() {
         var styles = {
-            padding: "5%",
             height: "75vh"
         }
         
