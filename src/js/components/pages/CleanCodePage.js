@@ -59,7 +59,7 @@ export default class CleanCodePage extends React.Component {
                 </div>
                 <div className="cleanCodeRight">
                     <div className="outside">
-                        <div className="inside typedText text-center">
+                        <div className="inside typedText text-center new-code">
                             bot.say(<span className="darkSyntax">"Hi"</span>);
                         </div>
                     </div>
