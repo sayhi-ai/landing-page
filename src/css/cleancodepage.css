@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Monaco;
+    src: url(../resources/fonts/Monaco.ttf);
+}
+
 .cleanCodeLeft {
     display: inline-block;
     width: 55vw;
