@@ -140,6 +140,15 @@ header .intro-text .skills {
     margin-right: auto;
     margin-left: auto;
     width: 100vw;
-    height: 75vh;
     text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .pageContainer {
+        height: 75vh;
+    }
+
+    .pageContainer {
+        height: 75vh;
+    }
 }
