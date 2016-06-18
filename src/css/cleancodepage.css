@@ -16,6 +16,18 @@
     height: 100%;
     width: 100%;
 }
+div.tr {
+    display: table-row;
+}
+
+.title-space {
+    display: table-cell;
+    color: white;
+}
+
+.placeholder {
+    color: transparent;
+}
 
 .inside {
     display: table-cell;

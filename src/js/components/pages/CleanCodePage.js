@@ -9,14 +9,27 @@ export default class CleanCodePage extends React.Component {
 
     render() {
         var styles = {
-            height: "75vh"
+            container: {
+                height: "auto",
+                display: "flex"
+            },
+            i: {
+                height: "100%",
+                display: "flex"
+            }
         }
-        
+
         return (
-            <PageContainer styles={styles}>
+            <PageContainer styles={styles.container}>
                 <div className="cleanCodeLeft">
                     <div className="outside">
-                        <div className="inside">
+                        <div className="tr">
+                            <div className="title-space">
+                                <h1>Turn this...</h1>
+                            </div>
+                        </div>
+                        <div className="tr">
+                            <div className="inside">
                         <pre>
                             <code>
                                 <div className="typedText text-left old-code">
@@ -51,16 +64,28 @@ export default class CleanCodePage extends React.Component {
                                 </div>
                             </code>
                         </pre>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="cleanCodeMiddle">
-                    <i dangerouslySetInnerHTML={{ __html:transition}}/>
+                    <i style={styles.i} dangerouslySetInnerHTML={{ __html:transition}}/>
                 </div>
                 <div className="cleanCodeRight">
                     <div className="outside">
-                        <div className="inside typedText text-center new-code">
-                            bot.say(<span className="darkSyntax">"Hi"</span>);
+                            <div className="title-space">
+                                <h1>...into this!</h1>
+                            </div>
+                        <div className="tr">
+                            <div className="inside typedText text-center new-code">
+                                bot.say(<span className="darkSyntax">"Hi"</span>);
+                            </div>
+                        </div>
+                        <div>
+
+                            <div className="title-space placeholder">
+                                <h1>Job?</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
