@@ -5,6 +5,7 @@ import ReactDOM from "react-dom"
 import "../css/index.css"
 import "../css/bootstrap.css"
 import "../css/freelancer.css"
+import "../css/navbar.css"
 
 // import less
 import "../less/freelancer.less"

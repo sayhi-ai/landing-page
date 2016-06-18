@@ -1,0 +1,215 @@
+/* ---- NAVIGATION BAR ---- */
+.navbar {
+    background-color: #FFFFFF;
+    display: block;
+    padding: 0 0px;
+    position: fixed;
+    top: 0px; right: 0px; left: 0px;
+    z-index: 10;
+    min-width: 500px;   /*m*/
+    /*box-shadow: 0px 1px 4px 0 #404040;*/
+    transition: background 0.1s linear;
+    -webkit-transition: background 0.1s linear;
+    -moz-transition: background 0.1s linear;
+    -o-transition: background 0.1s linear;
+}
+
+.navbar-inline {
+    height: 30px;
+    padding: 10px 0;
+    display: inline-block;
+    /*min-width: 50%;*/    /*m*/
+    position: relative;
+}
+
+.navbar-left {
+    min-width:40%;
+    float: left;
+    font-size: 20px;
+}
+
+.navbar-right {
+    min-width:50%;
+    text-transform: uppercase;
+    font-size: 13px;
+    float: right;
+}
+
+.navbar-inline > a, #language-selection {
+    color: #626262;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 0px 15px;
+    line-height: 30px;
+    font-family: AvenirMedium, sans-serif;
+    vertical-align: bottom;
+    font-weight: 100;
+    transition: background 0.2s, color 0.2s;
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    -o-transition: background 0.2s, color 0.2s;
+}
+
+.navbar-right > a:hover, .navbar-right > a:active {
+    background-color: #B71C1C;
+    color: white;
+}
+
+.navbar-right > a:active {
+    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+}
+
+a.navbar-current, .navbar-left a {
+    color: #B71C1C;
+    font-family: AvenirBlack, sans-serif;
+}
+
+#navbar-logo {
+    display: inline-block;
+    height: 30px;
+    width: 35px;
+    vertical-align: top;
+    margin-right: -12px;
+    background: transparent no-repeat;
+    background-size: contain;
+}
+
+#language-selection {
+    height: 30px;
+}
+
+#language-selection img {
+    display: block;
+    height: 10px;
+    margin: 3px;
+}
+
+#language-selection a {
+    display: block;
+    line-height: 14px;
+    font-size: 11px;
+}
+
+div.navbar:not(.opaque-navbar) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+div.navbar:not(.opaque-navbar) a {
+    color: #F0F0F0;
+    transition: color 0.1s linear;
+    -webkit-transition: color 0.1s linear;
+    -moz-transition: color 0.1s linear;
+    -o-transition: color 0.1s linear;
+}
+
+div.navbar:not(.opaque-navbar) .navbar-left {
+    padding-left: 20px;
+    margin-right: -20px;
+    text-align: left;
+}
+
+div.navbar:not(.opaque-navbar) .navbar-right {
+    padding-right: 20px;
+    margin-left: -20px;
+    text-align: right;
+}
+
+div.navbar:not(.opaque-navbar) #navbar-logo {
+    background: transparent no-repeat;
+    background-size: contain;
+}
+
+/* ---- MOBILE VERSION ---- */
+@media (max-width: 1024px) {
+
+    body {
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    body {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    div.navbar:not(.opaque-navbar) p.navbar-right, div.navbar:not(.opaque-navbar) p.navbar-left {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navbar-space {
+        height: 100px;
+    }
+
+    .navbar-right {
+        font-size: 13px;
+    }
+
+    .hidden-on-mobile { display: none !important; }
+    /*.visible-on-mobile { display: inherit !important; }*/
+
+    .info-box-content {
+        margin: 20px 20px 0;
+    }
+
+    .small-space {
+        padding-top: 100px;
+    }
+
+    h2 {
+        font-size: 280%;
+        margin-top: 25px;
+        margin-bottom: -2px;
+    }
+
+    .cblock {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .navbar {
+        min-width: 0;
+    }   /*TODO: Navbar navigation breaks under 317px width*/
+
+    .navbar-inline {
+        min-width: 100%;
+    }
+
+    .first-wrapper {
+        padding-top: 100px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .footer a {
+        margin-top: 6px;
+    }
+
+}
+@media (max-width: 320px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 220%;
+        margin-bottom: -1px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+}
