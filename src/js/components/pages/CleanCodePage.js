@@ -15,9 +15,8 @@ export default class CleanCodePage extends React.Component {
         return (
             <PageContainer styles={styles}>
                 <div className="cleanCodeLeft">
-                    <div>
-                        <div className="outside">
-                            <div className="inside">
+                    <div className="outside">
+                        <div className="inside">
                         <pre>
                             <code>
                                 <div className="typedText text-left old-code">
@@ -52,7 +51,6 @@ export default class CleanCodePage extends React.Component {
                                 </div>
                             </code>
                         </pre>
-                            </div>
                         </div>
                     </div>
                 </div>
