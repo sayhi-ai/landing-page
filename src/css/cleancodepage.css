@@ -6,12 +6,6 @@
     z-index: 0;
 }
 
-.title-space {
-    height:20%;
-    display: table-cell;
-    vertical-align: top;
-}
-
 .outside {
     display: table;
     height: 80%;

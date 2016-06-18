@@ -10,9 +10,6 @@ export default class CleanCodePage extends React.Component {
                 <div className="cleanCodeLeft">
                     <div>
                         <div className="outside">
-                            <div className="title-space">
-                                Turn this ...
-                            </div>
                             <div className="inside">
                         <pre>
                             <code>
