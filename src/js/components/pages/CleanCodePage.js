@@ -1,12 +1,19 @@
 import React from "react"
 import PageContainer from "../PageContainer"
+
+import "../../../css/cleancodepage.css"
+
 import transition from "../../../resources/img/transition.svg"
 
 export default class CleanCodePage extends React.Component {
 
     render() {
+        var styles = {
+            height: "75vh"
+        }
+        
         return (
-            <PageContainer padding={this.props.padding}>
+            <PageContainer styles={styles}>
                 <div className="cleanCodeLeft">
                     <div className="outside">
                         <div className="inside">

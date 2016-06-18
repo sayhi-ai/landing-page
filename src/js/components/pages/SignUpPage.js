@@ -1,6 +1,3 @@
-/**
- * Created by renebrandel on 6/16/16.
- */
 import React from "react"
 import PageContainer from "../PageContainer"
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -13,8 +10,13 @@ import "../../../css/signuppage.css"
 
 export default class Contact extends React.Component {
     render() {
+        var styles = {
+            padding: "5%",
+            height: "75vh"
+        }
+        
         return (
-            <PageContainer padding={this.props.padding} className="material-background">
+            <PageContainer styles={styles} className="material-background">
                 <div className="outer">
                     <div className="middle">
                         <MuiThemeProvider>

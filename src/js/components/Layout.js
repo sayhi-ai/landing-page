@@ -26,10 +26,10 @@ export default class Layout extends React.Component {
                 <NavBar/>
                 <MobileScrollButton/>
                 <Header/>
-                <VarietyCodePage padding="5%"/>
-                <CleanCodePage padding="0"/>
-                <FutureFeaturesPage padding="5%"/>
-                <SignUpPage padding="0"/>
+                <VarietyCodePage/>
+                <CleanCodePage/>
+                <FutureFeaturesPage/>
+                <SignUpPage/>
                 <Footer/>
             </div>
         )
