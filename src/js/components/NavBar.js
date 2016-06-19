@@ -20,7 +20,7 @@ export default class NavBar extends React.Component {
 
     handleScroll(event) {
         let scrollTop = event.srcElement.body.scrollTop
-        let itemTranslate = Math.min(0, scrollTop/3 - 60)
+        let itemTranslate = Math.min(0, scrollTop / 3 - 60)
 
         if (itemTranslate == 0) {
             this.setState({
