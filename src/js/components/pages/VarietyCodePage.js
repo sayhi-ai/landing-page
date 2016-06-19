@@ -8,7 +8,10 @@ export default class VarietyCodePage extends React.Component {
     render() {
         var styles = {
             padding: "5%",
-            height: "75vh"
+            height: "75vh",
+            WebkitBoxShadow: "0px 1px 10px 0 #404040",
+            MozBoxShadow: "0px 1px 10px 0 #404040",
+            boxShadow: "0px 1px 10px 0 #404040"
         }
 
         return (

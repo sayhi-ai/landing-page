@@ -11,7 +11,10 @@ import "../../../css/signuppage.css"
 export default class Contact extends React.Component {
     render() {
         var styles = {
-            height: "75vh"
+            height: "75vh",
+            WebkitBoxShadow: "0px 1px 10px 0 #404040",
+            MozBoxShadow: "0px 1px 10px 0 #404040",
+            boxShadow: "0px 1px 10px 0 #404040"
         }
         
         return (

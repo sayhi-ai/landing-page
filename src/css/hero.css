@@ -1,0 +1,64 @@
+/*
+ * Hero title
+ */
+.hero-title-div {
+    width: 100%;
+    text-align: center;
+}
+
+.hero-title {
+    width: 100%;
+    text-align: center;
+}
+
+.hero-outter-table {
+    width: 100vw;
+    display: table;
+    height: 80vh;
+}
+
+.hero-outter-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: inherit;
+}
+
+/*
+ * Hero Images
+ */
+.hero-table {
+    display:table;
+    width: 100vw;
+}
+
+.hero-image-row {
+    display: table-row;
+    width: 100%;
+    height:80%;
+}
+
+.hero-image {
+    display: table-cell;
+    width: 33%;
+    vertical-align: middle;
+}
+
+.hero-image img {
+    width: inherit;
+    height: inherit;
+}
+
+/*
+ * Hero labels
+ */
+.hero-label-row {
+    display: table-row;
+    width: 100%;
+}
+
+.hero-label {
+    display: table-cell;
+    width: 33%;
+    vertical-align: middle;
+    text-align: center;
+}

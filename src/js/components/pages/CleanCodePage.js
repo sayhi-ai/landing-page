@@ -11,7 +11,10 @@ export default class CleanCodePage extends React.Component {
         var styles = {
             container: {
                 height: "auto",
-                display: "flex"
+                display: "flex",
+                WebkitBoxShadow: "0px 1px 10px 0 #404040",
+                MozBoxShadow: "0px 1px 10px 0 #404040",
+                boxShadow: "0px 1px 10px 0 #404040"
             },
             i: {
                 height: "100%",

@@ -1,4 +1,3 @@
-/* ---- NAVIGATION BAR ---- */
 .navbar {
     background-color: #FFFFFF;
     display: block;
@@ -212,5 +211,4 @@ div.navbar:not(.opaque-navbar) #navbar-logo {
     h3 {
         font-size: 17px;
     }
-
 }
