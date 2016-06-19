@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'react-router'
 
 export default class NavBar extends React.Component {
     constructor() {
@@ -37,13 +38,12 @@ export default class NavBar extends React.Component {
             <div className={"navbar noselect mui--z1 " + this.state.navbar} id="navbar">
                 <p className="navbar-left navbar-inline">
                     <span id="navbar-logo"></span>
-                    <a href="/">enCourage</a>
+                    <Link to="/">Title</Link>
                 </p>
                 <p className="navbar-right navbar-inline">
-                    <a className="navbar-current" href="/">Home</a>
-                    <a className="" href="/App">App</a>
-                    <a className="" href="/Company/News">News</a>
-                    <a className="" href="/Company">Team</a>
+                    <Link to="/" className="navbar-current">Pricing</Link>
+                    <Link to="/" className="navbar-current">About</Link>
+                    <Link to="/" className="navbar-current">Sign-Up</Link>
                 </p>
             </div>
         )

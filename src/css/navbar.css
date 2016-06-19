@@ -2,12 +2,14 @@
 .navbar {
     background-color: #FFFFFF;
     display: block;
+    border-radius: 0;
     padding: 0 0px;
     position: fixed;
     top: 0px; right: 0px; left: 0px;
     z-index: 10;
+    min-height: 50px;
     min-width: 500px;   /*m*/
-    /*box-shadow: 0px 1px 4px 0 #404040;*/
+    box-shadow: 0px 1px 4px 0 #404040;
     transition: background 0.1s linear;
     -webkit-transition: background 0.1s linear;
     -moz-transition: background 0.1s linear;
@@ -29,7 +31,7 @@
 }
 
 .navbar-right {
-    min-width:50%;
+    min-width: 30%;
     text-transform: uppercase;
     font-size: 13px;
     float: right;
@@ -37,7 +39,6 @@
 
 .navbar-inline > a, #language-selection {
     color: #626262;
-    border-radius: 20px;
     display: inline-block;
     padding: 0px 15px;
     line-height: 30px;
@@ -51,7 +52,7 @@
 }
 
 .navbar-right > a:hover, .navbar-right > a:active {
-    background-color: #B71C1C;
+    background-color: #49C6FF;
     color: white;
 }
 
@@ -60,7 +61,7 @@
 }
 
 a.navbar-current, .navbar-left a {
-    color: #B71C1C;
+    color: #49C6FF;
     font-family: AvenirBlack, sans-serif;
 }
 
