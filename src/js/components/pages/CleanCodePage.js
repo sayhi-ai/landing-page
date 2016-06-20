@@ -113,7 +113,7 @@ export default class CleanCodePage extends React.Component {
                 </div>
                 <div className="cleanCodeRight">
                     <div className="outside">
-                            <div className="title-space">
+                            <div className="title-space title-grey">
                                 <h1>...into this!</h1>
                             </div>
                         <div className="tr">

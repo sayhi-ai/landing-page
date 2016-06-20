@@ -26,6 +26,10 @@ div.tr {
     color: white;
 }
 
+.title-grey {
+    color: #4A4A4A;
+}
+
 .placeholder {
     color: transparent;
 }
@@ -41,7 +45,7 @@ div.tr {
 }
 
 .new-code {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 /**
@@ -126,6 +130,11 @@ pre {
         font-size: 1.3em;
     }
 
+
+    .new-code {
+        font-size: 2.5em;
+    }
+
 }
 
 @media screen and (min-width: 1220px) {
@@ -133,5 +142,10 @@ pre {
     .old-code {
         padding: 0 0 0 5%;
         font-size: 1.5em;
+    }
+
+
+    .new-code {
+        font-size: 3.5em;
     }
 }
