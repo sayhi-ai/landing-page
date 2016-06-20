@@ -36,8 +36,8 @@ div.tr {
 }
 
 .old-code {
-    padding: 0 0 0 5%;
-    font-size: 1em;
+    padding: 0 5% 0 5%;
+    font-size: 1.3em;
 }
 
 .new-code {
