@@ -4,7 +4,6 @@
 .hero-title-div {
     margin-top: 5%;
     width: 100%;
-    text-align: center;
 }
 
 .hero-title {
@@ -12,12 +11,19 @@
     text-align: center;
 }
 
+.hero-moto-div {
+    display: block;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+
 /*
  * Hero Box
  */
 .hero-container {
     display: block;
-    height: 80vh;
+    height: auto;
 }
 
 .hero-box {
@@ -45,9 +51,17 @@
  * Hero labels
  */
 .hero-label {
-    display: table-cell;
-    width: 33%;
-    vertical-align: middle;
+    display: block;
+    margin-top: 10px;
+}
+
+.number-icon {
+    width: 30px;
+    height: 30px;
     text-align: center;
-    padding-top: 10%;
+}
+
+.hero-text-label {
+    display: inline-block;
+    margin-left: 10px;
 }
