@@ -14,13 +14,13 @@ import "../less/mixins.less"
 import "../less/variables.less"
 
 // import components
-import Layout from "./components/Layout"
+import App from "./components/App"
 
 // Copy the index.html file
 require('file?name=[name].[ext]!../index.html');
 
 ReactDOM.render(
     <Router history={hashHistory}>
-        <Route path="/" component={Layout}/>
+        <Route path="/" component={App}/>
     </Router>, document.getElementById('root')
 );
