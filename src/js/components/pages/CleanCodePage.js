@@ -26,7 +26,7 @@ export default class CleanCodePage extends React.Component {
         var iDis = "block"
         var iHeight = "auto"
         var transitionSrc = { __html:transition90};
-        if (window.innerWidth > 768) {
+        if (window.innerWidth >= 768) {
             transitionSrc = { __html:transition};
             containerDis = "flex"
             iDis = "flex"
