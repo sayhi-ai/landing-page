@@ -3,17 +3,6 @@
     margin: 0 !important;
 }
 
-.outter {
-    display: table;
-    width: 100%;
-}
-
-.inner {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
 .feature {
     display: inline-block;
     vertical-align: top;

@@ -143,6 +143,17 @@ header .intro-text .skills {
     text-align: center;
 }
 
+.outter {
+    display: table;
+    width: 100%;
+}
+
+.inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
 @media screen and (min-width: 1024px) {
     .pageContainer {
         height: 75vh;
