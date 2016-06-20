@@ -56,6 +56,12 @@ div.tr {
     color: white;
 }
 
+.code-block {
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+}
+
 .blueSyntax {
     color: #50E3C2;
 }

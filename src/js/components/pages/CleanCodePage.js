@@ -72,35 +72,42 @@ export default class CleanCodePage extends React.Component {
                             <div className="inside">
                         <pre>
                             <code>
-                                <div className="typedText text-left old-code">
+                                <div className="typedText code-block text-center old-code">
+                                    <div className="text-left">
                                     <span className="greenSyntax">//Array of possible responses</span>
                                     <br/>
                                     var responses = [
                                     <br/>
-                                    <span className="orangeSyntax">    “You don’t have a GPS connection.”</span>
+                                    <span className="orangeSyntax">    “Hi, how are you doing?”</span>
                                     ,
                                     <br/>
-                                    <span className="orangeSyntax">    “No satellites seems to able to connect.”</span>
+                                    <span className="orangeSyntax">    “Hello, what a great day!”</span>
                                     ,
                                     <br/>
-                                    <span className="orangeSyntax">    “Are you sure you have GPS turned on?”</span>
+                                    <span className="orangeSyntax">    “Good Day, sir!”</span>
                                     <br/>
                                     ];
                                     <br/>
                                     <br/>
+                                    <span className="hidden-xs hidden-sm">
                                     <span className="greenSyntax">//Get one of those responses randomly</span>
                                     <br/>
                                     var index = Math.floor(Math.random() * responses.length);
                                     <br/>
-                                    var response = responses[index];
+                                    var res = responses[index];
+                                    </span>
+                                    <span className="visible-xs-inline-block visible-sm-inline-block hidden-md hidden-lg">
+                                    var res = getRandom(responses);
+                                    </span>
                                     <br/>
                                     <br/>
-                                    <span className="greenSyntax">///Translate the response</span>
+                                    <span className="greenSyntax">//Translate the response</span>
                                     <br/>
-                                    var res = translator.translate(response);
+                                    res = translator.translate(res);
                                     <br/>
                                     <br/>
                                     <span className="blueSyntax">return</span> res;
+                                    </div>
                                 </div>
                             </code>
                         </pre>
