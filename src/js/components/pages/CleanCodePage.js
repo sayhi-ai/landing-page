@@ -4,26 +4,63 @@ import PageContainer from "../PageContainer"
 import "../../../css/cleancodepage.css"
 
 import transition from "../../../resources/img/transition.svg"
+import transition90 from "../../../resources/img/transition-90.svg"
 
 export default class CleanCodePage extends React.Component {
 
-    render() {
+    constructor() {
+        super()
+        this.state = this.getStateForResize()
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleResize.bind(this));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResize.bind(this));
+    }
+
+    getStateForResize() {
+        var containerDis = "block"
+        var iDis = "block"
+        var iHeight = "auto"
+        var transitionSrc = { __html:transition90};
+        if (window.innerWidth >= 768) {
+            transitionSrc = { __html:transition};
+            containerDis = "flex"
+            iDis = "flex"
+            iHeight = "100%"
+
+        }
+
         var styles = {
             container: {
                 height: "auto",
-                display: "flex",
+                display: containerDis,
                 WebkitBoxShadow: "0px 1px 10px 0 #404040",
                 MozBoxShadow: "0px 1px 10px 0 #404040",
                 boxShadow: "0px 1px 10px 0 #404040"
             },
             i: {
-                height: "100%",
-                display: "flex"
+                height: iHeight,
+                display: iDis
             }
         }
+        return {
+            styles,
+            trans: transitionSrc
+        }
+    }
+
+    handleResize(e) {
+        this.setState(this.getStateForResize())
+    }
+
+    render() {
 
         return (
-            <PageContainer styles={styles.container}>
+            <PageContainer styles={this.state.styles.container}>
                 <div className="cleanCodeLeft">
                     <div className="outside">
                         <div className="tr">
@@ -35,35 +72,42 @@ export default class CleanCodePage extends React.Component {
                             <div className="inside">
                         <pre>
                             <code>
-                                <div className="typedText text-left old-code">
+                                <div className="typedText code-block text-center old-code">
+                                    <div className="text-left">
                                     <span className="greenSyntax">//Array of possible responses</span>
                                     <br/>
                                     var responses = [
                                     <br/>
-                                    <span className="orangeSyntax">    “You don’t have a GPS connection.”</span>
+                                    <span className="orangeSyntax">    “Hi, how are you doing?”</span>
                                     ,
                                     <br/>
-                                    <span className="orangeSyntax">    “No satellites seems to able to connect.”</span>
+                                    <span className="orangeSyntax">    “Hello, what a great day!”</span>
                                     ,
                                     <br/>
-                                    <span className="orangeSyntax">    “Are you sure you have GPS turned on?”</span>
+                                    <span className="orangeSyntax">    “Good Day, sir!”</span>
                                     <br/>
                                     ];
                                     <br/>
                                     <br/>
+                                    <span className="hidden-xs hidden-sm">
                                     <span className="greenSyntax">//Get one of those responses randomly</span>
                                     <br/>
                                     var index = Math.floor(Math.random() * responses.length);
                                     <br/>
-                                    var response = responses[index];
+                                    var res = responses[index];
+                                    </span>
+                                    <span className="visible-xs-inline-block visible-sm-inline-block hidden-md hidden-lg">
+                                    var res = getRandom(responses);
+                                    </span>
                                     <br/>
                                     <br/>
-                                    <span className="greenSyntax">///Translate the response</span>
+                                    <span className="greenSyntax">//Translate the response</span>
                                     <br/>
-                                    var res = translator.translate(response);
+                                    res = translator.translate(res);
                                     <br/>
                                     <br/>
                                     <span className="blueSyntax">return</span> res;
+                                    </div>
                                 </div>
                             </code>
                         </pre>
@@ -72,11 +116,11 @@ export default class CleanCodePage extends React.Component {
                     </div>
                 </div>
                 <div className="cleanCodeMiddle">
-                    <i style={styles.i} dangerouslySetInnerHTML={{ __html:transition}}/>
+                    <i style={this.state.styles.i} dangerouslySetInnerHTML={this.state.trans}/>
                 </div>
                 <div className="cleanCodeRight">
                     <div className="outside">
-                            <div className="title-space">
+                            <div className="title-space title-grey">
                                 <h1>...into this!</h1>
                             </div>
                         <div className="tr">

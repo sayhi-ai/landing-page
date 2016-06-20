@@ -1,6 +1,8 @@
 import React from "react"
 import PageContainer from "./PageContainer"
-import favicon from "../../resources/img/profile.png"
+import manual1 from "../../resources/img/Manual1.png"
+import manual2 from "../../resources/img/Manual2.png"
+import manual3 from "../../resources/img/Manual3.png"
 
 import "../../css/hero.css"
 
@@ -21,13 +23,13 @@ export default class Hero extends React.Component {
                         <div className="hero-table">
                             <div className="hero-image-row">
                                 <div className="hero-image">
-                                    <img src={favicon}/>
+                                    <img src={manual1}/>
                                 </div>
                                 <div className="hero-image">
-                                    <img src={favicon}/>
+                                    <img src={manual2}/>
                                 </div>
                                 <div className="hero-image">
-                                    <img src={favicon}/>
+                                    <img src={manual3}/>
                                 </div>
                             </div>
                             <div className="hero-label-row">
