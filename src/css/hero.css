@@ -18,6 +18,14 @@
     margin-bottom: 3%;
 }
 
+.hero-label-table-row {
+    display: table-row;
+}
+
+.hero-label-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
 /*
  * Hero Box
  */
@@ -28,7 +36,6 @@
 
 .hero-box {
     display: inline-block;
-    vertical-align: top;
     padding-top: 2%;
     min-width: 300px;
     width: 33%;
@@ -37,7 +44,7 @@
 
 .hero-image {
     display: block;
-    height: 50vh;
+    height: 30vw;
 }
 
 .hero-image img {
@@ -51,7 +58,7 @@
  * Hero labels
  */
 .hero-label {
-    display: block;
+    display: inline-block;
     margin-top: 10px;
 }
 

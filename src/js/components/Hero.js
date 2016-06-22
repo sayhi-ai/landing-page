@@ -1,5 +1,6 @@
 import React from "react"
 import PageContainer from "./PageContainer"
+import HeroLabel from "./HeroLabel"
 import manual1 from "../../resources/img/Manual1.png"
 import manual2 from "../../resources/img/Manual2.png"
 import manual3 from "../../resources/img/Manual3.png"
@@ -23,33 +24,24 @@ export default class Hero extends React.Component {
                     <div className="inner">
                         <div className="hero-title-div">
                             <h1 className="hero-title">Give your bot a life</h1>
-                        </div>                        
+                        </div>
                         <div className="hero-container">
                             <div className="hero-box">
                                 <div className="hero-image">
                                     <img src={manual1}/>
-                                    <span className="hero-label">
-                                        <i dangerouslySetInnerHTML={{__html: number1}}></i>
-                                        <h4 className="hero-text-label">Bring your bot</h4>
-                                    </span>
+                                    <HeroLabel icon={{__html: number1}}>Bring your bot</HeroLabel>
                                 </div>
                             </div>
                             <div className="hero-box">
                                 <div className="hero-image">
                                     <img src={manual2}/>
-                                    <span className="hero-label">
-                                        <i dangerouslySetInnerHTML={{__html: number2}}></i>
-                                        <h4 className="hero-text-label">We apply magic</h4>
-                                    </span>
+                                    <HeroLabel icon={{__html: number2}}>We apply magic</HeroLabel>
                                 </div>
                             </div>
                             <div className="hero-box">
                                 <div className="hero-image">
                                     <img src={manual3}/>
-                                    <span className="hero-label">
-                                        <i dangerouslySetInnerHTML={{__html: number3}}></i>
-                                        <h4 className="hero-text-label">It's alive!</h4>
-                                    </span>
+                                    <HeroLabel icon={{__html: number3}}>It's alive!</HeroLabel>
                                 </div>
                             </div>
                         </div>
