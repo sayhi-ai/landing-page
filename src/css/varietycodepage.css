@@ -8,11 +8,10 @@
 }
 
 .vcp-explanation {
-    margin-top: 3vh;
-    padding-top: 3%;
+    margin-top: 20px;
+    margin-bottom: 6vh;
     width: 30vw;
     font-size: 2em;
-    line-height: 4.5vh;
     text-align: left;
 }
 
@@ -24,12 +23,9 @@
     }
 
     .vcp-explanation {
-        margin-top: 3vh;
-        margin: 0 auto;
-        padding-top: 3%;
+        margin-top: 20px;
+        margin-bottom: 6vh;
         width: 90vw;
-        font-size: 2em;
-        line-height: 4.5vh;
         text-align: center;
     }
 }
