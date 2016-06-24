@@ -9,11 +9,6 @@ import "../css/bootstrap.css"
 import "../css/freelancer.css"
 import "../css/navbar.css"
 
-// import less
-import "../less/freelancer.less"
-import "../less/mixins.less"
-import "../less/variables.less"
-
 // import components
 import App from "./components/App"
 
