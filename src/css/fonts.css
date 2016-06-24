@@ -1,5 +1,15 @@
 @font-face {
-    font-family: FlexDisplay-Thin;
-    src: url(../resources/fonts/FlexDisplay-Thin.otf);
+    font-family: Hero-Font;
+    src: url(../resources/fonts/Adequate-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: Header-Font;
+    src: url(../resources/fonts/Adequate-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: Body-Font;
+    src: url(../resources/fonts/Adequate-ExtraLight.ttf);
 }
 
