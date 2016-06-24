@@ -1,15 +1,35 @@
-.title {
+.vcp-title {
     margin: 0 !important;
+    text-align: left;
 }
 
-.diversifyStyle {
+.vcp-diversify {
     color: #fc8c84;
 }
 
-.varietyExplanation {
+.vcp-explanation {
     margin-top: 3vh;
     padding-top: 3%;
     width: 30vw;
     font-size: 2em;
     line-height: 4.5vh;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+
+    .vcp-title {
+        margin: 15px 10%;
+        text-align: center;
+    }
+
+    .vcp-explanation {
+        margin-top: 3vh;
+        margin: 0 auto;
+        padding-top: 3%;
+        width: 90vw;
+        font-size: 2em;
+        line-height: 4.5vh;
+        text-align: center;
+    }
 }
