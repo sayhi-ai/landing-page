@@ -3,6 +3,7 @@ import ReactDOM from "react-dom"
 import { Router, Route, hashHistory } from 'react-router'
 
 // import css
+import "../css/fonts.css"
 import "../css/index.css"
 import "../css/bootstrap.css"
 import "../css/freelancer.css"

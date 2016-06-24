@@ -11,10 +11,7 @@ export default class FutureFeaturesPage extends React.Component {
         var styles = {
             minHeight: "75vh",
             height: "auto",
-            padding: "5%",
-            WebkitBoxShadow: "0px 1px 10px 0 #404040",
-            MozBoxShadow: "0px 1px 10px 0 #404040",
-            boxShadow: "0px 1px 10px 0 #404040"
+            padding: "5%"
         }
         
         return (
