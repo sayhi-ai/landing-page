@@ -38,7 +38,11 @@ export default class CleanCodePage extends React.Component {
         var styles = {
             container: {
                 height: "auto",
-                display: containerDis
+                minHeight: "85vh",
+                display: containerDis,
+                WebkitBoxShadow: "0px 0px 70px 0px rgba(179,177,179,1)",
+                MozBoxShadow: "0px 0px 70px 0px rgba(179,177,179,1)",
+                boxShadow: "0px 0px 70px 0px rgba(179,177,179,1)"
             },
             i: {
                 height: iHeight,
@@ -62,7 +66,7 @@ export default class CleanCodePage extends React.Component {
                 <div style={this.state.styles.container}>
                     <div className="cleanCodeLeft">
                         <div className="outside">
-                            <div className="tr">
+                            <div className="tr" style={{height : 0}}>
                                 <div className="title-space">
                                     <h1>Turn this...</h1>
                                 </div>
