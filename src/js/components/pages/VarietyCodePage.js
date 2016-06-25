@@ -25,7 +25,7 @@ export default class VarietyCodePage extends React.Component {
                     </div>
                 </div>
                 <div className="vcp-img-container">
-                    <Paper zDepth="5">
+                    <Paper zDepth={5}>
                         <img className="vcp-img" src={diversity}/>
                     </Paper>
                 </div>

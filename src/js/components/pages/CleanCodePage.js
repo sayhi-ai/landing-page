@@ -1,5 +1,6 @@
 import React from "react"
 import PageContainer from "../PageContainer"
+import WaveDivider from "../WaveDivider"
 
 import "../../../css/cleancodepage.css"
 
@@ -25,9 +26,9 @@ export default class CleanCodePage extends React.Component {
         var containerDis = "block"
         var iDis = "block"
         var iHeight = "auto"
-        var transitionSrc = { __html:transition90};
+        var transitionSrc = {__html: transition90};
         if (window.innerWidth >= 768) {
-            transitionSrc = { __html:transition};
+            transitionSrc = {__html: transition};
             containerDis = "flex"
             iDis = "flex"
             iHeight = "100%"
@@ -57,16 +58,17 @@ export default class CleanCodePage extends React.Component {
     render() {
 
         return (
-            <PageContainer styles={this.state.styles.container}>
-                <div className="cleanCodeLeft">
-                    <div className="outside">
-                        <div className="tr">
-                            <div className="title-space">
-                                <h1>Turn this...</h1>
+            <PageContainer>
+                <div style={this.state.styles.container}>
+                    <div className="cleanCodeLeft">
+                        <div className="outside">
+                            <div className="tr">
+                                <div className="title-space">
+                                    <h1>Turn this...</h1>
+                                </div>
                             </div>
-                        </div>
-                        <div className="tr">
-                            <div className="inside">
+                            <div className="tr">
+                                <div className="inside">
                         <pre>
                             <code>
                                 <div className="typedText code-block text-center old-code">
@@ -93,7 +95,8 @@ export default class CleanCodePage extends React.Component {
                                     <br/>
                                     var res = responses[index];
                                     </span>
-                                    <span className="visible-xs-inline-block visible-sm-inline-block hidden-md hidden-lg">
+                                    <span
+                                        className="visible-xs-inline-block visible-sm-inline-block hidden-md hidden-lg">
                                     var res = getRandom(responses);
                                     </span>
                                     <br/>
@@ -108,30 +111,32 @@ export default class CleanCodePage extends React.Component {
                                 </div>
                             </code>
                         </pre>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="cleanCodeMiddle">
-                    <i style={this.state.styles.i} dangerouslySetInnerHTML={this.state.trans}/>
-                </div>
-                <div className="cleanCodeRight">
-                    <div className="outside">
+                    <div className="cleanCodeMiddle">
+                        <i style={this.state.styles.i} dangerouslySetInnerHTML={this.state.trans}/>
+                    </div>
+                    <div className="cleanCodeRight">
+                        <div className="outside">
                             <div className="title-space title-grey">
                                 <h1>...into this!</h1>
                             </div>
-                        <div className="tr">
-                            <div className="inside typedText text-center new-code">
-                                bot.say(<span className="darkSyntax">"Hi"</span>);
+                            <div className="tr">
+                                <div className="inside typedText text-center new-code">
+                                    bot.say(<span className="darkSyntax">"Hi"</span>);
+                                </div>
                             </div>
-                        </div>
-                        <div>
+                            <div>
 
-                            <div className="title-space placeholder">
-                                <h1>Job?</h1>
+                                <div className="title-space placeholder">
+                                    <h1>Job?</h1>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </PageContainer>)
     }
