@@ -2,8 +2,12 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Router, Route, hashHistory } from 'react-router'
 
+// import js
+import "../js/lib/material"
+
 // import css
 import "../css/fonts.css"
+import "../css/material.css"
 import "../css/index.css"
 import "../css/bootstrap.css"
 import "../css/freelancer.css"

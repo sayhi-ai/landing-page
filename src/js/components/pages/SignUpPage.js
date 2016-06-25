@@ -7,7 +7,7 @@ import FontIcon from "material-ui/FontIcon"
 
 import "../../../css/signuppage.css"
 
-export default class Contact extends React.Component {
+export default class SignUpPage extends React.Component {
     render() {
         var styles = {
             height: "75vh"
@@ -20,8 +20,6 @@ export default class Contact extends React.Component {
                             <Paper className="login-wrapper text-center" zDepth={5}>
                                 <div className="text-center">
                                     <h2>Sign Up for Beta</h2>
-                                    <hr className="star-primary"/>
-                                    <h3>Beta users get a FREE 2 MONTHS trial</h3>
                                 </div>
                                 <div>
                                     <div className="name-field">
