@@ -67,9 +67,7 @@ export default class ExampleUsesPage extends React.Component {
                         <div className="eu-example-features">
                             bot.<span className="blue-syntax">say</span>(
                             <RaisedButton
-                                style={buttonStyles}
-                                className="eu-button-style"
-                                onTouchTap={console.log("this")}
+                                onMouseDown={this.handleTouchTap.bind(this)}
                                 label={<span className="eu-button-style green-syntax">Click me</span>}
                             />
                             <Popover
