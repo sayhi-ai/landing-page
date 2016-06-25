@@ -1,9 +1,9 @@
 .cleanCodeLeft {
     display: block;
     width: 100vw;
-    height: inherit;
     background-color: #4A4A4A;
     z-index: 0;
+    padding: 40px 0;
 }
 
 .outside {
@@ -91,6 +91,7 @@ div.tr {
     display: block;
     width: 100vw;
     height: inherit;
+    padding: 40px 0;
     background-color: #49C6FF;
     z-index: 0;
 }
@@ -111,7 +112,7 @@ pre {
     .cleanCodeLeft {
         display: inline-block;
         width: 55vw;
-        height: inherit;
+        padding: 40px 0;
         background-color: #4A4A4A;
         z-index: 0;
     }
