@@ -71,7 +71,7 @@ export default class CleanCodePage extends React.Component {
                                 <div className="inside">
                         <pre>
                             <code>
-                                <div className="typedText code-block text-center old-code">
+                                <div className="ccp-typed-text code-block text-center old-code">
                                     <div className="text-left">
                                     <span className="green-syntax">//Array of possible responses</span>
                                     <br/>
@@ -124,7 +124,7 @@ export default class CleanCodePage extends React.Component {
                                 <h1>...into this!</h1>
                             </div>
                         <div className="tr">
-                            <div className="inside typedText text-center new-code">
+                            <div className="inside ccp-typed-text text-center new-code">
                                 bot.say(<span className="dark-syntax">"Hi"</span>);
                             </div>
                         </div>
