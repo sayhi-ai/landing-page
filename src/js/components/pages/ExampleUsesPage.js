@@ -4,7 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
-import Typist from "react-typist"
+import ArrowDropRight from 'material-ui/svg-icons/navigation-arrow-drop-right';
 import TypeWriter from 'react-typewriter';
 
 import "../../../css/exampleusages.css"
@@ -15,9 +15,9 @@ export default class ExampleUsesPage extends React.Component {
 
         this.state = {
             open: false,
-            typeAnimation:
+            typeAnimation: 
                 <div>
-                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
+                    <TypeWriter typing={1} className="eu-typed-text">
                         Example usages
                     </TypeWriter>
                     <span className="eu-typed-text blinking-cursor">|</span>
@@ -26,24 +26,13 @@ export default class ExampleUsesPage extends React.Component {
     }
 
     handleTouchTap(event) {
-        console.log("click")
         // This prevents ghost click.
         event.preventDefault()
-    
+
         this.setState({
             open: true,
-            anchorEl: event.currentTarget,
-            typeAnimation:
-                <div>
-                    {TypeWriter.reset}
-                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
-                        Click me
-                    </TypeWriter>
-                    <span className="eu-typed-text blinking-cursor">|</span>
-                </div>
-
-
-    })
+            anchorEl: event.currentTarget
+        })
     }
 
     handleRequestClose() {
@@ -60,9 +49,18 @@ export default class ExampleUsesPage extends React.Component {
         }
         return defDelayGenerator(mean - 20)
     }
-
-    onTypingDone() {
-        
+    
+    animateText(text) {
+        this.setState({
+            typeAnimation: 
+                <div>
+                    {TypeWriter.reset}
+                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
+                        {text}
+                    </TypeWriter>
+                    <span className="eu-typed-text blinking-cursor">|</span>
+                </div>
+        })
     }
 
     render() {
@@ -108,15 +106,24 @@ export default class ExampleUsesPage extends React.Component {
                             <Popover
                                 open={this.state.open}
                                 anchorEl={this.state.anchorEl}
-                                anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
-                                targetOrigin={{horizontal: 'left', vertical: 'top'}}
+                                anchorOrigin={{horizontal: 'middle', vertical: 'center'}}
+                                targetOrigin={{horizontal: 'middle', vertical: 'center'}}
                                 onRequestClose={this.handleRequestClose.bind(this)}
                             >
                                 <Menu>
-                                    <MenuItem primaryText="Refresh" />
-                                    <MenuItem primaryText="Help &amp; feedback" />
-                                    <MenuItem primaryText="Settings" />
-                                    <MenuItem primaryText="Sign out" />
+                                    <MenuItem
+                                        primaryText="hi"
+                                        rightIcon={<ArrowDropRight />}
+                                        menuItems={[
+                                                <MenuItem primaryText="no-xsgs"
+                                                />,
+                <MenuItem primaryText="Grid lines" checked={true} />,
+                <MenuItem primaryText="Page breaks" insetChildren={true} />
+                                          ]}
+                                    />
+                                    <MenuItem primaryText="no-gps"/>
+                                    <MenuItem primaryText="new-item-created"/>
+                                    <MenuItem primaryText="introduction"/>
                                 </Menu>
                             </Popover>
                             );
