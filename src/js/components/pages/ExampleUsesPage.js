@@ -5,6 +5,7 @@ import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import Typist from "react-typist"
+import TypeWriter from 'react-typewriter';
 
 import "../../../css/exampleusages.css"
 
@@ -13,7 +14,14 @@ export default class ExampleUsesPage extends React.Component {
         super(props);
 
         this.state = {
-            open: false
+            open: false,
+            typeAnimation:
+                <div>
+                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
+                        Example usages
+                    </TypeWriter>
+                    <span className="eu-typed-text blinking-cursor">|</span>
+                </div>
         }
     }
 
@@ -24,14 +32,37 @@ export default class ExampleUsesPage extends React.Component {
     
         this.setState({
             open: true,
-            anchorEl: event.currentTarget
-        })
+            anchorEl: event.currentTarget,
+            typeAnimation:
+                <div>
+                    {TypeWriter.reset}
+                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
+                        Click me
+                    </TypeWriter>
+                    <span className="eu-typed-text blinking-cursor">|</span>
+                </div>
+
+
+    })
     }
 
     handleRequestClose() {
         this.setState({
             open: false
         })
+    }
+
+    static delayGen(mean, std, {line, lineIdx, charIdx, defDelayGenerator}) {
+        if (lineIdx === 4 && charIdx === 1) {
+            return 1000
+        } else if (lineIdx === 5 && charIdx === line.length - 1) {
+            return 1000
+        }
+        return defDelayGenerator(mean - 20)
+    }
+
+    onTypingDone() {
+        
     }
 
     render() {
@@ -65,10 +96,9 @@ export default class ExampleUsesPage extends React.Component {
             <PageContainer styles={styles}>
                 <div className="eu-outter">
                     <div className="eu-inner">
-                        <Typist className="typedText" cursor={{element: '|', hideWhenDone: true}}
-                                delayGenerator={Signup.delayGen} onTypingDone={this.onTypingDone.bind(this)}>
-
-                        </Typist>
+                        <div className="eu-typed-text-div">
+                            {this.state.typeAnimation}
+                        </div>
                         <div className="eu-example-features">
                             bot.<span className="blue-syntax">say</span>(
                             <RaisedButton
@@ -89,7 +119,7 @@ export default class ExampleUsesPage extends React.Component {
                                     <MenuItem primaryText="Sign out" />
                                 </Menu>
                             </Popover>
-                            )
+                            );
                         </div>
                     </div>
                 </div>

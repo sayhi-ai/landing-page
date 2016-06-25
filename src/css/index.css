@@ -171,7 +171,5 @@ header .intro-text .skills {
 }
 
 @media screen and (min-width: 1024px) {
-    .pageContainer {
-        height: 75vh;
-    }
 }
+

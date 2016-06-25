@@ -31,3 +31,13 @@
     vertical-align: middle;
     text-align: center;
 }
+
+.eu-typed-text {
+    font-family: Monaco, sans-serif;
+    color: #4A4A4A;
+    font-size: 3em;
+}
+
+.eu-typed-text-div {
+    margin-bottom: 7%;
+}
