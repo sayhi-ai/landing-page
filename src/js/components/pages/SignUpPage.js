@@ -1,6 +1,5 @@
 import React from "react"
 import PageContainer from "../PageContainer"
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from "material-ui/TextField"
 import Paper from "material-ui/Paper"
 import RaisedButton from "material-ui/RaisedButton"
@@ -18,7 +17,6 @@ export default class Contact extends React.Component {
             <PageContainer styles={styles} className="material-background">
                 <div className="outer">
                     <div className="middle">
-                        <MuiThemeProvider>
                             <Paper className="login-wrapper text-center" zDepth={5}>
                                 <div className="text-center">
                                     <h2>Sign Up for Beta</h2>
@@ -41,7 +39,6 @@ export default class Contact extends React.Component {
                                     </div>
                                 </div>
                             </Paper>
-                        </MuiThemeProvider>
                     </div>
                 </div>
             </PageContainer>

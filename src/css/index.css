@@ -1,3 +1,8 @@
+/**
+ * -------------------
+ * API styles
+ * -------------------
+ */
 html {
     overflow-x: hidden;
     -ms-text-size-adjust: 100%;
@@ -123,6 +128,12 @@ header .intro-text .skills {
     }
 }
 
+
+/**
+ * -------------------
+ * Global styles
+ * -------------------
+ */
 .layout {
     margin: 0;
     padding: 0;
@@ -152,6 +163,11 @@ header .intro-text .skills {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+}
+
+.title {
+    text-align: left;
+    margin: 0 !important;
 }
 
 @media screen and (min-width: 1024px) {

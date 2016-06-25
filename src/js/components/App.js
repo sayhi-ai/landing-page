@@ -4,12 +4,14 @@ import Header from "./Hero"
 import CleanCodePage from "./pages/CleanCodePage"
 import VarietyCodePage from "./pages/VarietyCodePage"
 import FutureFeaturesPage from "./pages/FutureFeaturesPage"
+import ExampleUsesPage from "./pages/ExampleUsesPage"
 import Footer from "./Footer"
 import Favicon from "react-favicon"
 import MobileScrollButton from "./MobileScrollButton"
 import SignUpPage from "./pages/SignUpPage"
 import favicon from "../../resources/img/favicon.png"
 import Smooch from "smooch"
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class Layout extends React.Component {
     constructor() {
@@ -22,15 +24,20 @@ export default class Layout extends React.Component {
     render() {
         return (
             <div id="page-top" className="index">
-                <Favicon url={favicon}/>
-                <NavBar/>
-                <MobileScrollButton/>
-                <Header/>
-                <VarietyCodePage/>
-                <CleanCodePage/>
-                <FutureFeaturesPage/>
-                <SignUpPage/>
-                <Footer/>
+                <MuiThemeProvider>
+                <div>
+                    <Favicon url={favicon}/>
+                    <NavBar/>
+                    <MobileScrollButton/>
+                    <Header/>
+                    <VarietyCodePage/>
+                    <CleanCodePage/>
+                    <ExampleUsesPage/>
+                    <FutureFeaturesPage/>
+                    <SignUpPage/>
+                    <Footer/>
+                </div>
+                </MuiThemeProvider>
             </div>
         )
     }
