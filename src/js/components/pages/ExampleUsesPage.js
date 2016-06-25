@@ -4,6 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
+import Typist from "react-typist"
 
 import "../../../css/exampleusages.css"
 
@@ -64,6 +65,10 @@ export default class ExampleUsesPage extends React.Component {
             <PageContainer styles={styles}>
                 <div className="eu-outter">
                     <div className="eu-inner">
+                        <Typist className="typedText" cursor={{element: '|', hideWhenDone: true}}
+                                delayGenerator={Signup.delayGen} onTypingDone={this.onTypingDone.bind(this)}>
+
+                        </Typist>
                         <div className="eu-example-features">
                             bot.<span className="blue-syntax">say</span>(
                             <RaisedButton
