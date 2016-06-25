@@ -1,3 +1,18 @@
+.vcp-content {
+    width: 40vw;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.vcp-img-container {
+    display: inline-block;
+}
+
+.vcp-img {
+    margin: 40px 20px;
+    height: 400px;
+}
+
 .vcp-title {
     margin: 0 !important;
     text-align: left;
