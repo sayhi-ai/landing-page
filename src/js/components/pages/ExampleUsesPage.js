@@ -1,6 +1,6 @@
 import React from "react"
 import PageContainer from "../PageContainer"
-import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
@@ -41,7 +41,19 @@ export default class ExampleUsesPage extends React.Component {
             paddingBottom: "0"
         }
 
-        var bottonStyles = {
+        var buttonStyles = {
+            height: "auto",
+            margin: "0",
+            padding: "0",
+            lineHeight: "normal"
+        }
+
+        var innerButtonStyles = {
+            textTransform: "none",
+            fontSize: "3em",
+            fontFamily: "Monaco, sans-serif",
+            textAlign: "center",
+            color: "#7ED321",
             height: "auto",
             margin: "0",
             padding: "0",
@@ -52,11 +64,12 @@ export default class ExampleUsesPage extends React.Component {
             <PageContainer styles={styles}>
                 <div className="eu-outter">
                     <div className="eu-inner">
-                        <div className="eu-example-features" style={bottonStyles}>
+                        <div className="eu-example-features">
                             bot.<span className="blue-syntax">say</span>(
-                            <FlatButton
+                            <RaisedButton
+                                style={buttonStyles}
                                 className="eu-button-style"
-                                onTouchTap={this.handleTouchTap.bind(this)}
+                                onTouchTap={console.log("this")}
                                 label={<span className="eu-button-style green-syntax">Click me</span>}
                             />
                             <Popover
