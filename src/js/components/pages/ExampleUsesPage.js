@@ -115,10 +115,9 @@ export default class ExampleUsesPage extends React.Component {
                                         primaryText="hi"
                                         rightIcon={<ArrowDropRight />}
                                         menuItems={[
-                                                <MenuItem primaryText="no-xsgs"
-                                                />,
-                <MenuItem primaryText="Grid lines" checked={true} />,
-                <MenuItem primaryText="Page breaks" insetChildren={true} />
+                                                <MenuItem primaryText="no-xsgs"/>,
+                                                <MenuItem primaryText="Grid lines" checked={true} />,
+                                                <MenuItem primaryText="Page breaks" insetChildren={true} />
                                           ]}
                                     />
                                     <MenuItem primaryText="no-gps"/>
