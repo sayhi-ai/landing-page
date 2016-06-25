@@ -13,6 +13,7 @@ import SignUpPage from "./pages/SignUpPage"
 import favicon from "../../resources/img/favicon.png"
 import Smooch from "smooch"
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 export default class Layout extends React.Component {
     constructor() {
@@ -20,6 +21,7 @@ export default class Layout extends React.Component {
         Smooch.init({
             appToken: "3d081wby5cpnrvud7dw9vbwrm"
         })
+        injectTapEventPlugin();
     }
     
     render() {
