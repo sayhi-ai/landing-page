@@ -71,23 +71,23 @@ export default class CleanCodePage extends React.Component {
                             <code>
                                 <div className="typedText code-block text-center old-code">
                                     <div className="text-left">
-                                    <span className="greenSyntax">//Array of possible responses</span>
+                                    <span className="green-syntax">//Array of possible responses</span>
                                     <br/>
                                     var responses = [
                                     <br/>
-                                    <span className="orangeSyntax">    “Hi, how are you doing?”</span>
+                                    <span className="orange-syntax">    “Hi, how are you doing?”</span>
                                     ,
                                     <br/>
-                                    <span className="orangeSyntax">    “Hello, what a great day!”</span>
+                                    <span className="orange-syntax">    “Hello, what a great day!”</span>
                                     ,
                                     <br/>
-                                    <span className="orangeSyntax">    “Good Day, sir!”</span>
+                                    <span className="orange-syntax">    “Good Day, sir!”</span>
                                     <br/>
                                     ];
                                     <br/>
                                     <br/>
                                     <span className="hidden-xs hidden-sm">
-                                    <span className="greenSyntax">//Get one of those responses randomly</span>
+                                    <span className="green-syntax">//Get one of those responses randomly</span>
                                     <br/>
                                     var index = Math.floor(Math.random() * responses.length);
                                     <br/>
@@ -98,12 +98,12 @@ export default class CleanCodePage extends React.Component {
                                     </span>
                                     <br/>
                                     <br/>
-                                    <span className="greenSyntax">//Translate the response</span>
+                                    <span className="green-syntax">//Translate the response</span>
                                     <br/>
                                     res = translator.translate(res);
                                     <br/>
                                     <br/>
-                                    <span className="blueSyntax">return</span> res;
+                                    <span className="blue-syntax">return</span> res;
                                     </div>
                                 </div>
                             </code>
@@ -122,7 +122,7 @@ export default class CleanCodePage extends React.Component {
                             </div>
                         <div className="tr">
                             <div className="inside typedText text-center new-code">
-                                bot.say(<span className="darkSyntax">"Hi"</span>);
+                                bot.say(<span className="dark-syntax">"Hi"</span>);
                             </div>
                         </div>
                         <div>
