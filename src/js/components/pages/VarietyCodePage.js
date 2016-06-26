@@ -17,7 +17,7 @@ export default class VarietyCodePage extends React.Component {
 
         return (
             <PageContainer styles={styles}>
-                <h1 className='vcp-title'><span class="vcp-diversify">Diversify</span> your bot's responses</h1>
+                <h1 className='vcp-title'><span class="accent-color header-font">Diversify</span> your bot's responses</h1>
                 <div className="vcp-content">
                     <div className="vcp-explanation">
                         We provide human responses for your conversational bots. Instead of

@@ -23,7 +23,8 @@ export default class Hero extends React.Component {
                 <div className="outter">
                     <div className="inner">
                         <div className="hero-title-div">
-                            <h1 className="hero-title"><span className="vcp-diversify">Human responses</span> for your bot</h1>
+                            <h1 className="hero-title"><span className="accent-color header-font">Human responses</span>
+                                <br/> for your bot</h1>
                         </div>
                         <div className="hero-container">
                             <div className="hero-box">
@@ -46,7 +47,7 @@ export default class Hero extends React.Component {
                             </div>
                         </div>
                         <div className="hero-moto-div">
-                            <h4 className="hero-title">Turn your bot's language into human language</h4>
+                            <h4 className="hero-moto">Turn your bot's language into human language</h4>
                         </div>
                     </div>
                 </div>

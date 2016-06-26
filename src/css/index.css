@@ -141,6 +141,14 @@ header .intro-text .skills {
     overflow-x: hidden;
 }
 
+.accent-color {
+    color: #19A5E4;
+}
+
+.header-font {
+    font-family: Header-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .pageSection {
     padding: 0;
 }
