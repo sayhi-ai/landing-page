@@ -1,11 +1,13 @@
 import React from "react"
 import PageContainer from "../PageContainer"
-import RaisedButton from 'material-ui/RaisedButton';
-import Popover from 'material-ui/Popover';
-import Menu from 'material-ui/Menu';
-import MenuItem from 'material-ui/MenuItem';
-import ArrowDropRight from 'material-ui/svg-icons/navigation-arrow-drop-right';
-import TypeWriter from 'react-typewriter';
+import TypeWriter from 'react-typewriter'
+import {
+    Step,
+    Stepper,
+    StepLabel,
+} from 'material-ui/Stepper'
+import RaisedButton from 'material-ui/RaisedButton'
+import ExpandTransition from 'material-ui/internal/ExpandTransition'
 
 import "../../../css/exampleusages.css"
 
@@ -14,52 +16,99 @@ export default class ExampleUsesPage extends React.Component {
         super(props);
 
         this.state = {
-            open: false,
-            typeAnimation: 
-                <div>
-                    <TypeWriter typing={1} className="eu-typed-text">
-                        Example usages
-                    </TypeWriter>
-                    <span className="eu-typed-text blinking-cursor">|</span>
-                </div>
+            typeAnimation: <div>
+                <TypeWriter typing={1} className="eu-typed-text">
+                    Example usages
+                </TypeWriter>
+                <span className="eu-typed-text blinking-cursor">|</span>
+            </div>,
+            loading: false,
+            finished: false,
+            stepIndex: 0,
+            hasHow: false,
+            what: "",
+            how: ""
         }
     }
 
-    handleTouchTap(event) {
-        // This prevents ghost click.
+    dummyAsync = (cb) => {
+        this.setState({loading: true}, () => {
+            this.asyncTimer = setTimeout(cb, 200);
+        });
+    };
+
+    handleNext = (content, type) => {
         event.preventDefault()
-
-        this.setState({
-            open: true,
-            anchorEl: event.currentTarget
-        })
-    }
-
-    handleRequestClose() {
-        this.setState({
-            open: false
-        })
-    }
-
-    static delayGen(mean, std, {line, lineIdx, charIdx, defDelayGenerator}) {
-        if (lineIdx === 4 && charIdx === 1) {
-            return 1000
-        } else if (lineIdx === 5 && charIdx === line.length - 1) {
-            return 1000
+        const {stepIndex} = this.state
+        if (!this.state.loading) {
+            this.dummyAsync(() => this.setState({
+                loading: false,
+                stepIndex: stepIndex + 1,
+                finished: stepIndex >= 1,
+                how: type == "style" ? content : "",
+                hasHow: type == "style",
+                what: type != "style" ? content : this.state.what
+            }))
         }
-        return defDelayGenerator(mean - 20)
     }
-    
+
+    getStepContent(stepIndex) {
+        switch (stepIndex) {
+            case 0:
+                return (
+                    <div>
+                        Select campaign settings. Campaign settings can include your budget, network, bidding
+                        options and adjustments, location targeting, campaign end date, and other settings that
+                        affect an entire campaign.
+                    </div>
+                );
+            case 1:
+                return (
+                    <div>
+                        Ad group status is different than the statuses for campaigns, ads, and keywords, though the
+                        statuses can affect each other. Ad groups are contained within a campaign, and each campaign
+                        can
+                        have one or more ad groups. Within each ad group are ads, keywords, and bids.
+                    </div>
+                );
+            default:
+                return 'You\'re a long way from home sonny jim!';
+        }
+    }
+
+    renderContent() {
+        const {finished, stepIndex} = this.state;
+        const contentStyle = {margin: '0 16px', overflow: 'hidden'};
+
+        if (finished) {
+            this.setState({stepIndex: 0, finished: false});
+            return this.renderContent();
+        }
+        var param = stepIndex === 0 ? '"hi"' : '"starwars"'
+        var style = stepIndex === 0 ? '"hi"' : "style"
+        return (
+            <div style={contentStyle}>
+                <div>{this.getStepContent(stepIndex)}</div>
+                <div style={{marginTop: 24, marginBottom: 12}}>
+                    <RaisedButton
+                        label={stepIndex === 1 ? 'Finish' : 'Next'}
+                        primary={true}
+                        onTouchTap={this.handleNext.bind(this, param, style)}
+                    />
+                </div>
+            </div>
+        );
+    }
+
     animateText(text) {
         this.setState({
-            typeAnimation: 
-                <div>
-                    {TypeWriter.reset}
-                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
-                        {text}
-                    </TypeWriter>
-                    <span className="eu-typed-text blinking-cursor">|</span>
-                </div>
+            typeAnimation: <div>
+                {TypeWriter.reset}
+                <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
+                    {text}
+                </TypeWriter>
+                <span className="eu-typed-text blinking-cursor">|</span>
+            </div>
         })
     }
 
@@ -72,25 +121,6 @@ export default class ExampleUsesPage extends React.Component {
             backgroundColor: "#F9F9F9"
         }
 
-        var buttonStyles = {
-            height: "auto",
-            margin: "0",
-            padding: "0",
-            lineHeight: "normal"
-        }
-
-        var innerButtonStyles = {
-            textTransform: "none",
-            fontSize: "3em",
-            fontFamily: "Monaco, sans-serif",
-            textAlign: "center",
-            color: "#7ED321",
-            height: "auto",
-            margin: "0",
-            padding: "0",
-            lineHeight: "normal"
-        }
-
         return (
             <PageContainer styles={styles}>
                 <div className="eu-outter">
@@ -99,34 +129,21 @@ export default class ExampleUsesPage extends React.Component {
                             {this.state.typeAnimation}
                         </div>
                         <div className="eu-example-features">
-                            bot.<span className="blue-syntax">say</span>(
-                            <RaisedButton
-                                onMouseDown={this.handleTouchTap.bind(this)}
-                                label={<span className="eu-button-style green-syntax">Click me</span>}
-                            />
-                            <Popover
-                                open={this.state.open}
-                                anchorEl={this.state.anchorEl}
-                                anchorOrigin={{horizontal: 'middle', vertical: 'center'}}
-                                targetOrigin={{horizontal: 'middle', vertical: 'center'}}
-                                onRequestClose={this.handleRequestClose.bind(this)}
-                            >
-                                <Menu>
-                                    <MenuItem
-                                        primaryText="hi"
-                                        rightIcon={<ArrowDropRight />}
-                                        menuItems={[
-                                                <MenuItem primaryText="star wars welcome"
-                                                onTouchTap={console.log("hi")}
-                                                />                                           
-                                          ]}
-                                    />
-                                    <MenuItem primaryText="no-gps"/>
-                                    <MenuItem primaryText="new-item-created"/>
-                                    <MenuItem primaryText="introduction"/>
-                                </Menu>
-                            </Popover>
-                            );
+                            bot.<span className="blue-syntax">say</span>({this.state.what}<span
+                            style={this.state.hasHow ? {display: "inline-block"} : {display: "none"}}>, {this.state.how}</span>);
+                        </div>
+                        <div style={{width: '100%', maxWidth: 700, margin: 'auto'}}>
+                            <Stepper activeStep={this.state.stepIndex} style={{width: "70%", margin: 'auto'}}>
+                                <Step>
+                                    <StepLabel>What to say?</StepLabel>
+                                </Step>
+                                <Step>
+                                    <StepLabel>How to say it?</StepLabel>
+                                </Step>
+                            </Stepper>
+                            <ExpandTransition loading={this.state.loading} open={true}>
+                                {this.renderContent()}
+                            </ExpandTransition>
                         </div>
                     </div>
                 </div>
