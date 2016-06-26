@@ -1,6 +1,11 @@
 .login-wrapper {
     display: inline-block;
-    padding: 15vh 5vw;
+    padding: 3vh 5vw;
+}
+
+.sup-title {
+    text-align: center;
+    margin-bottom: 0 !important;
 }
 
 .outer {

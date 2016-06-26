@@ -21,8 +21,8 @@ export default class SignUpPage extends React.Component {
                 <div className="outer">
                     <div className="middle">
                         <div className="login-wrapper text-center" zDepth={5}>
-                            <div className="text-center">
-                                <h3>Get notified</h3>
+                            <div className="sup-title">
+                                <h3 className="sup-title">Want to give it a try?</h3>
                             </div>
                             <div>
                                 <div className="name-field">
