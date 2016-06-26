@@ -71,7 +71,7 @@
     margin-left: auto;
     margin-right: auto;
     height: inherit;
-    box-shadow: #333333 0px -9px 29px 0px;
+    box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3), 0 15px 20px rgba(0, 0, 0, 0.22);
 }
 
 /*
