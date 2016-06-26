@@ -1,4 +1,20 @@
-.feature {
+.ffp-outter {
+    display: table;
+    width: 100%;
+}
+
+.ffp-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ffp-title {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.ffp-feature {
     display: inline-block;
     vertical-align: top;
     padding-top: 2%;
@@ -7,23 +23,23 @@
     text-align: center;
 }
 
-.feature-title {
+.ffp-feature-title {
     height: 15%;
 }
 
-.feature-image {
+.ffp-feature-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 20vw;
 }
 
-.feature-explanation {
+.ffp-feature-explanation {
     padding-top: 10%;
 }
 
 @media screen and (min-width: 1024px) {
-    .feature {
+    .ffp-feature {
         display: inline-block;
     }
 }

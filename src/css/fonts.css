@@ -5,18 +5,12 @@
 
 @font-face {
     font-family: Header-Font;
-    src: url("../resources/fonts/Monaco.ttf");
+    src: url("../resources/fonts/Drugs.otf");
 }
 
 @font-face {
     font-family: Body-Font;
-    src: Lato;
-}
-
-@font-face {
-    font-family: 'Glyphicons Halflings';
-    src: url('../resources/fonts/glyphicons-halflings-regular.eot');
-    src: url('../resources/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../resources/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../resources/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../resources/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../resources/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+    src: url("../resources/fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {

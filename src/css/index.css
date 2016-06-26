@@ -38,8 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
-    font-family: Montserrat-Bold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Header-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 

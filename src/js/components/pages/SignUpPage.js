@@ -12,7 +12,8 @@ export default class SignUpPage extends React.Component {
         var styles = {
             minHeight: "10vh",
             height: "auto",
-            backgroundColor: "#F5F5F5"
+            backgroundColor: "#F9F9F9",
+            borderTop: "1px solid #E0E0E0"
         }
         
         return (
@@ -21,7 +22,7 @@ export default class SignUpPage extends React.Component {
                     <div className="middle">
                         <div className="login-wrapper text-center" zDepth={5}>
                             <div className="text-center">
-                                <h2>Get notified</h2>
+                                <h3>Get notified</h3>
                             </div>
                             <div>
                                 <div className="name-field">
