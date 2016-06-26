@@ -9,22 +9,24 @@
 .hero-title {
     width: 100%;
     text-align: center;
-    font-family: Hero-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Header-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 3em;
+    color: white;
 }
 
 .hero-moto-div {
     display: block;
     width: 100%;
-    margin-top: 10%;
-    margin-bottom: 3%;
+    margin-top: 1%;
+    margin-bottom: 5%;
 }
 
 .hero-moto {
     width: 100%;
     text-align: center;
-    font-family: Hero-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em;
+    color: white;
+    font-family: Header-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.6em;
 }
 
 .hero-label-table-row {
@@ -41,11 +43,11 @@
 .hero-container {
     display: block;
     height: auto;
+    background-color: #333333;
 }
 
 .hero-box {
     display: inline-block;
-    padding-top: 2%;
     min-width: 300px;
     width: 33.333333%;
     text-align: center;
@@ -69,6 +71,7 @@
     margin-left: auto;
     margin-right: auto;
     height: inherit;
+    box-shadow: #333333 0px -9px 29px 0px;
 }
 
 /*
@@ -77,6 +80,7 @@
 .hero-label {
     display: inline-block;
     margin-top: 10px;
+    color: white;
 }
 
 .number-icon {

@@ -13,9 +13,9 @@ import "../../../css/hero.css"
 export default class Hero extends React.Component {
     render() {
         var styles = {
-            minHeight: "100vh",
+            minHeight: "90vh",
             height: "auto",
-            backgroundColor: "#F9F9F9"
+            backgroundColor: "#6b6b6b"
         }
 
         return (
@@ -23,8 +23,12 @@ export default class Hero extends React.Component {
                 <div className="outter">
                     <div className="inner">
                         <div className="hero-title-div">
-                            <h1 className="hero-title"><span className="accent-color header-font">Human responses</span>
-                                <br/> for your bot</h1>
+                            <h1 className="hero-title">
+                                <span className="">Human responses</span><br/> for your bot
+                            </h1>
+                            <div className="hero-moto-div">
+                                <h4 className="hero-moto">Turn your bot's language into human language</h4>
+                            </div>
                         </div>
                         <div className="hero-container">
                             <div className="hero-box">
@@ -45,9 +49,6 @@ export default class Hero extends React.Component {
                                     <HeroLabel icon={{__html: number3}}>It's alive!</HeroLabel>
                                 </div>
                             </div>
-                        </div>
-                        <div className="hero-moto-div">
-                            <h4 className="hero-moto">Turn your bot's language into human language</h4>
                         </div>
                     </div>
                 </div>
