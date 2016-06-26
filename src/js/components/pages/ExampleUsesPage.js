@@ -8,6 +8,9 @@ import {
 } from 'material-ui/Stepper'
 import RaisedButton from 'material-ui/RaisedButton'
 import ExpandTransition from 'material-ui/internal/ExpandTransition'
+import ContentButton from "./examplesusages/ContentButton"
+
+import diversity from "../../../resources/img/diversity.png"
 
 import "../../../css/exampleusages.css"
 
@@ -144,6 +147,9 @@ export default class ExampleUsesPage extends React.Component {
                             <ExpandTransition loading={this.state.loading} open={true}>
                                 {this.renderContent()}
                             </ExpandTransition>
+                        </div>
+                        <div>
+                            <ContentButton style={{width: "300px"}} src={diversity} title="Hello"/>
                         </div>
                     </div>
                 </div>
