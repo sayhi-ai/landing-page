@@ -1,13 +1,12 @@
 .login-wrapper {
     display: inline-block;
-    padding: 5vh 5vw;
+    padding: 15vh 5vw;
 }
 
 .outer {
     display: table;
     height: 100%;
     width: 100%;
-    /*background-image: url("../resources/img/package.png");*/
 }
 
 .middle {
