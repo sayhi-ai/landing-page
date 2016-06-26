@@ -1,5 +1,5 @@
 import React from "react"
-import wave from "../../resources/img/divider.png"
+import wave from "../../../../../resources/img/divider.png"
 
 export default class WaveDivider extends React.Component {
     render() {

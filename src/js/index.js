@@ -14,7 +14,7 @@ import "../css/freelancer.css"
 import "../css/typist.css"
 
 // import components
-import App from "./components/App"
+import App from "./components/pages/app/App"
 
 // Copy the index.html file
 require('file?name=[name].[ext]!../index.html');

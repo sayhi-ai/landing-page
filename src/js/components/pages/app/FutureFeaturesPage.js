@@ -1,11 +1,11 @@
 import React from "react"
-import PageContainer from "../PageContainer"
+import PageContainer from "../../PageContainer"
 
-import "../../../css/futurefeaturespage.css"
+import "../../../../css/futurefeaturespage.css"
 
-import personality from "../../../resources/img/personality.png"
-import language from "../../../resources/img/language.png"
-import deeplearning from "../../../resources/img/deeplearning.png"
+import personality from "../../../../resources/img/personality.png"
+import language from "../../../../resources/img/language.png"
+import deeplearning from "../../../../resources/img/deeplearning.png"
 
 export default class FutureFeaturesPage extends React.Component {
 

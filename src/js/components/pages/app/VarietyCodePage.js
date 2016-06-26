@@ -1,9 +1,9 @@
 import React from "react"
-import PageContainer from "../PageContainer"
+import PageContainer from "../../PageContainer"
 import Paper from "material-ui/Paper"
-import diversity from "../../../resources/img/diversity.png"
+import diversity from "../../../../resources/img/diversity.png"
 
-import "../../../css/varietycodepage.css"
+import "../../../../css/varietycodepage.css"
 
 export default class VarietyCodePage extends React.Component {
 

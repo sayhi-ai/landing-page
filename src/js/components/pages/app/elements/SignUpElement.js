@@ -1,13 +1,13 @@
 import React from "react"
-import PageContainer from "../PageContainer"
+import PageContainer from "../../../PageContainer"
 import TextField from "material-ui/TextField"
 import Paper from "material-ui/Paper"
 import RaisedButton from "material-ui/RaisedButton"
 import FontIcon from "material-ui/FontIcon"
 
-import "../../../css/signuppage.css"
+import "../../../../../css/signuppage.css"
 
-export default class SignUpPage extends React.Component {
+export default class SignUpElement extends React.Component {
     render() {
         var styles = {
             minHeight: "10vh",

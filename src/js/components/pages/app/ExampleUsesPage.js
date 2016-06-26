@@ -1,5 +1,5 @@
 import React from "react"
-import PageContainer from "../PageContainer"
+import PageContainer from "../../PageContainer"
 import TypeWriter from 'react-typewriter'
 import {
     Step,
@@ -8,11 +8,11 @@ import {
 } from 'material-ui/Stepper'
 import RaisedButton from 'material-ui/RaisedButton'
 import ExpandTransition from 'material-ui/internal/ExpandTransition'
-import ContentButton from "./examplesusages/ContentButton"
+import ContentButton from "./elements/ContentButton"
 
-import diversity from "../../../resources/img/diversity.png"
+import diversity from "../../../../resources/img/diversity.png"
 
-import "../../../css/exampleusages.css"
+import "../../../../css/exampleusages.css"
 
 export default class ExampleUsesPage extends React.Component {
     constructor(props) {
