@@ -9,7 +9,8 @@
 .hero-title {
     width: 100%;
     text-align: center;
-    font-family: Hero-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    font-family: Hero-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 3em;
 }
 
 .hero-moto-div {
@@ -17,6 +18,13 @@
     width: 100%;
     margin-top: 10%;
     margin-bottom: 3%;
+}
+
+.hero-moto {
+    width: 100%;
+    text-align: center;
+    font-family: Hero-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
 }
 
 .hero-label-table-row {
