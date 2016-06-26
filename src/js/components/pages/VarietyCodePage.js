@@ -10,7 +10,9 @@ export default class VarietyCodePage extends React.Component {
     render() {
         var styles = {
             padding: "5%",
-            height: "auto"
+            height: "auto",
+            backgroundColor: "#F5F5F5",
+            borderTop: "1px solid #E0E0E0"
         }
 
         return (

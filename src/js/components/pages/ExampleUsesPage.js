@@ -68,7 +68,8 @@ export default class ExampleUsesPage extends React.Component {
             minHeight: "75vh",
             height: "auto",
             padding: "5%",
-            paddingBottom: "0"
+            paddingBottom: "0",
+            backgroundColor: "#F9F9F9"
         }
 
         var buttonStyles = {

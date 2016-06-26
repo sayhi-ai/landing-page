@@ -1,6 +1,6 @@
 import React from "react"
 import NavBar from "./NavBar"
-import Header from "./Hero"
+import Header from "./pages/Hero"
 import CleanCodePage from "./pages/CleanCodePage"
 import VarietyCodePage from "./pages/VarietyCodePage"
 import FutureFeaturesPage from "./pages/FutureFeaturesPage"

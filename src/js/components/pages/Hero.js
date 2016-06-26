@@ -1,20 +1,21 @@
 import React from "react"
-import PageContainer from "./PageContainer"
+import PageContainer from "../PageContainer"
 import HeroLabel from "./HeroLabel"
-import manual1 from "../../resources/img/Manual1.png"
-import manual2 from "../../resources/img/Manual2.png"
-import manual3 from "../../resources/img/Manual3.png"
-import number1 from "../../resources/img/number1.svg"
-import number2 from "../../resources/img/number2.svg"
-import number3 from "../../resources/img/number3.svg"
+import manual1 from "../../../resources/img/Manual1.png"
+import manual2 from "../../../resources/img/Manual2.png"
+import manual3 from "../../../resources/img/Manual3.png"
+import number1 from "../../../resources/img/number1.svg"
+import number2 from "../../../resources/img/number2.svg"
+import number3 from "../../../resources/img/number3.svg"
 
-import "../../css/hero.css"
+import "../../../css/hero.css"
 
 export default class Hero extends React.Component {
     render() {
         var styles = {
             minHeight: "100vh",
-            height: "auto"
+            height: "auto",
+            backgroundColor: "#F9F9F9"
         }
 
         return (
