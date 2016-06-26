@@ -39,12 +39,13 @@ export default class NavBar extends React.Component {
         return (
             <div className={"navbar noselect mui--z1 " + this.state.navbar} id="navbar">
                 <p className="navbar-left navbar-inline">
-                    <span id="navbar-logo"></span>
-                    <Link to="/">Title</Link>
+                    <Link to="/">
+                        <span id="navbar-logo"></span>
+                        <span className="header-font">response</span>
+                        <span className="hero-font">ai</span>
+                    </Link>
                 </p>
                 <p className="navbar-right navbar-inline">
-                    <Link to="/" className="navbar-current">Pricing</Link>
-                    <Link to="/" className="navbar-current">About</Link>
                     <Link to="/" className="navbar-current">Sign-Up</Link>
                 </p>
             </div>

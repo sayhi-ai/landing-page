@@ -149,6 +149,10 @@ header .intro-text .skills {
     font-family: Header-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.hero-font {
+    font-family: Hero-Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .pageSection {
     padding: 0;
 }
