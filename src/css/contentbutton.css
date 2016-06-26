@@ -1,0 +1,14 @@
+.cb-container {
+    width: inherit;
+    border-radius: 50%;
+    overflow: hidden;
+    border: black 3px solid;
+}
+
+.cb-img {
+    width: inherit;
+}
+
+.cb-title {
+    height: 30%;
+}
