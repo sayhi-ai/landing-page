@@ -149,7 +149,7 @@ export default class ExampleUsesPage extends React.Component {
                             </ExpandTransition>
                         </div>
                         <div>
-                            <ContentButton src={diversity} title="Hello"/>
+                            <ContentButton title='"Hello"'/>
                         </div>
                     </div>
                 </div>
