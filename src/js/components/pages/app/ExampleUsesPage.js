@@ -122,15 +122,20 @@ export default class ExampleUsesPage extends React.Component {
 
     render() {
         var styles = {
-            minHeight: "75vh",
-            height: "auto",
-            padding: "5%",
-            paddingBottom: "0",
-            backgroundColor: "#F9F9F9"
+            container : {
+                minHeight: "75vh",
+                height: "auto",
+                padding: "5%",
+                paddingBottom: "0",
+                backgroundColor: "#F9F9F9"
+            },
+            stepper : {
+                fontSize: "1.5em"
+            }
         }
 
         return (
-            <PageContainer styles={styles}>
+            <PageContainer styles={styles.container}>
                 <div className="eu-outter">
                     <div className="eu-inner">
                         <div className="eu-typed-text-div">
@@ -147,13 +152,13 @@ export default class ExampleUsesPage extends React.Component {
                             <Stepper activeStep={this.state.stepIndex} style={{width: "100%", margin: 'auto'}}
                                      orientation="horizontal">
                                 <Step>
-                                    <StepLabel>Choose a text</StepLabel>
+                                    <StepLabel style={styles.stepper}>Choose a text</StepLabel>
                                 </Step>
                                 <Step>
-                                    <StepLabel>Choose a persona</StepLabel>
+                                    <StepLabel style={styles.stepper}>Choose a persona</StepLabel>
                                 </Step>
                                 <Step>
-                                    <StepLabel>Done</StepLabel>
+                                    <StepLabel style={styles.stepper}>Done</StepLabel>
                                 </Step>
                             </Stepper>
                             <ExpandTransition loading={this.state.loading} open={true}>
