@@ -41,7 +41,7 @@ export default class NavBar extends React.Component {
                 <p className="navbar-left navbar-inline">
                     <Link to="/">
                         <span id="navbar-logo"></span>
-                        <span className="header-font">response</span>
+                        <span style={{fontWeight:"900"}} className="header-font">sayhi.</span>
                         <span className="hero-font">ai</span>
                     </Link>
                 </p>

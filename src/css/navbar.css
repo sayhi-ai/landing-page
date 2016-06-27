@@ -26,12 +26,14 @@
     min-width:40%;
     float: left;
     font-size: 1.5em;
+    font-weight: 400;
 }
 
 .navbar-right {
     min-width: 30%;
-    font-size: 1.1em;
+    font-size: 1.2em;
     float: right;
+    font-weight: 400;
 }
 
 .navbar-inline > a {
@@ -39,7 +41,7 @@
     display: inline-block;
     padding: 0px 15px;
     line-height: 30px;
-    font-family: AvenirMedium, sans-serif;
+    font-family: Header-Font, sans-serif;
     vertical-align: bottom;
     font-weight: 100;
     transition: background 0.2s, color 0.2s;
