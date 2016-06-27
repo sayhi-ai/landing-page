@@ -147,10 +147,10 @@ export default class ExampleUsesPage extends React.Component {
                             <Stepper activeStep={this.state.stepIndex} style={{width: "100%", margin: 'auto'}}
                                      orientation="horizontal">
                                 <Step>
-                                    <StepLabel>What?</StepLabel>
+                                    <StepLabel>Choose a text</StepLabel>
                                 </Step>
                                 <Step>
-                                    <StepLabel>How?</StepLabel>
+                                    <StepLabel>Choose a persona</StepLabel>
                                 </Step>
                                 <Step>
                                     <StepLabel>Done</StepLabel>
