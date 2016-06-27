@@ -1,7 +1,7 @@
 .login-wrapper {
     display: inline-block;
-    padding: 3vh 0;
-    width: 40%;
+    padding: 3% 0;
+    width: 94%;
 }
 
 .sup-title {
@@ -42,8 +42,8 @@
 @media screen and (min-width: 768px) {
     .login-wrapper {
         display: inline-block;
-        padding: 3% 0;
-        width: 94%;
+        padding: 3vh 0;
+        width: 40%;
     }
     .name-field {
         width: 25%;
