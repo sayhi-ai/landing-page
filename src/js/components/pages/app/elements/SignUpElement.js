@@ -24,17 +24,21 @@ export default class SignUpElement extends React.Component {
                                 <h3 className="sup-title">Want to give it a try?</h3>
                             </div>
                             <div>
-                                <div className="name-field">
-                                    <TextField floatingLabelText="Name" fullWidth={true}/>
-                                </div>
                                 <div className="email-field">
-                                    <TextField floatingLabelText="Email" type="email" fullWidth={true}/>
+                                    <TextField floatingLabelText="Email"
+                                               floatingLabelFocusStyle={{color:"#19A5E4"}}
+                                               underlineFocusStyle={{borderColor:"#19A5E4"}}
+                                               type="email" 
+                                               fullWidth={true}/>
                                 </div>
 
                                 <div className="sign-up-button">
-                                    <RaisedButton label="Sign Up" primary={true} fullWidth={true}
+                                    <RaisedButton label="Request early access"
+                                                  primary={true}
+                                                  fullWidth={true}
                                                   labelPosition="before" icon={
-                                                      <FontIcon style={{marginRight: "6px"}} className="material-icons">send</FontIcon>
+                                                      <FontIcon style={{marginRight: "6px"}}
+                                                       className="material-icons">send</FontIcon>
                                                       }/>
                                 </div>
                             </div>
