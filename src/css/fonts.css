@@ -18,3 +18,12 @@
     src: url(../resources/fonts/Monaco.ttf);
 }
 
+@font-face {
+    font-family: Varsity;
+    src: url("../resources/fonts/Varsity Regular.ttf");
+}
+
+@font-face {
+    font-family: Star-Wars;
+    src: url("../resources/fonts/Starjedi.ttf");
+}

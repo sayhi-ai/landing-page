@@ -9,9 +9,6 @@ import {
 import ExpandTransition from 'material-ui/internal/ExpandTransition'
 import ContentButton from "./elements/ContentButton"
 
-import empire from "../../../../resources/img/empire.png"
-import bro from "../../../../resources/img/bro.png"
-import neutral from "../../../../resources/img/neutral.png"
 import restart from "../../../../resources/img/restart.png"
 
 import "../../../../css/exampleusages.css"
@@ -75,22 +72,18 @@ export default class ExampleUsesPage extends React.Component {
             case 1:
                 return (
                     <div className="eu-button-container">
-                        <ContentButton style={style} title='Neutral'
-                                       src={neutral}
+                        <ContentButton style={style} title='Neutral' font="Header-Font"
                                        handleClick={this.handleNext.bind(this, '"Neutral"', "style")}/>
-                        <ContentButton style={style} title='Star Wars'
-                                       src={empire}
+                        <ContentButton style={style} title='Star Wars' font="Star-Wars" fontSize="1.7em"
                                        handleClick={this.handleNext.bind(this, '"StarWars"', "style")}/>
-                        <ContentButton style={style} title='Bro'
-                                       src={bro}
+                        <ContentButton style={style} title='BRO' font="Varsity" fontSize="3em"
                                        handleClick={this.handleNext.bind(this, '"Bro"', "style")}/>
                     </div>
                 );
             case 2:
                 return (
                     <div className="eu-button-container">
-                        <ContentButton style={style} title='Restart'
-                                       src = {restart}
+                        <ContentButton style={style} title='Restart' src = {restart} font="Header-Font"
                                        handleClick={this.handleNext.bind(this, '""')}/>
                     </div>
                 )
@@ -154,10 +147,10 @@ export default class ExampleUsesPage extends React.Component {
                             <Stepper activeStep={this.state.stepIndex} style={{width: "100%", margin: 'auto'}}
                                      orientation="horizontal">
                                 <Step>
-                                    <StepLabel>What?</StepLabel>
+                                    <StepLabel>Choose a text</StepLabel>
                                 </Step>
                                 <Step>
-                                    <StepLabel>How?</StepLabel>
+                                    <StepLabel>Choose a persona</StepLabel>
                                 </Step>
                                 <Step>
                                     <StepLabel>Done</StepLabel>
