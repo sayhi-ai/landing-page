@@ -1,7 +1,6 @@
 import React from "react"
 import PageContainer from "../../../PageContainer"
 import TextField from "material-ui/TextField"
-import Paper from "material-ui/Paper"
 import RaisedButton from "material-ui/RaisedButton"
 import FontIcon from "material-ui/FontIcon"
 
@@ -35,7 +34,7 @@ export default class SignUpElement extends React.Component {
                                 <div className="sign-up-button">
                                     <RaisedButton label="Sign Up" primary={true} fullWidth={true}
                                                   labelPosition="before" icon={
-                                                      <FontIcon className="material-icons">send</FontIcon>
+                                                      <FontIcon style={{marginRight: "6px"}} className="material-icons">send</FontIcon>
                                                       }/>
                                 </div>
                             </div>
