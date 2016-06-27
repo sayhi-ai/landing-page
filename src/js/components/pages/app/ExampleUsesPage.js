@@ -4,13 +4,15 @@ import TypeWriter from 'react-typewriter'
 import {
     Step,
     Stepper,
-    StepLabel,
+    StepLabel
 } from 'material-ui/Stepper'
-import RaisedButton from 'material-ui/RaisedButton'
 import ExpandTransition from 'material-ui/internal/ExpandTransition'
 import ContentButton from "./elements/ContentButton"
 
-import diversity from "../../../../resources/img/diversity.png"
+import empire from "../../../../resources/img/empire.png"
+import bro from "../../../../resources/img/bro.png"
+import neutral from "../../../../resources/img/neutral.png"
+import restart from "../../../../resources/img/restart.png"
 
 import "../../../../css/exampleusages.css"
 
@@ -36,7 +38,7 @@ export default class ExampleUsesPage extends React.Component {
 
     dummyAsync = (cb) => {
         this.setState({loading: true}, () => {
-            this.asyncTimer = setTimeout(cb, 200);
+            this.asyncTimer = setTimeout(cb, 500);
         });
     };
 
@@ -47,7 +49,7 @@ export default class ExampleUsesPage extends React.Component {
             this.dummyAsync(() => this.setState({
                 loading: false,
                 stepIndex: stepIndex + 1,
-                finished: stepIndex >= 1,
+                finished: stepIndex >= 2,
                 how: type == "style" ? content : "",
                 hasHow: type == "style",
                 what: type != "style" ? content : this.state.what
@@ -56,24 +58,42 @@ export default class ExampleUsesPage extends React.Component {
     }
 
     getStepContent(stepIndex) {
+        var style = {
+            margin: "5% 0",
+            width: "33%"
+        }
         switch (stepIndex) {
             case 0:
                 return (
-                    <div>
-                        Select campaign settings. Campaign settings can include your budget, network, bidding
-                        options and adjustments, location targeting, campaign end date, and other settings that
-                        affect an entire campaign.
+                    <div className="eu-button-container">
+                        <ContentButton style={style} title='"Hi"' handleClick={this.handleNext.bind(this, '"Hi"')}/>
+                        <ContentButton style={style} title='"Item Created"'
+                                       handleClick={this.handleNext.bind(this, '"ItemCreated"')}/>
+                        <ContentButton style={style} title='"Done"' handleClick={this.handleNext.bind(this, '"Done"')}/>
                     </div>
                 );
             case 1:
                 return (
-                    <div>
-                        Ad group status is different than the statuses for campaigns, ads, and keywords, though the
-                        statuses can affect each other. Ad groups are contained within a campaign, and each campaign
-                        can
-                        have one or more ad groups. Within each ad group are ads, keywords, and bids.
+                    <div className="eu-button-container">
+                        <ContentButton style={style} title='Neutral'
+                                       src={neutral}
+                                       handleClick={this.handleNext.bind(this, '"Neutral"', "style")}/>
+                        <ContentButton style={style} title='Star Wars'
+                                       src={empire}
+                                       handleClick={this.handleNext.bind(this, '"StarWars"', "style")}/>
+                        <ContentButton style={style} title='Bro'
+                                       src={bro}
+                                       handleClick={this.handleNext.bind(this, '"Bro"', "style")}/>
                     </div>
                 );
+            case 2:
+                return (
+                    <div className="eu-button-container">
+                        <ContentButton style={style} title='Restart'
+                                       src = {restart}
+                                       handleClick={this.handleNext.bind(this, '""')}/>
+                    </div>
+                )
             default:
                 return 'You\'re a long way from home sonny jim!';
         }
@@ -85,20 +105,12 @@ export default class ExampleUsesPage extends React.Component {
 
         if (finished) {
             this.setState({stepIndex: 0, finished: false});
-            return this.renderContent();
+            //return this.renderContent();
         }
-        var param = stepIndex === 0 ? '"hi"' : '"starwars"'
-        var style = stepIndex === 0 ? '"hi"' : "style"
+
         return (
             <div style={contentStyle}>
                 <div>{this.getStepContent(stepIndex)}</div>
-                <div style={{marginTop: 24, marginBottom: 12}}>
-                    <RaisedButton
-                        label={stepIndex === 1 ? 'Finish' : 'Next'}
-                        primary={true}
-                        onTouchTap={this.handleNext.bind(this, param, style)}
-                    />
-                </div>
             </div>
         );
     }
@@ -132,24 +144,28 @@ export default class ExampleUsesPage extends React.Component {
                             {this.state.typeAnimation}
                         </div>
                         <div className="eu-example-features">
-                            bot.<span className="blue-syntax">say</span>({this.state.what}<span
-                            style={this.state.hasHow ? {display: "inline-block"} : {display: "none"}}>, {this.state.how}</span>);
+                            bot.<span className="accent-color">say</span>(
+                            <span className="orange-syntax">{this.state.what}</span>
+                                <span style={this.state.hasHow ? {display: "inline-block"} : {display: "none"}}>,
+                                    <span className="orange-syntax">{this.state.how}</span>
+                                </span>);
                         </div>
-                        <div style={{width: '100%', maxWidth: 700, margin: 'auto'}}>
-                            <Stepper activeStep={this.state.stepIndex} style={{width: "70%", margin: 'auto'}}>
+                        <div style={{width: '100%', maxWidth: 700, margin: '5% auto'}}>
+                            <Stepper activeStep={this.state.stepIndex} style={{width: "100%", margin: 'auto'}}
+                                     orientation="horizontal">
                                 <Step>
-                                    <StepLabel>What to say?</StepLabel>
+                                    <StepLabel>What?</StepLabel>
                                 </Step>
                                 <Step>
-                                    <StepLabel>How to say it?</StepLabel>
+                                    <StepLabel>How?</StepLabel>
+                                </Step>
+                                <Step>
+                                    <StepLabel>Done</StepLabel>
                                 </Step>
                             </Stepper>
                             <ExpandTransition loading={this.state.loading} open={true}>
                                 {this.renderContent()}
                             </ExpandTransition>
-                        </div>
-                        <div>
-                            <ContentButton title='"Hello"'/>
                         </div>
                     </div>
                 </div>

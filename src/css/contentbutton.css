@@ -1,9 +1,14 @@
+.cb-wrapper {
+    display: inline-block;
+}
+
 .cb-container {
     height: 160px;
     width: 160px;
     border-radius: 50%;
     overflow: hidden;
     border: black 2px solid;
+    margin: 0 auto;
 }
 
 .cb-container:hover {
@@ -11,8 +16,14 @@
     cursor: pointer;
 }
 
+.cb-container:active {
+    background-color: #f9f9f9;
+}
+
 .cb-img {
-    height: 70%;
+    width: 40%;
+    margin-top: 15%;
+    margin-bottom: 5%;
 }
 
 .cb-title-container {
@@ -34,4 +45,8 @@
     vertical-align: middle;
     font-family: "Header-Font";
     font-size: 1.5em;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
 }
