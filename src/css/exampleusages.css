@@ -1,12 +1,12 @@
 .eu-example-features {
     font-size: 4em;
-    font-family: Monaco, sans-serif;
+    font-family: Code-Font, sans-serif;
 }
 
 .eu-button-style {
     text-transform: none !important;
     font-size: 3em;
-    font-family: Monaco, sans-serif;
+    font-family: Code-Font, sans-serif;
     text-align: center;
     color: #7ED321;
     height: auto;
@@ -32,7 +32,7 @@
 }
 
 .eu-typed-text {
-    font-family: Monaco, sans-serif;
+    font-family: Code-Font, sans-serif;
     color: #4A4A4A;
     font-size: 3em;
 }
