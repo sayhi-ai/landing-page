@@ -25,19 +25,19 @@ export default class FutureFeaturesPage extends React.Component {
                         <h1 className='ffp-title'>Upcoming Features</h1>
                         <div>
                             <div className="ffp-feature">
-                                <h4 className="ffp-feature-title">Personality creator</h4>
+                                <h3 className="ffp-feature-title">Personality creator</h3>
                                 <img className="ffp-feature-image" src={personality} alt=""/>
                                 <p className="ffp-feature-explanation">Create a custom personality<br/>for each bot.</p>
                             </div>
                             <div className="ffp-feature">
-                                <h4 className="ffp-feature-title">Language integration</h4>
+                                <h3 className="ffp-feature-title">Language integration</h3>
                                 <img className="ffp-feature-image" src={language} alt=""/>
                                 <p className="ffp-feature-explanation">Have your bots answer<br/>in multiple languages.</p>
                             </div>
                             <div className="ffp-feature">
-                                <h4 className="ffp-feature-title">Response generator through deep learning</h4>
+                                <h3 className="ffp-feature-title">Neural Response Network</h3>
                                 <img className="ffp-feature-image" src={deeplearning} alt=""/>
-                                <p className="ffp-feature-explanation">Say what you want to say exactly the way you want to say it.</p>
+                                <p className="ffp-feature-explanation">Generate similar responses<br/>.</p>
                             </div>
                         </div>
                     </div>
