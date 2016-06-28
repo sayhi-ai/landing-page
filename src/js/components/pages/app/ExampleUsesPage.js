@@ -70,8 +70,8 @@ export default class ExampleUsesPage extends React.Component {
                     <div className="eu-button-container">
                         <ContentButton style={style} title='Neutral' font="Header-Font"
                                        handleClick={this.handleNext.bind(this, '"Neutral"', "style")}/>
-                        <ContentButton style={style} title='Star Wars' font="Star-Wars" fontSize="1.7em"
-                                       handleClick={this.handleNext.bind(this, '"StarWars"', "style")}/>
+                        <ContentButton style={style} title='Han Solo' font="Star-Wars" fontSize="1.7em"
+                                       handleClick={this.handleNext.bind(this, '"HanSolo"', "style")}/>
                         <ContentButton style={style} title='BRO' font="Varsity" fontSize="3em"
                                        handleClick={this.handleNext.bind(this, '"Bro"', "style")}/>
                     </div>
