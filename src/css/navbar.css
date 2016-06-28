@@ -23,17 +23,22 @@
 }
 
 .navbar-left {
-    min-width:40%;
+    padding-left:10%;
     float: left;
     font-size: 1.5em;
     font-weight: 400;
 }
 
+.nb-logo-title-p1 {
+    margin-left: 10px;
+}
+
 .navbar-right {
-    min-width: 30%;
+    padding-right: 13%;
     font-size: 1.2em;
     float: right;
     font-weight: 400;
+    margin-right: 5px;
 }
 
 .navbar-inline > a {
@@ -50,18 +55,13 @@
     -o-transition: background 0.2s, color 0.2s;
 }
 
-.navbar-right > a:hover, .navbar-right > a:active {
-    background-color: #19A5E4;
-    color: white;
-}
-
-.navbar-right > a:active {
-    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+.navbar-current:hover {
+    color: black !important;
 }
 
 a.navbar-current, .navbar-left a {
     color: #19A5E4;
-    font-family: AvenirBlack, sans-serif;
+    font-family: Header-Font, sans-serif;
 }
 
 #navbar-logo {
@@ -70,24 +70,8 @@ a.navbar-current, .navbar-left a {
     width: 35px;
     vertical-align: top;
     margin-right: -12px;
-    background: transparent no-repeat;
+    background: transparent url("../resources/img/favicon.png") no-repeat;
     background-size: contain;
-}
-
-#language-selection {
-    height: 30px;
-}
-
-#language-selection img {
-    display: block;
-    height: 10px;
-    margin: 3px;
-}
-
-#language-selection a {
-    display: block;
-    line-height: 14px;
-    font-size: 11px;
 }
 
 div.navbar:not(.opaque-navbar) {
@@ -116,7 +100,7 @@ div.navbar:not(.opaque-navbar) .navbar-right {
 }
 
 div.navbar:not(.opaque-navbar) #navbar-logo {
-    background: transparent no-repeat;
+    background: transparent url("../resources/img/favicon.png") no-repeat;
     background-size: contain;
 }
 
