@@ -43,7 +43,7 @@
 .cb-title {
     display: table-cell;
     vertical-align: middle;
-    font-family: Monaco, sans-serif;
+    font-family: Code-Font, sans-serif;
     line-height: 1.3em;
     font-size: 1.2em;
     -webkit-user-select: none;  /* Chrome all / Safari all */
