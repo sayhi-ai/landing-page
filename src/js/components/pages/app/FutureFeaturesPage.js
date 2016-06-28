@@ -37,7 +37,7 @@ export default class FutureFeaturesPage extends React.Component {
                             <div className="ffp-feature">
                                 <h3 className="ffp-feature-title">Neural Response Network</h3>
                                 <img className="ffp-feature-image" src={deeplearning} alt=""/>
-                                <p className="ffp-feature-explanation">Generate similar responses<br/>.</p>
+                                <p className="ffp-feature-explanation">Generate similar responses<br/>based on your input.</p>
                             </div>
                         </div>
                     </div>
