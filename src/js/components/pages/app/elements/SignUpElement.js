@@ -26,8 +26,6 @@ export default class SignUpElement extends React.Component {
                             <div>
                                 <div className="email-field">
                                     <TextField floatingLabelText="Email"
-                                               floatingLabelFocusStyle={{color:"#19A5E4"}}
-                                               underlineFocusStyle={{borderColor:"#19A5E4"}}
                                                type="email" 
                                                fullWidth={true}/>
                                 </div>
