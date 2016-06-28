@@ -1,8 +1,7 @@
 import React from "react"
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NavBar from "../../NavBar"
 import Header from "./Hero"
+import MUITheme from "../../MUITheme"
 import CleanCodePage from "./CleanCodePage"
 import VarietyCodePage from "./VarietyCodePage"
 import FutureFeaturesPage from "./FutureFeaturesPage"
@@ -26,31 +25,19 @@ export default class Layout extends React.Component {
     }
     
     render() {
-        const muiTheme = getMuiTheme({
-            palette: {
-                primary1Color: "#19A5E4",
-                primary2Color: "#19A5E4",
-                primary3Color: "#19A5E4"
-            }
-        })
-        
         return (
-            <div id="page-top" className="index">
-                <MuiThemeProvider muiTheme={muiTheme}>
-                    <div>
-                        <Favicon url={favicon}/>
-                        <NavBar/>
-                        <MobileScrollButton/>
-                        <Header/>
-                        <VarietyCodePage/>
-                        <CleanCodePage/>
-                        <ExampleUsesPage/>
-                        <FutureFeaturesPage/>
-                        <SignUpElement/>
-                        <Footer/>
-                    </div>
-                </MuiThemeProvider>
-            </div>
+            <MUITheme>
+                <Favicon url={favicon}/>
+                <NavBar/>
+                <MobileScrollButton/>
+                <Header/>
+                <VarietyCodePage/>
+                <CleanCodePage/>
+                <ExampleUsesPage/>
+                <FutureFeaturesPage/>
+                <SignUpElement/>
+                <Footer/>
+            </MUITheme>
         )
     }
 }
