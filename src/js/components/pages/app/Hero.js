@@ -24,8 +24,8 @@ export default class Hero extends React.Component {
                 <div className="outter">
                     <div className="inner">
                         <div className="hero-title-div">
-                            <h1 className="hero-title">
-                                <span className="">Human responses</span><br/> for your bot
+                            <h1 className="hero-title accent-color">
+                                Human responses for your bot
                             </h1>
                             <div className="hero-moto-div">
                                 <h4 className="hero-moto">Turn your bot's language into human language</h4>
@@ -33,22 +33,13 @@ export default class Hero extends React.Component {
                         </div>
                         <div className="hero-container">
                             <div className="hero-box">
-                                <div className="hero-image">
-                                    <img src={manual1}/>
-                                    <HeroLabel icon={{__html: number1}}>Bring your bot</HeroLabel>
-                                </div>
+                                <img src={manual1}/>
+                            </div>
+                            <div className="hero-vs-box">
+                                VS.
                             </div>
                             <div className="hero-box">
-                                <div className="hero-image">
-                                    <img src={manual2}/>
-                                    <HeroLabel icon={{__html: number2}}>We apply magic</HeroLabel>
-                                </div>
-                            </div>
-                            <div className="hero-box">
-                                <div className="hero-image">
-                                    <img src={manual3}/>
-                                    <HeroLabel icon={{__html: number3}}>It's alive!</HeroLabel>
-                                </div>
+                                <img src={manual2}/>
                             </div>
                         </div>
                         <SignUpElement/>
