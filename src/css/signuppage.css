@@ -4,7 +4,14 @@
     width: 94%;
 }
 
+.sup-title-div {
+    text-align: center;
+    margin-bottom: 0 !important;
+    cursor: auto;
+}
+
 .sup-title {
+    display: inline-block;
     text-align: center;
     margin-bottom: 0 !important;
     cursor: auto;
@@ -40,7 +47,7 @@
     margin: 24px auto;
 }
 
-#top-signup-scroll-marker-title {
+.top-signup-scroll-marker-title:hover {
     cursor: pointer;
 }
 
