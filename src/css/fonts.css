@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: Code-Font;
-    src: url(../resources/fonts/Monaco.ttf);
+    src: url("../resources/fonts/Monaco.ttf");
 }
 
 @font-face {
