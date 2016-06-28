@@ -1,19 +1,4 @@
 @font-face {
-    font-family: Hero-Font;
-    src: url("../resources/fonts/OpenSans-ExtraBold.ttf");
-}
-
-@font-face {
-    font-family: Header-Font;
-    src: url("../resources/fonts/Drugs.otf");
-}
-
-@font-face {
-    font-family: Body-Font;
-    src: url("../resources/fonts/OpenSans-Regular.ttf");
-}
-
-@font-face {
     font-family: Monaco;
     src: url(../resources/fonts/Monaco.ttf);
 }
