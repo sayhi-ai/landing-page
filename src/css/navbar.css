@@ -16,7 +16,7 @@
 }
 
 .navbar-inline {
-    height: 30px;
+    margin: 0;
     padding: 10px 0;
     display: inline-block;
     position: relative;
@@ -27,7 +27,7 @@
     float: left;
     font-size: 1.5em;
     font-weight: 400;
-    transition: padding 0.5s;
+    transition: padding 0.5s, font-size 0.5s;
 }
 
 .navbar-right {
@@ -43,7 +43,7 @@
     color: #626262;
     display: inline-block;
     padding: 0px 15px;
-    line-height: 30px;
+    line-height: 35px;
     font-family: Header-Font, sans-serif;
     vertical-align: bottom;
     font-weight: 100;
@@ -66,11 +66,12 @@ a.navbar-current, .navbar-left a {
 
 #navbar-logo {
     display: inline-block;
-    height: 30px;
-    width: 35px;
+    height: 35px;
+    width: 40px;
     vertical-align: top;
     background: transparent url("../resources/img/logo.png") no-repeat;
     background-size: contain;
+    transition: height 0.5s, width 0.5s;
 }
 
 div.navbar:not(.opaque-navbar) {
@@ -87,6 +88,7 @@ div.navbar:not(.opaque-navbar) a {
 }
 
 div.navbar:not(.opaque-navbar) .navbar-left {
+    font-size: 2em;
     padding-left: 20px;
     margin-right: -20px;
     text-align: left;
@@ -99,6 +101,8 @@ div.navbar:not(.opaque-navbar) .navbar-right {
 }
 
 div.navbar:not(.opaque-navbar) #navbar-logo {
+    height: 40px;
+    width: 45px;
     background: transparent url("../resources/img/logo_inv.png") no-repeat;
     background-size: contain;
 }
