@@ -8,6 +8,16 @@ import Scroll from "react-scroll"
 import "../../../../../css/signuppage.css"
 
 export default class SignUpElement extends React.Component {
+    
+    scrollToSignUp() {
+        var scroller = Scroll.scroller;
+        scroller.scrollTo("vs-scroll-marker", {
+            duration: 1500,
+            delay: 100,
+            smooth: true
+        })
+    }
+
     render() {
         var styles = {
             minHeight: "10vh",
@@ -23,15 +33,13 @@ export default class SignUpElement extends React.Component {
                 <div className="outer">
                     <div className="middle">
                         <div className="login-wrapper text-center" zDepth={5}>
-                        <Element name={this.props.scrollMarker}>
-                            <div className="sup-title">
-                                <h3 className="sup-title">Want to give it a try?</h3>
+                            <Element name={this.props.scrollMarker}>
+                            <div classID={this.props.signUpTitle} className="sup-title">
+                                <h3 onClick={this.scrollToSignUp.bind(this)}className="sup-title">Want to give it a try?</h3>
                             </div>
                             <div>
                                 <div className="email-field">
-                                    <TextField floatingLabelText="Email"
-                                               type="email" 
-                                               fullWidth={true}/>
+                                    <TextField floatingLabelText="Email" type="email" fullWidth={true}/>
                                 </div>
 
                                 <div className="sign-up-button">

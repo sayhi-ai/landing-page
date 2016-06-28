@@ -1,7 +1,7 @@
 import React from "react"
 import NavBar from "../../NavBar"
 import Header from "./Hero"
-import MUITheme from "../../MUITheme"
+import MuiTheme from "../../MuiTheme"
 import CleanCodePage from "./CleanCodePage"
 import VarietyCodePage from "./VarietyCodePage"
 import FutureFeaturesPage from "./FutureFeaturesPage"
@@ -26,7 +26,7 @@ export default class Layout extends React.Component {
     
     render() {
         return (
-            <MUITheme>
+            <MuiTheme>
                 <Favicon url={favicon}/>
                 <NavBar/>
                 <MobileScrollButton/>
@@ -35,9 +35,9 @@ export default class Layout extends React.Component {
                 <CleanCodePage/>
                 <ExampleUsesPage/>
                 <FutureFeaturesPage/>
-                <SignUpElement scrollMarker="bottom-signup-scroll-marker"/>
+                <SignUpElement signUpTitle="" scrollMarker="bottom-signup-scroll-marker"/>
                 <Footer/>
-            </MUITheme>
+            </MuiTheme>
         )
     }
 }

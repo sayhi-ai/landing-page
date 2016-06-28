@@ -7,6 +7,7 @@
 .sup-title {
     text-align: center;
     margin-bottom: 0 !important;
+    cursor: auto;
 }
 
 .outer {
@@ -37,6 +38,10 @@
     width: 80%;
     display: block;
     margin: 24px auto;
+}
+
+#top-signup-scroll-marker-title {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

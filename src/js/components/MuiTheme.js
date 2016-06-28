@@ -2,7 +2,7 @@ import React from "react"
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-export default class MUITheme extends React.Component {
+export default class MuiTheme extends React.Component {
     render() {
         const muiTheme = getMuiTheme({
             palette: {
