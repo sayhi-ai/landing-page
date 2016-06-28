@@ -53,11 +53,13 @@
 
 .navbar-current:hover {
     color: black !important;
+    cursor: pointer;
 }
 
 a.navbar-current, .navbar-left a {
     color: #19A5E4;
     font-family: Header-Font, sans-serif;
+    cursor: auto;
 }
 
 #navbar-logo {

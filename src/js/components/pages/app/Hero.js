@@ -37,7 +37,7 @@ export default class Hero extends React.Component {
                                 <img src={manual2}/>
                             </div>
                         </div>
-                        <SignUpElement/>
+                        <SignUpElement scrollMarker="top-signup-scroll-marker"/>
                     </div>
                 </div>
             </PageContainer>

@@ -1,13 +1,11 @@
 import React from "react"
 import PageContainer from "../../PageContainer"
 import TypeWriter from 'react-typewriter'
-import {
-    Step,
-    Stepper,
-    StepLabel
-} from 'material-ui/Stepper'
+import {Step, Stepper, StepLabel} from 'material-ui/Stepper'
 import ExpandTransition from 'material-ui/internal/ExpandTransition'
 import ContentButton from "./elements/ContentButton"
+var PropTypes = React.PropTypes;
+var Waypoint = require("react-waypoint");
 
 import restart from "../../../../resources/img/restart.png"
 
@@ -18,12 +16,10 @@ export default class ExampleUsesPage extends React.Component {
         super(props);
 
         this.state = {
-            typeAnimation: <div>
-                <TypeWriter typing={1} className="eu-typed-text">
-                    Example usages
-                </TypeWriter>
-                <span className="eu-typed-text blinking-cursor">|</span>
-            </div>,
+            typeAnimation: 
+                <div>
+                    <span className="eu-typed-text blinking-cursor">|</span>
+                </div>,
             loading: false,
             finished: false,
             stepIndex: 0,
@@ -37,7 +33,7 @@ export default class ExampleUsesPage extends React.Component {
         this.setState({loading: true}, () => {
             this.asyncTimer = setTimeout(cb, 500);
         });
-    };
+    }
 
     handleNext = (content, type) => {
         event.preventDefault()
@@ -139,6 +135,10 @@ export default class ExampleUsesPage extends React.Component {
                 <div className="eu-outter">
                     <div className="eu-inner">
                         <div className="eu-typed-text-div">
+                            <Waypoint
+                                onEnter={console.log("enter")}
+                                onLeave={console.log("left")}
+                                threshold={0}/>
                             {this.state.typeAnimation}
                         </div>
                         <div className="eu-example-features">

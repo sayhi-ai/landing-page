@@ -35,7 +35,7 @@ export default class Layout extends React.Component {
                 <CleanCodePage/>
                 <ExampleUsesPage/>
                 <FutureFeaturesPage/>
-                <SignUpElement/>
+                <SignUpElement scrollMarker="bottom-signup-scroll-marker"/>
                 <Footer/>
             </MUITheme>
         )

@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from 'react-router'
 
 import "../../css/navbar.css"
+import Scroll from "react-scroll"
 
 export default class NavBar extends React.Component {
     constructor() {
@@ -35,6 +36,15 @@ export default class NavBar extends React.Component {
         }
     }
 
+    scrollToSignUp() {
+        var scroller = Scroll.scroller;
+        scroller.scrollTo('bottom-signup-scroll-marker', {
+            duration: 1500,
+            delay: 100,
+            smooth: true
+        })
+    }
+
     render() {
         return (
             <div className={"navbar noselect mui--z1 " + this.state.navbar} id="navbar">
@@ -46,7 +56,7 @@ export default class NavBar extends React.Component {
                     </Link>
                 </p>
                 <p className="navbar-right navbar-inline">
-                    <Link to="/" className="navbar-current">Sign up</Link>
+                    <a onClick={this.scrollToSignUp.bind(this)} className="navbar-current">Sign up</a>
                 </p>
             </div>
         )
