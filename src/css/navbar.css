@@ -36,7 +36,7 @@
     float: right;
     font-weight: 400;
     margin-right: 5px;
-    transition: padding 0.5 s;
+    transition: padding 0.5s;
 }
 
 .navbar-inline > a {
