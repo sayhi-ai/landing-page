@@ -12,7 +12,7 @@ export default class SignUpElement extends React.Component {
     scrollToSignUp() {
         var scroller = Scroll.scroller;
         scroller.scrollTo("vs-scroll-marker", {
-            duration: 1500,
+            duration: 750,
             delay: 100,
             smooth: true
         })
@@ -34,8 +34,11 @@ export default class SignUpElement extends React.Component {
                     <div className="middle">
                         <div className="login-wrapper text-center" zDepth={5}>
                             <Element name={this.props.scrollMarker}>
-                            <div classID={this.props.signUpTitle} className="sup-title">
-                                <h3 onClick={this.scrollToSignUp.bind(this)}className="sup-title">Want to give it a try?</h3>
+                            <div className="sup-title-div">
+                                <h3 onClick={this.scrollToSignUp.bind(this)}
+                                    className={"sup-title " + this.props.signUpTitle}>
+                                    Want to give it a try?
+                                </h3>
                             </div>
                             <div>
                                 <div className="email-field">
