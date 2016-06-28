@@ -33,22 +33,13 @@ export default class Hero extends React.Component {
                         </div>
                         <div className="hero-container">
                             <div className="hero-box">
-                                <div className="hero-image">
-                                    <img src={manual1}/>
-                                    <HeroLabel icon={{__html: number1}}>Bring your bot</HeroLabel>
-                                </div>
+                                <img src={manual1}/>
+                            </div>
+                            <div className="hero-vs-box">
+                                VS.
                             </div>
                             <div className="hero-box">
-                                <div className="hero-image">
-                                    <img src={manual2}/>
-                                    <HeroLabel icon={{__html: number2}}>We apply magic</HeroLabel>
-                                </div>
-                            </div>
-                            <div className="hero-box">
-                                <div className="hero-image">
-                                    <img src={manual3}/>
-                                    <HeroLabel icon={{__html: number3}}>It's alive!</HeroLabel>
-                                </div>
+                                <img src={manual2}/>
                             </div>
                         </div>
                         <SignUpElement/>

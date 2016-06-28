@@ -28,7 +28,7 @@ export default class ExampleUsesPage extends React.Component {
             finished: false,
             stepIndex: 0,
             hasHow: false,
-            what: "",
+            what: "\"\"",
             how: ""
         }
     }

@@ -43,35 +43,32 @@
 .hero-container {
     display: block;
     height: auto;
-    background-color: #333333;
+    color: white;
+    vertical-align: middle;
 }
 
 .hero-box {
     display: inline-block;
-    min-width: 300px;
-    width: 33.333333%;
+    height: 50vh;
+    max-height: 500px;
+    margin: 0 20px;
     text-align: center;
+    vertical-align: middle;
 }
 
-.hero-image {
-    display: block;
-    height: 25vw;
-    background: rgba(109,107,107,1);
-    background: -moz-linear-gradient(top, rgba(109,107,107,1) 0%, rgba(109,107,107,1) 33.33333%, rgba(77,77,77,1) 33.33333%, rgba(77,77,77,1) 66.666666%, rgba(51,51,51,1) 66.666666%, rgba(51,51,51,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(109,107,107,1)), color-stop(33.33333%, rgba(109,107,107,1)), color-stop(33.33333%, rgba(77,77,77,1)), color-stop(66.666666%, rgba(77,77,77,1)), color-stop(66.666666%, rgba(51,51,51,1)), color-stop(100%, rgba(51,51,51,1)));
-    background: -webkit-linear-gradient(top, rgba(109,107,107,1) 0%, rgba(109,107,107,1) 33.33333%, rgba(77,77,77,1) 33.33333%, rgba(77,77,77,1) 66.666666%, rgba(51,51,51,1) 66.666666%, rgba(51,51,51,1) 100%);
-    background: -o-linear-gradient(top, rgba(109,107,107,1) 0%, rgba(109,107,107,1) 33.33333%, rgba(77,77,77,1) 33.33333%, rgba(77,77,77,1) 66.666666%, rgba(51,51,51,1) 66.666666%, rgba(51,51,51,1) 100%);
-    background: -ms-linear-gradient(top, rgba(109,107,107,1) 0%, rgba(109,107,107,1) 33.33333%, rgba(77,77,77,1) 33.33333%, rgba(77,77,77,1) 66.666666%, rgba(51,51,51,1) 66.666666%, rgba(51,51,51,1) 100%);
-    background: linear-gradient(to bottom, rgba(109,107,107,1) 0%, rgba(109,107,107,1) 33.33333%, rgba(77,77,77,1) 33.33333%, rgba(77,77,77,1) 66.666666%, rgba(51,51,51,1) 66.666666%, rgba(51,51,51,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6b6b', endColorstr='#333333', GradientType=0 );
+.hero-vs-box {
+    max-height: 500px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 4em;
 }
 
-.hero-image img {
+.hero-box img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     height: inherit;
-    box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3), 0 15px 20px rgba(0, 0, 0, 0.22);
+    width: inherit;
+    box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.22);
 }
 
 /*
