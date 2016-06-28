@@ -3,16 +3,20 @@ import PageContainer from "../../PageContainer"
 import SignUpElement from "./elements/SignUpElement"
 import manual1 from "../../../../resources/img/Manual1.png"
 import manual2 from "../../../../resources/img/Manual2.png"
+import Scroll from "react-scroll"
 
 import "../../../../css/hero.css"
 
 export default class Hero extends React.Component {
+    
     render() {
         var styles = {
             minHeight: "90vh",
             height: "auto",
             backgroundColor: "#6b6b6b"
         }
+        
+        var Element = Scroll.Element;
 
         return (
             <PageContainer styles={styles}>
@@ -30,14 +34,15 @@ export default class Hero extends React.Component {
                             <div className="hero-box">
                                 <img src={manual1}/>
                             </div>
-                            <div className="hero-vs-box">
+                            <Element name="vs-scroll-marker" className="hero-vs-box">
                                 VS.
-                            </div>
+                            </Element>
                             <div className="hero-box">
                                 <img src={manual2}/>
                             </div>
                         </div>
-                        <SignUpElement scrollMarker="top-signup-scroll-marker"/>
+                        <SignUpElement signUpTitle="top-signup-scroll-marker-title"
+                                       scrollMarker=""/>
                     </div>
                 </div>
             </PageContainer>
