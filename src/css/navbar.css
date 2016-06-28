@@ -27,6 +27,7 @@
     float: left;
     font-size: 1.5em;
     font-weight: 400;
+    transition: padding 0.5s;
 }
 
 .navbar-right {
@@ -35,6 +36,7 @@
     float: right;
     font-weight: 400;
     margin-right: 5px;
+    transition: padding 0.5 s;
 }
 
 .navbar-inline > a {
@@ -67,7 +69,7 @@ a.navbar-current, .navbar-left a {
     height: 30px;
     width: 35px;
     vertical-align: top;
-    background: transparent url("../resources/img/favicon.png") no-repeat;
+    background: transparent url("../resources/img/logo.png") no-repeat;
     background-size: contain;
 }
 
@@ -97,7 +99,7 @@ div.navbar:not(.opaque-navbar) .navbar-right {
 }
 
 div.navbar:not(.opaque-navbar) #navbar-logo {
-    background: transparent url("../resources/img/favicon.png") no-repeat;
+    background: transparent url("../resources/img/logo_inv.png") no-repeat;
     background-size: contain;
 }
 
