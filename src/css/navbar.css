@@ -29,10 +29,6 @@
     font-weight: 400;
 }
 
-.nb-logo-title-p1 {
-    margin-left: 10px;
-}
-
 .navbar-right {
     padding-right: 13%;
     font-size: 1.2em;
@@ -69,7 +65,6 @@ a.navbar-current, .navbar-left a {
     height: 30px;
     width: 35px;
     vertical-align: top;
-    margin-right: -12px;
     background: transparent url("../resources/img/favicon.png") no-repeat;
     background-size: contain;
 }
