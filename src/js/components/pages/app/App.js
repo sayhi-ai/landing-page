@@ -11,7 +11,7 @@ import Footer from "../../AppFooter"
 import Favicon from "react-favicon"
 import MobileScrollButton from "../../MobileScrollButton"
 import SignUpElement from "./elements/SignUpElement"
-import favicon from "../../../../resources/img/favicon.png"
+import favicon from "../../../../resources/img/logo.png"
 import Smooch from "smooch"
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
