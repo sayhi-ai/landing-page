@@ -11,6 +11,8 @@ export default class NavBar extends React.Component {
         this.state = {
             navbar: ""
         }
+
+        this.isFirefox = typeof InstallTrigger !== 'undefined';
     }
 
     componentDidMount() {
@@ -22,7 +24,12 @@ export default class NavBar extends React.Component {
     }
 
     handleScroll(event) {
-        let scrollTop = event.srcElement.body.scrollTop
+        let scrollTop = 0;
+        if (this.isFirefox) {
+            scrollTop = event.pageY;
+        } else {
+            scrollTop = event.srcElement.body.scrollTop
+        }
         let itemTranslate = Math.min(0, scrollTop / 3 - 60)
 
         if (itemTranslate == 0) {
