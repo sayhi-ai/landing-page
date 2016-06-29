@@ -27,6 +27,9 @@ export default class ExampleUsesPage extends React.Component {
             what: "\"\"",
             how: ""
         }
+
+
+        this.isFirefox = typeof InstallTrigger !== 'undefined';
     }
 
     dummyAsync = (cb) => {
@@ -36,7 +39,10 @@ export default class ExampleUsesPage extends React.Component {
     }
 
     handleNext = (content, type) => {
-        event.preventDefault()
+        console.log(content, type)
+        if (!this.isFirefox) {
+            event.preventDefault()
+        }
         const {stepIndex} = this.state
         if (!this.state.loading) {
             this.dummyAsync(() => this.setState({
