@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 
 // import js
 import "../js/lib/material"
@@ -19,8 +19,8 @@ import App from "./components/app/App"
 // Copy the index.html file
 require('file?name=[name].[ext]!../index.html');
 
-ReactDOM.render(
-    <Router history={hashHistory}>
+ReactDOM.render((
+    <Router history={browserHistory}>
         <Route path="/" component={App}/>
-    </Router>, document.getElementById('root')
+    </Router>), document.getElementById('root')
 );
