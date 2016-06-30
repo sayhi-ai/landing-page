@@ -11,7 +11,6 @@ export default class Hero extends React.Component {
     
     render() {
         var styles = {
-            minHeight: "90vh",
             height: "auto",
             backgroundColor: "#6b6b6b"
         }

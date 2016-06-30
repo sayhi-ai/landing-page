@@ -42,16 +42,18 @@ export default class ExampleUsesSection extends React.Component {
     }
 
     handleScroll(event) {
-        let scrollTop = 0;
-        if (this.isFirefox) {
-            scrollTop = event.pageY;
-        } else {
-            scrollTop = event.srcElement.body.scrollTop
-        }
+        if (!this.exampleSeen) {
+            let scrollTop = 0;
+            if (this.isFirefox) {
+                scrollTop = event.pageY;
+            } else {
+                scrollTop = event.srcElement.body.scrollTop
+            }
 
-        if (scrollTop >= 1700 && !this.exampleSeen) {
-            this.exampleSeen = true;
-            this.animateText("Example usages");
+            if (scrollTop >= 1600) {
+                this.exampleSeen = true;
+                this.animateText("Example usages");
+            }
         }
     }
 
