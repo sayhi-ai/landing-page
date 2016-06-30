@@ -15,7 +15,7 @@ export default class HumanHelpElement extends React.Component {
             <div>
                 <div>
                     <div className="hhe-question-div">
-                        <h4>Got a question?</h4>
+                        <h3>Got a question?</h3>
                     </div>
                     <div className="hhe-button">
                         <RaisedButton label="Talk to a human"

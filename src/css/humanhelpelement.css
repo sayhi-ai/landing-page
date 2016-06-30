@@ -1,8 +1,9 @@
 .hhe-question-div {
-    display: inline-block;
+    display: block;
+    margin-top: 5%;
 }
 
 .hhe-button {
-    display: inline-block;
-    margin: 5% 0 2% 2%;
+    display: block;
+    margin-bottom: 2%;
 }
