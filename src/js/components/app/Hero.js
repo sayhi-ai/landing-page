@@ -1,11 +1,11 @@
 import React from "react"
-import PageContainer from "../../PageContainer"
+import PageContainer from "../PageContainer"
 import SignUpElement from "./elements/SignUpElement"
-import manual1 from "../../../../resources/img/Manual1.png"
-import manual2 from "../../../../resources/img/Manual2.png"
+import manual1 from "../../../resources/img/Manual1.png"
+import manual2 from "../../../resources/img/Manual2.png"
 import Scroll from "react-scroll"
 
-import "../../../../css/hero.css"
+import "../../../css/hero.css"
 
 export default class Hero extends React.Component {
     
@@ -41,8 +41,6 @@ export default class Hero extends React.Component {
                                 <img src={manual2}/>
                             </div>
                         </div>
-                        <SignUpElement signUpTitle="top-signup-scroll-marker-title"
-                                       scrollMarker=""/>
                     </div>
                 </div>
             </PageContainer>

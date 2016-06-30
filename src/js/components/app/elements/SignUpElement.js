@@ -1,21 +1,33 @@
 import React from "react"
-import PageContainer from "../../../PageContainer"
+import PageContainer from "../../PageContainer"
 import TextField from "material-ui/TextField"
 import RaisedButton from "material-ui/RaisedButton"
 import FontIcon from "material-ui/FontIcon"
 import Scroll from "react-scroll"
+import HumanHelpElement from "./HumanHelpElement"
 
-import "../../../../../css/signuppage.css"
+import "../../../../css/signuppage.css"
 
 export default class SignUpElement extends React.Component {
     
+    loadHumanHelp() {
+        if (this.props.scrollMarker === "bottom-signup-scroll-marker") {
+            console.log("yes")
+            return (
+                <HumanHelpElement/>
+            )
+        }
+    }
+    
     scrollToSignUp() {
-        var scroller = Scroll.scroller;
-        scroller.scrollTo("vs-scroll-marker", {
-            duration: 750,
-            delay: 100,
-            smooth: true
-        })
+        if (this.props.signUpTitle === "top-signup-scroll-marker-title") {
+            var scroller = Scroll.scroller;
+            scroller.scrollTo("vs-scroll-marker", {
+                duration: 750,
+                delay: 100,
+                smooth: true
+            })
+        }
     }
 
     render() {
@@ -32,6 +44,7 @@ export default class SignUpElement extends React.Component {
             <PageContainer styles={styles} className="material-background">
                 <div className="outer">
                     <div className="middle">
+                        {this.loadHumanHelp()}
                         <div className="login-wrapper text-center" zDepth={5}>
                             <Element name={this.props.scrollMarker}>
                             <div className="sup-title-div">

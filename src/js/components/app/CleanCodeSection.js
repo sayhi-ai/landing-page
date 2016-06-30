@@ -1,13 +1,13 @@
 import React from "react"
-import PageContainer from "../../PageContainer"
+import PageContainer from "../PageContainer"
 import WaveDivider from "./elements/WaveDivider"
 
-import "../../../../css/cleancodepage.css"
+import "../../../css/cleancodepage.css"
 
-import transition from "../../../../resources/img/transition.svg"
-import transition90 from "../../../../resources/img/transition-90.svg"
+import transition from "../../../resources/img/transition.svg"
+import transition90 from "../../../resources/img/transition-90.svg"
 
-export default class CleanCodePage extends React.Component {
+export default class CleanCodeSection extends React.Component {
 
     constructor() {
         super()
