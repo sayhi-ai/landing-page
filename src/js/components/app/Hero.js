@@ -12,7 +12,7 @@ export default class Hero extends React.Component {
     render() {
         var styles = {
             height: "auto",
-            backgroundColor: "#6b6b6b"
+            backgroundColor: "#4A4A4A"
         }
         
         var Element = Scroll.Element;
