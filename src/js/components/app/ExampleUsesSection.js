@@ -14,7 +14,8 @@ import "../../../css/exampleusages.css"
 export default class ExampleUsesSection extends React.Component {
     constructor(props) {
         super(props);
-
+        this.exampleSeen = false;
+        
         this.state = {
             typeAnimation: 
                 <div>
@@ -30,6 +31,28 @@ export default class ExampleUsesSection extends React.Component {
 
 
         this.isFirefox = typeof InstallTrigger !== 'undefined';
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll.bind(this));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll.bind(this));
+    }
+
+    handleScroll(event) {
+        let scrollTop = 0;
+        if (this.isFirefox) {
+            scrollTop = event.pageY;
+        } else {
+            scrollTop = event.srcElement.body.scrollTop
+        }
+
+        if (scrollTop >= 1700 && !this.exampleSeen) {
+            this.exampleSeen = true;
+            this.animateText("Example usages");
+        }
     }
 
     dummyAsync = (cb) => {
@@ -141,10 +164,6 @@ export default class ExampleUsesSection extends React.Component {
                 <div className="eu-outter">
                     <div className="eu-inner">
                         <div className="eu-typed-text-div">
-                            <Waypoint
-                                onEnter={console.log("enter")}
-                                onLeave={console.log("left")}
-                                threshold={0}/>
                             {this.state.typeAnimation}
                         </div>
                         <div className="eu-example-features">
