@@ -77,7 +77,7 @@ export default class CleanCodeSection extends React.Component {
                             <code>
                                 <div className="ccp-typed-text code-block text-center old-code">
                                     <div className="text-left">
-                                    <span className="green-syntax">//Array of possible responses</span>
+                                    <span className="green-syntax">// Array of possible responses</span>
                                     <br/>
                                     var responses = [
                                     <br/>
@@ -93,7 +93,7 @@ export default class CleanCodeSection extends React.Component {
                                     <br/>
                                     <br/>
                                     <span className="hidden-xs hidden-sm">
-                                    <span className="green-syntax">//Get one of those responses randomly</span>
+                                    <span className="green-syntax">// Get one of those responses randomly</span>
                                     <br/>
                                     var index = Math.floor(Math.random() * responses.length);
                                     <br/>
@@ -105,9 +105,11 @@ export default class CleanCodeSection extends React.Component {
                                     </span>
                                     <br/>
                                     <br/>
-                                    <span className="green-syntax">//Translate the response</span>
+                                    <span className="green-syntax">// Add a persona to the response</span>
                                     <br/>
-                                    res = translator.translate(res);
+                                    res = personaGenerator.transform(res, 
+                                        <span className="orange-syntax"> "bro"</span>
+                                        );
                                     <br/>
                                     <br/>
                                     <span className="blue-syntax">return</span> res;
@@ -129,7 +131,7 @@ export default class CleanCodeSection extends React.Component {
                             </div>
                         <div className="tr">
                             <div className="inside ccp-typed-text text-center new-code">
-                                bot.say(<span className="dark-syntax">"Hi"</span>);
+                                bot.say(<span className="dark-syntax">"Hi"</span>, <span className="dark-syntax">"bro"</span>);
                             </div>
                         </div>
                         <div>
