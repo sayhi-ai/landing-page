@@ -6,9 +6,12 @@ module.exports = {
     module: {
         loaders: [
             {test: /\.s?css$/, loader: "style-loader!css-loader"},
-            {test: /\.ttf$|\.eot$|\.svg$|\.woff$|\.woff2$/, loader: "url-loader?limit=100000"},
+            {test: /\.less$/, loader: "style!css!less"},
+            {test: /\.ttf$|\.otf$|\.eot$|\.woff$|\.woff2$/, loader: "url-loader?limit=100000"},
             {test: /\.jpe?g$|\.png$/, loader: "file-loader"},
+            {test: /\.svg$/, loader: "svg-inline"},
             {test: /load-image/, loader: 'imports?define=>false'},
+            {test: /\.json$/, loader: "json-loader"},
             {
                 test: /\.jsx?$/,
                 exclude: /(node_modules)/,
