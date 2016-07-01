@@ -7,7 +7,8 @@
     width: 120px;
     border-radius: 50%;
     overflow: hidden;
-    border: black 2px solid;
+    border: black solid 2px;
+    transition: box-shadow 0.3s;
     margin: 0 auto;
 }
 
