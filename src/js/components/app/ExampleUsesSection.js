@@ -4,6 +4,7 @@ import TypeWriter from 'react-typewriter'
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper'
 import ExpandTransition from 'material-ui/internal/ExpandTransition'
 import ContentButton from "./elements/ContentButton"
+import Scroll from "react-scroll"
 
 import restart from "../../../resources/img/restart.png"
 
@@ -62,10 +63,15 @@ export default class ExampleUsesSection extends React.Component {
     }
 
     handleNext = (content, type) => {
-        console.log(content, type)
         if (!this.isFirefox) {
             event.preventDefault()
         }
+        
+        if (type == "style") {
+            console.log("got here")
+            this.scrollToText()
+        }
+        
         const {stepIndex} = this.state
         if (!this.state.loading) {
             this.dummyAsync(() => this.setState({
@@ -108,7 +114,8 @@ export default class ExampleUsesSection extends React.Component {
             case 2:
                 return (
                     <div className="eu-button-container">
-                        <ContentButton style={style} title='Restart' src = {restart} font="Header-Font"
+                        <ContentButton style={style} title='Restart' 
+                                       src = {restart} font="Header-Font"
                                        handleClick={this.handleNext.bind(this, '""')}/>
                     </div>
                 )
@@ -145,6 +152,16 @@ export default class ExampleUsesSection extends React.Component {
         })
     }
 
+    scrollToText() {
+        var scroller = Scroll.scroller;
+        scroller.scrollTo("eu-scroll-marker", {
+            duration: 500,
+            delay: 100,
+            offset: -50,
+            smooth: true
+        })
+    }
+
     render() {
         var styles = {
             container : {
@@ -159,40 +176,44 @@ export default class ExampleUsesSection extends React.Component {
             }
         }
 
+        let Element = Scroll.Element;
+        
         return (
-            <PageContainer styles={styles.container}>
-                <div className="eu-outter">
-                    <div className="eu-inner">
-                        <div className="eu-typed-text-div">
-                            {this.state.typeAnimation}
-                        </div>
-                        <div className="eu-example-features">
-                            bot.<span className="accent-color">say</span>(
-                            <span className="orange-syntax">{this.state.what}</span>
-                                <span style={this.state.hasHow ? {display: "inline-block"} : {display: "none"}}>,
-                                    <span className="orange-syntax">{this.state.how}</span>
-                                </span>);
-                        </div>
-                        <div style={{width: '100%', maxWidth: 700, margin: '5% auto'}}>
-                            <Stepper activeStep={this.state.stepIndex} style={{width: "100%", margin: 'auto'}}
-                                     orientation="horizontal">
-                                <Step>
-                                    <StepLabel style={styles.stepper}>Choose a text</StepLabel>
-                                </Step>
-                                <Step>
-                                    <StepLabel style={styles.stepper}>Choose a persona</StepLabel>
-                                </Step>
-                                <Step>
-                                    <StepLabel style={styles.stepper}>Done</StepLabel>
-                                </Step>
-                            </Stepper>
-                            <ExpandTransition loading={this.state.loading} open={true}>
-                                {this.renderContent()}
-                            </ExpandTransition>
+            <Element name="eu-scroll-marker">
+                <PageContainer styles={styles.container}>
+                    <div name="eu-scroll-marker" className="eu-outter">
+                        <div className="eu-inner">
+                            <div className="eu-typed-text-div">
+                                {this.state.typeAnimation}
+                            </div>
+                            <div className="eu-example-features">
+                                bot.<span className="accent-color">say</span>(
+                                <span className="orange-syntax">{this.state.what}</span>
+                                    <span style={this.state.hasHow ? {display: "inline-block"} : {display: "none"}}>,
+                                        <span className="orange-syntax">{this.state.how}</span>
+                                    </span>);
+                            </div>
+                            <div style={{width: '100%', maxWidth: 700, margin: '5% auto'}}>
+                                <Stepper activeStep={this.state.stepIndex} style={{width: "100%", margin: 'auto'}}
+                                         orientation="horizontal">
+                                    <Step>
+                                        <StepLabel style={styles.stepper}>Choose a text</StepLabel>
+                                    </Step>
+                                    <Step>
+                                        <StepLabel style={styles.stepper}>Choose a persona</StepLabel>
+                                    </Step>
+                                    <Step>
+                                        <StepLabel style={styles.stepper}>Done</StepLabel>
+                                    </Step>
+                                </Stepper>
+                                <ExpandTransition loading={this.state.loading} open={true}>
+                                    {this.renderContent()}
+                                </ExpandTransition>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </PageContainer>
+                </PageContainer>
+            </Element>
         )
     }
 }

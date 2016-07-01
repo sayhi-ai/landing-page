@@ -38,7 +38,7 @@ export default class SignUpElement extends React.Component {
             borderTop: "1px solid #E0E0E0"
         }
 
-        var Element = Scroll.Element;
+        let Element = Scroll.Element;
 
         return (
             <PageContainer styles={styles} className="material-background">
