@@ -1,6 +1,5 @@
 import React from "react"
 import PageContainer from "../PageContainer"
-import SignUpElement from "./elements/SignUpElement"
 import manual1 from "../../../resources/img/Manual1.png"
 import manual2 from "../../../resources/img/Manual2.png"
 import Scroll from "react-scroll"
@@ -15,7 +14,7 @@ export default class Hero extends React.Component {
             backgroundColor: "#4A4A4A"
         }
         
-        var Element = Scroll.Element;
+        let Element = Scroll.Element;
 
         return (
             <PageContainer styles={styles}>
