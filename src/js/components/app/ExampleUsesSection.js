@@ -14,12 +14,11 @@ export default class ExampleUsesSection extends React.Component {
     constructor(props) {
         super(props);
         this.exampleSeen = false;
-        
+
         this.state = {
-            typeAnimation: 
-                <div>
-                    <span className="eu-typed-text blinking-cursor">|</span>
-                </div>,
+            typeAnimation: <div>
+                <span className="eu-typed-text blinking-cursor">|</span>
+            </div>,
             loading: false,
             finished: false,
             stepIndex: 0,
@@ -66,12 +65,9 @@ export default class ExampleUsesSection extends React.Component {
         if (!this.isFirefox) {
             event.preventDefault()
         }
-        
-        if (type == "style") {
-            console.log("got here")
-            this.scrollToText()
-        }
-        
+
+        this.scrollToText()
+
         const {stepIndex} = this.state
         if (!this.state.loading) {
             this.dummyAsync(() => this.setState({
@@ -114,8 +110,8 @@ export default class ExampleUsesSection extends React.Component {
             case 2:
                 return (
                     <div className="eu-button-container">
-                        <ContentButton style={style} title='Restart' 
-                                       src = {restart} font="Header-Font"
+                        <ContentButton style={style} title='Restart'
+                                       src={restart} font="Header-Font"
                                        handleClick={this.handleNext.bind(this, '""')}/>
                     </div>
                 )
@@ -130,7 +126,6 @@ export default class ExampleUsesSection extends React.Component {
 
         if (finished) {
             this.setState({stepIndex: 0, finished: false});
-            //return this.renderContent();
         }
 
         return (
@@ -164,20 +159,20 @@ export default class ExampleUsesSection extends React.Component {
 
     render() {
         var styles = {
-            container : {
+            container: {
                 minHeight: "75vh",
                 height: "auto",
                 padding: "5%",
                 paddingBottom: "0",
                 backgroundColor: "#F9F9F9"
             },
-            stepper : {
+            stepper: {
                 fontSize: "1.5em"
             }
         }
 
         let Element = Scroll.Element;
-        
+
         return (
             <Element name="eu-scroll-marker">
                 <PageContainer styles={styles.container}>
