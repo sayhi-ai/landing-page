@@ -1,7 +1,7 @@
 import AppDispatcher from "../dispatcher/AppDispatcher"
-import AccountConstants from "../constants/AccountConstants"
+import AccountConstants from "../constants/accountConstants"
 
-class AccountActions {
+class accountActions {
     signUp(email) {
         AppDispatcher.handleViewAction({
             actionType: AccountConstants.SIGN_UP,
@@ -18,4 +18,4 @@ class AccountActions {
     }
 }
 
-export default accountActions = new AccountActions()
+export default accountActions = new accountActions()

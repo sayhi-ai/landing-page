@@ -13,12 +13,16 @@ import "../../../css/exampleusages.css"
 export default class ExampleUsesSection extends React.Component {
     constructor(props) {
         super(props);
-        this.exampleSeen = false;
-
+        this.exampleSeen = false
+        this.currentText = null
         this.state = {
-            typeAnimation: <div>
-                <span className="eu-typed-text blinking-cursor">|</span>
-            </div>,
+            typeAnimation:
+                <div>
+                    {TypeWriter.reset}
+                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
+                    </TypeWriter>
+                    <span className="eu-typed-text blinking-cursor">|</span>
+                </div>,
             loading: false,
             finished: false,
             stepIndex: 0,
@@ -28,15 +32,15 @@ export default class ExampleUsesSection extends React.Component {
         }
 
 
-        this.isFirefox = typeof InstallTrigger !== 'undefined';
+        this.isFirefox = typeof InstallTrigger !== 'undefined'
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll.bind(this));
+        window.addEventListener('scroll', this.handleScroll.bind(this))
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll.bind(this));
+        window.removeEventListener('scroll', this.handleScroll.bind(this))
     }
 
     handleScroll(event) {
@@ -50,14 +54,14 @@ export default class ExampleUsesSection extends React.Component {
 
             if (scrollTop >= 1600) {
                 this.exampleSeen = true;
-                this.animateText("Example usages");
+                this.animateText("Example usages")
             }
         }
     }
 
     dummyAsync = (cb) => {
         this.setState({loading: true}, () => {
-            this.asyncTimer = setTimeout(cb, 500);
+            this.asyncTimer = setTimeout(cb, 500)
         });
     }
 
@@ -65,9 +69,14 @@ export default class ExampleUsesSection extends React.Component {
         if (!this.isFirefox) {
             event.preventDefault()
         }
-
-        this.scrollToText()
-
+        
+        if (type == "style") {
+            this.scrollToText()
+            this.handleTextAnimation(this.currentText, content)
+        } else if(content !== "") {
+            this.currentText = content
+        }
+        
         const {stepIndex} = this.state
         if (!this.state.loading) {
             this.dummyAsync(() => this.setState({
@@ -81,8 +90,56 @@ export default class ExampleUsesSection extends React.Component {
         }
     }
 
+    handleTextAnimation(contentParam, personaParam) {
+        let content = contentParam.replace(/['"]+/g, '')
+        let persona = personaParam.replace(/['"]+/g, '')
+        console.log("content: " + content + "  " +  persona)
+
+        switch(content) {
+            case "Hi":
+                switch(persona) {
+                    case "Neutral":
+                        this.animateText("Hello World1")
+                        break
+                    case "HanSolo":
+                        this.animateText("Hello World2")
+                        break
+                    case "Bro":
+                        this.animateText("Hello World3")
+                        break
+                }
+                break
+            case "ItemCreated":
+                switch(type) {
+                    case "Neutral":
+                        this.animateText("Hello World4")
+                        break
+                    case "HanSolo":
+                        this.animateText("Hello World5")
+                        break
+                    case "Bro":
+                        this.animateText("Hello World6")
+                        break
+                }
+                break
+            case "Done":
+                switch(type) {
+                    case "Neutral":
+                        this.animateText("Hello World7")
+                        break
+                    case "HanSolo":
+                        this.animateText("Hello World8")
+                        break
+                    case "Bro":
+                        this.animateText("Hello World9")
+                        break
+                }
+                break
+        }
+    }
+
     getStepContent(stepIndex) {
-        var style = {
+        let style = {
             margin: "5% 0",
             width: "33%"
         }
@@ -137,18 +194,19 @@ export default class ExampleUsesSection extends React.Component {
 
     animateText(text) {
         this.setState({
-            typeAnimation: <div>
-                {TypeWriter.reset}
-                <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
-                    {text}
-                </TypeWriter>
-                <span className="eu-typed-text blinking-cursor">|</span>
-            </div>
+            typeAnimation:
+                <div>
+                    {TypeWriter.reset}
+                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
+                        {text}
+                    </TypeWriter>
+                    <span className="eu-typed-text blinking-cursor">|</span>
+                </div>
         })
     }
 
     scrollToText() {
-        var scroller = Scroll.scroller;
+        let scroller = Scroll.scroller;
         scroller.scrollTo("eu-scroll-marker", {
             duration: 500,
             delay: 100,
