@@ -18,9 +18,6 @@ export default class ExampleUsesSection extends React.Component {
         this.state = {
             typeAnimation:
                 <div>
-                    {TypeWriter.reset}
-                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
-                    </TypeWriter>
                     <span className="eu-typed-text blinking-cursor">|</span>
                 </div>,
             loading: false,
@@ -30,8 +27,7 @@ export default class ExampleUsesSection extends React.Component {
             what: "\"\"",
             how: ""
         }
-
-
+        
         this.isFirefox = typeof InstallTrigger !== 'undefined'
     }
 
@@ -193,11 +189,11 @@ export default class ExampleUsesSection extends React.Component {
     }
 
     animateText(text) {
+        console.log(this.refs["type-writer"])
         this.setState({
             typeAnimation:
                 <div>
-                    {TypeWriter.reset}
-                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
+                    <TypeWriter typing={1} className="eu-typed-text" ref="type-writer">
                         {text}
                     </TypeWriter>
                     <span className="eu-typed-text blinking-cursor">|</span>
