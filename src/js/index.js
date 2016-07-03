@@ -19,6 +19,7 @@ import "../css/typist.css"
 // import components
 import App from "./components/app/App"
 import Pricing from "./components/pricing/Pricing"
+import Terms from "./components/terms/Terms"
 
 // Copy the index.html file
 require('file?name=[name].[ext]!../index.html');
@@ -47,6 +48,7 @@ ReactDOM.render(
         <Route name="app" path="/" handler={App}>
             <IndexRoute component={App} />
             <Route path='pricing' component={Pricing} />
+            <Route path='terms' component={Terms} />
         </Route>
     </Router>,
     document.getElementById('root')
