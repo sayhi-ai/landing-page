@@ -6,6 +6,8 @@ import FontIcon from "material-ui/FontIcon"
 import Scroll from "react-scroll"
 import Snackbar from "material-ui/Snackbar"
 
+import request from "request"
+
 import "../../css/signuppage.css"
 
 
@@ -35,15 +37,16 @@ export default class SignUpElement extends React.Component {
 
     signUp() {
         if (this.validateEmail(this.state.email)) {
+            let email = this.state.email;
+            request.get("http://sayhi-ai.azurewebsites.net/hello/" + email)
             this.setState({
                 email: "",
                 errorText: "",
                 open: true,
                 signedUp: true
             })
-            this.refs.email.setValue("");
         }
-         else {
+        else {
             this.setState({
                 errorText: "Sorry! Please check for a typo :-)"
             })
@@ -102,7 +105,8 @@ export default class SignUpElement extends React.Component {
                                 <div>
                                     <div className="email-field">
                                         <TextField floatingLabelText="Email" type="email" fullWidth={true}
-                                                   value={this.state.email} onChange={this.handleEmailChanged.bind(this)}
+                                                   value={this.state.email}
+                                                   onChange={this.handleEmailChanged.bind(this)}
                                                    errorText={this.state.errorText} ref="email"/>
                                     </div>
 
@@ -125,6 +129,9 @@ export default class SignUpElement extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Snackbar message="We will process your request as soon as possible." bodyStyle={{backgroundColor: "#27ae60"}}
+                          autoHideDuration={8000} open={this.state.open}
+                          handleClose={this.handleRequestClose.bind(this)}/>
             </PageContainer>
         )
     }
