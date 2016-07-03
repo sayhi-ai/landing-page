@@ -4,21 +4,67 @@ import TextField from "material-ui/TextField"
 import RaisedButton from "material-ui/RaisedButton"
 import FontIcon from "material-ui/FontIcon"
 import Scroll from "react-scroll"
+import Snackbar from "material-ui/Snackbar"
 import HumanHelpElement from "./app/elements/HumanHelpElement"
 
 import "../../css/signuppage.css"
 
+
 export default class SignUpElement extends React.Component {
-    
+
+    constructor() {
+        super()
+        this.state = {
+            errorText: "",
+            email: "",
+            open: false,
+            signedUp: false
+        }
+    }
+
+    validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    handleEmailChanged(e) {
+        this.setState({
+            errorText: "",
+            email: e.target.value
+        })
+    }
+
+    signUp() {
+        if (this.validateEmail(this.state.email)) {
+            this.setState({
+                email: "",
+                errorText: "",
+                open: true,
+                signedUp: true
+            })
+            this.refs.email.setValue("");
+        }
+         else {
+            this.setState({
+                errorText: "Sorry! Please check for a typo :-)"
+            })
+        }
+    }
+
+    handleRequestClose = () => {
+        this.setState({
+            open: false,
+        });
+    };
+
     loadHumanHelp() {
         if (this.props.scrollMarker === "bottom-signup-scroll-marker") {
-            console.log("yes")
             return (
                 <HumanHelpElement/>
             )
         }
     }
-    
+
     scrollToSignUp() {
         if (this.props.signUpTitle === "top-signup-scroll-marker-title") {
             var scroller = Scroll.scroller;
@@ -32,8 +78,9 @@ export default class SignUpElement extends React.Component {
 
     render() {
         var styles = {
-            minHeight: "10vh",
             height: "auto",
+            overflow: "hidden",
+            transition: "height .5s",
             backgroundColor: "#F9F9F9",
             borderTop: "1px solid #E0E0E0"
         }
@@ -47,27 +94,34 @@ export default class SignUpElement extends React.Component {
                         {this.loadHumanHelp()}
                         <div className="login-wrapper text-center" zDepth={5}>
                             <Element name={this.props.scrollMarker}>
-                            <div className="sup-title-div">
-                                <h3 onClick={this.scrollToSignUp.bind(this)}
-                                    className={"sup-title " + this.props.signUpTitle}>
-                                    Want to give it a try?
-                                </h3>
-                            </div>
-                            <div>
-                                <div className="email-field">
-                                    <TextField floatingLabelText="Email" type="email" fullWidth={true}/>
+                                <div className="sup-title-div">
+                                    <h3 onClick={this.scrollToSignUp.bind(this)}
+                                        className={"sup-title " + this.props.signUpTitle}>
+                                        Want to give it a try?
+                                    </h3>
                                 </div>
+                                <div>
+                                    <div className="email-field">
+                                        <TextField floatingLabelText="Email" type="email" fullWidth={true}
+                                                   value={this.state.email} onChange={this.handleEmailChanged.bind(this)}
+                                                   errorText={this.state.errorText} ref="email"/>
+                                    </div>
 
-                                <div className="sign-up-button">
-                                    <RaisedButton label="Request early access"
-                                                  primary={true}
-                                                  fullWidth={true}
-                                                  labelPosition="before" icon={
+                                    <div className="sign-up-button">
+                                        <RaisedButton label="Request early access"
+                                                      primary={true}
+                                                      onTouchTap={this.signUp.bind(this)}
+                                                      fullWidth={true}
+                                                      labelPosition="before" icon={
                                                       <FontIcon style={{marginRight: "6px"}}
                                                        className="material-icons">send</FontIcon>
                                                       }/>
+                                    </div>
+                                    <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true">
+                                        <input type="text" name="b_91105fa973023812cf53dce73_5ddf44500c" tabIndex="-1"
+                                               id="validate" ref="validated"/>
+                                    </div>
                                 </div>
-                            </div>
                             </Element>
                         </div>
                     </div>
