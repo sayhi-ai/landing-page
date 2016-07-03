@@ -66,19 +66,46 @@ export default class ExampleUsesSection extends React.Component {
             event.preventDefault()
         }
         
+        let animationText;
         if (type == "style") {
             this.scrollToText()
-            this.handleTextAnimation(this.currentText, content)
+            animationText = this.handleTextAnimation(this.currentText, content)
         } else if(content !== "") {
             this.currentText = content
         }
         
         const {stepIndex} = this.state
-        if (!this.state.loading) {
+        if (!this.state.loading && animationText) {
             this.dummyAsync(() => this.setState({
                 loading: false,
                 stepIndex: stepIndex + 1,
                 finished: stepIndex >= 2,
+                how: type == "style" ? content : "",
+                hasHow: type == "style",
+                what: type != "style" ? content : this.state.what,
+                typeAnimation:
+                    <div>
+                        {TypeWriter.reset}
+                        <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
+                            {animationText}
+                        </TypeWriter>
+                        <span className="eu-typed-text blinking-cursor">|</span>
+                    </div>
+            }))
+        } else if (!this.state.loading) {
+            this.dummyAsync(() => this.setState({
+                loading: false,
+                stepIndex: stepIndex + 1,
+                finished: stepIndex >= 2,
+                how: type == "style" ? content : "",
+                hasHow: type == "style",
+                what: type != "style" ? content : this.state.what
+            }))
+        } else if(type === "done") {
+            this.dummyAsync(() => this.setState({
+                loading: false,
+                stepIndex: 0,
+                finished: true,
                 how: type == "style" ? content : "",
                 hasHow: type == "style",
                 what: type != "style" ? content : this.state.what
@@ -95,40 +122,31 @@ export default class ExampleUsesSection extends React.Component {
             case "Hi":
                 switch(persona) {
                     case "Neutral":
-                        this.animateText("Hello World1")
-                        break
+                        return "Hello World1"
                     case "HanSolo":
-                        this.animateText("Hello World2")
-                        break
+                        return "Hello World2"
                     case "Bro":
-                        this.animateText("Hello World3")
-                        break
+                        return "Hello World3"
                 }
                 break
             case "ItemCreated":
-                switch(type) {
+                switch(persona) {
                     case "Neutral":
-                        this.animateText("Hello World4")
-                        break
+                        return "Hello World4"
                     case "HanSolo":
-                        this.animateText("Hello World5")
-                        break
+                        return "Hello World5"
                     case "Bro":
-                        this.animateText("Hello World6")
-                        break
+                        return "Hello World6"
                 }
                 break
             case "Done":
-                switch(type) {
+                switch(persona) {
                     case "Neutral":
-                        this.animateText("Hello World7")
-                        break
+                        return "Hello World7"
                     case "HanSolo":
-                        this.animateText("Hello World8")
-                        break
+                        return "Hello World8"
                     case "Bro":
-                        this.animateText("Hello World9")
-                        break
+                        return "Hello World9"
                 }
                 break
         }
@@ -165,27 +183,12 @@ export default class ExampleUsesSection extends React.Component {
                     <div className="eu-button-container">
                         <ContentButton style={style} title='Restart'
                                        src={restart} font="Header-Font"
-                                       handleClick={this.handleNext.bind(this, '""')}/>
+                                       handleClick={this.handleNext.bind(this, '""', "done")}/>
                     </div>
                 )
             default:
-                return 'You\'re a long way from home sonny jim!';
+                return 'You\'re a long way from home sonny jim!'
         }
-    }
-
-    renderContent() {
-        const {finished, stepIndex} = this.state;
-        const contentStyle = {margin: '0 16px', overflow: 'hidden'};
-
-        if (finished) {
-            this.setState({stepIndex: 0, finished: false});
-        }
-
-        return (
-            <div style={contentStyle}>
-                <div>{this.getStepContent(stepIndex)}</div>
-            </div>
-        );
     }
 
     animateText(text) {
@@ -193,7 +196,8 @@ export default class ExampleUsesSection extends React.Component {
         this.setState({
             typeAnimation:
                 <div>
-                    <TypeWriter typing={1} className="eu-typed-text" ref="type-writer">
+                    {TypeWriter.reset}
+                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
                         {text}
                     </TypeWriter>
                     <span className="eu-typed-text blinking-cursor">|</span>
@@ -256,7 +260,9 @@ export default class ExampleUsesSection extends React.Component {
                                     </Step>
                                 </Stepper>
                                 <ExpandTransition loading={this.state.loading} open={true}>
-                                    {this.renderContent()}
+                                    <div style={{margin: '0 16px', overflow: 'hidden'}}>
+                                        <div>{this.getStepContent(this.state.stepIndex)}</div>
+                                    </div>
                                 </ExpandTransition>
                             </div>
                         </div>
