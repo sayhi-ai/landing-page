@@ -18,8 +18,9 @@ import "../css/typist.css"
 
 // import components
 import App from "./components/app/App"
-import Pricing from "./components/pricing/Pricing"
-import Terms from "./components/terms/Terms"
+import HomeView from "./components/home/HomeView"
+import PricingView from "./components/pricing/PricingView"
+import TermsView from "./components/terms/TermsView"
 
 // Copy the index.html file
 require('file?name=[name].[ext]!../index.html');
@@ -45,10 +46,10 @@ require('file?name=[name].[ext]!../index.html');
 
 ReactDOM.render(
     <Router history={browserHistory}>
-        <Route name="app" path="/" handler={App}>
-            <IndexRoute component={App} />
-            <Route path='pricing' component={Pricing} />
-            <Route path='terms' component={Terms} />
+        <Route path="/" component={App}>
+            <IndexRoute component={HomeView} />
+            <Route path='pricing' component={PricingView} />
+            <Route path='terms' component={TermsView} />
         </Route>
     </Router>,
     document.getElementById('root')

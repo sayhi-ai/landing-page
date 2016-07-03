@@ -1,18 +1,16 @@
-import React from "react"
-import NavBar from "../NavBar"
-import Hero from "./Hero"
-import MuiTheme from "../MuiTheme"
-import CleanCodeSection from "./CleanCodeSection"
-import VarietyCodeSection from "./VarietyCodeSection"
-import FutureFeaturesSection from "./FutureFeaturesSection"
-import ExampleUsesSection from "./ExampleUsesSection"
-import Footer from "../AppFooter"
-import SignUpElement from "../SignUpElement"
-import HumanHelpElement from "../HumanHelpElement"
+import React, { PropTypes } from 'react'
+import NavBar from "../app/NavBar"
+import MuiTheme from "../app/MuiTheme"
+import Footer from "../app/AppFooter"
 import Smooch from "smooch"
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-export default class Layout extends React.Component {
+export default class App extends React.Component {
+    
+    static propTypes = {
+        children: PropTypes.element.isRequired
+    }
+
     constructor() {
         super()
         Smooch.init({
@@ -24,22 +22,15 @@ export default class Layout extends React.Component {
             },
             emailCaptureEnabled: true
         })
+        
         injectTapEventPlugin();
     }
     
-    render() {
+    render () {
         return (
-            <MuiTheme>        
+            <MuiTheme>
                 <NavBar inverted="true"/>
-                <Hero/>
-                <SignUpElement signUpTitle="top-signup-scroll-marker-title" scrollMarker=""/>
-                <VarietyCodeSection/>
-                <CleanCodeSection/>
-                <ExampleUsesSection/>
-                <FutureFeaturesSection/>
-                <SignUpElement signUpTitle="" scrollMarker="bottom-signup-scroll-marker">
-                    <HumanHelpElement title="Got a question?" buttonLabel="Talk to a human"/>
-                </SignUpElement>
+                {this.props.children}
                 <Footer/>
             </MuiTheme>
         )

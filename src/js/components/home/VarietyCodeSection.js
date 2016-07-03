@@ -1,5 +1,5 @@
 import React from "react"
-import PageContainer from "../PageContainer"
+import PageContainer from "../app/PageContainer"
 import Paper from "material-ui/Paper"
 import diversity from "../../../resources/img/diversity.png"
 

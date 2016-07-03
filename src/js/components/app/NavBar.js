@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from 'react-router'
 import Scroll from "react-scroll"
-import logo from "../../resources/img/logo.png"
+import logo from "../../../resources/img/logo.png"
 
-import "../../css/navbar.css"
+import "../../../css/navbar.css"
 
 export default class NavBar extends React.Component {
     constructor() {

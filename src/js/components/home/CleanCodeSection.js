@@ -1,5 +1,5 @@
 import React from "react"
-import PageContainer from "../PageContainer"
+import PageContainer from "../app/PageContainer"
 
 import "../../../css/cleancodepage.css"
 

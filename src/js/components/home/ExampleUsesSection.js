@@ -1,9 +1,9 @@
 import React from "react"
-import PageContainer from "../PageContainer"
+import PageContainer from "../app/PageContainer"
 import TypeWriter from 'react-typewriter'
 import {Step, Stepper, StepLabel} from 'material-ui/Stepper'
 import ExpandTransition from 'material-ui/internal/ExpandTransition'
-import ContentButton from "./elements/ContentButton"
+import ContentButton from "./ContentButton"
 import Scroll from "react-scroll"
 import TextFit from "react-textfit"
 import restart from "../../../resources/img/restart.png"

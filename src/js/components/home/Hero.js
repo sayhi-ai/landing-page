@@ -1,5 +1,5 @@
 import React from "react"
-import PageContainer from "../PageContainer"
+import PageContainer from "../app/PageContainer"
 import manual1 from "../../../resources/img/Manual1.png"
 import manual2 from "../../../resources/img/Manual2.png"
 import Scroll from "react-scroll"

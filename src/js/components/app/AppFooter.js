@@ -2,7 +2,7 @@ import React from "react"
 import {Footer, FooterSection, FooterDropDownSection, FooterLinkList} from "react-mdl"
 import { Link } from 'react-router'
 
-import "../../css/footer.css"
+import "../../../css/footer.css"
 
 export default class AppFooter extends React.Component {
     render() {

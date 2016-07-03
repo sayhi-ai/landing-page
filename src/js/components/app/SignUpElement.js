@@ -8,7 +8,7 @@ import Snackbar from "material-ui/Snackbar"
 
 import request from "request"
 
-import "../../css/signuppage.css"
+import "../../../css/signuppage.css"
 
 
 export default class SignUpElement extends React.Component {

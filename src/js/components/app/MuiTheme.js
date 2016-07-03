@@ -1,6 +1,6 @@
 import React from "react"
 import Favicon from "react-favicon"
-import favicon from "../../resources/img/logo.png"
+import favicon from "../../../resources/img/logo.png"
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 

@@ -2,7 +2,7 @@ import React from "react"
 import RaisedButton from "material-ui/RaisedButton"
 import FontIcon from "material-ui/FontIcon"
 
-import "../../css/humanhelpelement.css"
+import "../../../css/humanhelpelement.css"
 import Smooch from "smooch"
 export default class HumanHelpElement extends React.Component {
     
