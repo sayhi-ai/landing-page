@@ -1,6 +1,7 @@
 .eu-example-features {
-    font-size: 4em;
     font-family: Code-Font, sans-serif;
+    margin: 0 auto;
+    width: 80vw;
 }
 
 .eu-button-style {

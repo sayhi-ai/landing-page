@@ -5,7 +5,7 @@ import {Step, Stepper, StepLabel} from 'material-ui/Stepper'
 import ExpandTransition from 'material-ui/internal/ExpandTransition'
 import ContentButton from "./elements/ContentButton"
 import Scroll from "react-scroll"
-
+import TextFit from "react-textfit"
 import restart from "../../../resources/img/restart.png"
 
 import "../../../css/exampleusages.css"
@@ -240,11 +240,13 @@ export default class ExampleUsesSection extends React.Component {
                                 {this.state.typeAnimation}
                             </div>
                             <div className="eu-example-features">
+                                <TextFit mode="single" perfectFit={true} forceSingleModeWidth={true} max={64}>
                                 bot.<span className="accent-color">say</span>(
                                 <span className="orange-syntax">{this.state.what}</span>
                                     <span style={this.state.hasHow ? {display: "inline-block"} : {display: "none"}}>,
                                         <span className="orange-syntax">{this.state.how}</span>
                                     </span>);
+                                </TextFit>
                             </div>
                             <div style={{width: '100%', maxWidth: 700, margin: '5% auto'}}>
                                 <Stepper activeStep={this.state.stepIndex} style={{width: "100%", margin: 'auto'}}
