@@ -131,7 +131,7 @@ export default class CleanCodeSection extends React.Component {
                             </div>
                         <div className="tr">
                             <div className="inside ccp-typed-text text-center">
-                                <TextFit mode="single" max={64}>
+                                <TextFit mode="multi" max={64}>
                                     bot.say(<span className="dark-syntax">"Hi"</span>, <span className="dark-syntax">"bro"</span>);
                                 </TextFit>
                             </div>
