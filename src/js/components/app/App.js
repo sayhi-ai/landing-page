@@ -7,10 +7,7 @@ import VarietyCodeSection from "./VarietyCodeSection"
 import FutureFeaturesSection from "./FutureFeaturesSection"
 import ExampleUsesSection from "./ExampleUsesSection"
 import Footer from "../AppFooter"
-import Favicon from "react-favicon"
-import MobileScrollButton from "../MobileScrollButton"
-import SignUpElement from "./elements/SignUpElement"
-import favicon from "../../../resources/img/logo.png"
+import SignUpElement from "../SignUpElement"
 import Smooch from "smooch"
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -32,7 +29,6 @@ export default class Layout extends React.Component {
     render() {
         return (
             <MuiTheme>
-                <Favicon url={favicon}/>
                 <NavBar/>
                 <Hero/>
                 <SignUpElement signUpTitle="top-signup-scroll-marker-title" scrollMarker=""/>

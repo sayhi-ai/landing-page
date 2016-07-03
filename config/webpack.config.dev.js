@@ -5,8 +5,8 @@ module.exports = {
     entry: "./src/js/index.js",
     module: {
         loaders: [
-            {test: /\.s?css$/, loader: "style-loader!css-loader"},
-            {test: /\.less$/, loader: "style!css!less"},
+            {test: /\.scss|\.sass|\.css$/, loaders: ["style", "css", "sass"], exclude: /node_modules/},
+            {test: /\.less$/, loader: "style!css!less", exclude: /node_modules/},
             {test: /\.ttf$|\.otf$|\.eot$|\.woff$|\.woff2$/, loader: "url-loader?limit=100000"},
             {test: /\.jpe?g$|\.png$/, loader: "file-loader"},
             {test: /\.svg$/, loader: "svg-inline"},

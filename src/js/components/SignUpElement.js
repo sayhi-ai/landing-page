@@ -1,12 +1,12 @@
 import React from "react"
-import PageContainer from "../../PageContainer"
+import PageContainer from "./PageContainer"
 import TextField from "material-ui/TextField"
 import RaisedButton from "material-ui/RaisedButton"
 import FontIcon from "material-ui/FontIcon"
 import Scroll from "react-scroll"
-import HumanHelpElement from "./HumanHelpElement"
+import HumanHelpElement from "./app/elements/HumanHelpElement"
 
-import "../../../../css/signuppage.css"
+import "../../css/signuppage.css"
 
 export default class SignUpElement extends React.Component {
     

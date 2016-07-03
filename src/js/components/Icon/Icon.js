@@ -1,8 +1,8 @@
 import React from 'react'
 
 export default class Icon extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = this.getStateForResize()
     }
 
@@ -18,10 +18,10 @@ export default class Icon extends React.Component {
         var containerDis = "block"
         var iDis = "block"
         var iHeight = "auto"
-        var img = this.props.src
-        var transitionSrc = {__html: img};
+        var img = this.props.image
+        var transitionSrc = img
         if (window.innerWidth >= 768) {
-            transitionSrc = {__html: transition};
+            transitionSrc = img
             containerDis = "flex"
             iDis = "flex"
             iHeight = "100%"
@@ -49,12 +49,12 @@ export default class Icon extends React.Component {
     }
 
     handleResize(e) {
-        this.setState(this.getStateForResize())
+        this.setState(this.getStateForResize.bind(this))
     }
 
     render() {
         return (
-            <i style={this.state.styles.i} dangerouslySetInnerHTML={this.state.trans}/>
+            <img style={this.state.styles.i} src={this.state.trans}/>
         )
     }
 }

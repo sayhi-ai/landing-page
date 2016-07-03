@@ -1,4 +1,6 @@
 import React from "react"
+import Favicon from "react-favicon"
+import favicon from "../../resources/img/logo.png"
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
@@ -14,6 +16,7 @@ export default class MuiTheme extends React.Component {
 
         return (
             <div>
+                <Favicon url={favicon}/>
                 <MuiThemeProvider muiTheme={muiTheme}>
                     <div>
                         {this.props.children}
