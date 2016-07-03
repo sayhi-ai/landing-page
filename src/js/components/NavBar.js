@@ -35,22 +35,20 @@ export default class NavBar extends React.Component {
                 scrollTop = event.srcElement.body.scrollTop
             }
             let itemTranslate = Math.min(0, scrollTop / 3 - 60)
-            console.log(itemTranslate, scrollTop)
 
             var titleStyle, linkStyle, logoStyle
             if (this.props.inverted === "false") {
                 titleStyle = {color: "#19A5E4"}
                 linkStyle = {color: "#4A4A4A"}
                 logoStyle = {
-                    background: "transparent url(" + logo + ") no-repeat"
+                    backgroundImage: "url(" + logo + ")"
                 }
             } else {
                 titleStyle = {}
                 linkStyle = {}
                 logoStyle = {}
             }
-            
-            
+
             if (itemTranslate == 0) {
                 this.setState({
                     navbar: "opaque-navbar",

@@ -1,98 +1,106 @@
 .pri-section {
-  width: 1020px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 100px 10px;
+    width: 1020px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 100px 10px 10px;
 }
 
 .pri-sectionTitle {
-  text-align: center;
-  font-size: 24px;
-  padding: 0 0 11px;
+    text-align: center;
+    font-size: 24px;
+    padding: 0 0 11px;
 }
 
 .pri-sectionSubTitle {
-  text-align: center;
-  font-size: 17px;
-  padding-bottom: 90px;
-  font-weight: 300;
+    text-align: center;
+    font-size: 17px;
+    padding-bottom: 90px;
+    font-weight: 300;
 }
 
-
 .pri-root {
-  width: 1020px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 100px 10px;
-  background-color: #ffffff;
+    width: 1020px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 100px 10px 10px;
+    background-color: #ffffff;
 }
 
 .pri-table {
-  width: 60vw;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  margin: 0 auto;
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto;
 }
 
 .pri-sidebar {
-  position: absolute;
-  left: -190px;
-  top: 309px;
-  width: 200px;
-  text-align: right;
+    position: absolute;
+    left: -190px;
+    top: 309px;
+    width: 200px;
+    text-align: right;
+}
+
+.pri-requests-label {
+    display: block;
+    font-size: 0.8em;
 }
 
 .pri-line {
-  height: 22px;
-  font-size: 14px;
-  padding-top: 1px;
-  margin-bottom: 30px;
-  color: #4A4A4A;
-  font-weight: 300;
+    height: 22px;
+    font-size: 14px;
+    padding-top: 1px;
+    margin-bottom: 30px;
+    color: #4A4A4A;
+    font-weight: 300;
 }
 
 .pri-plan {
-  width: 170px;
-  padding: 40px 20px 10px;
-  text-align: center;
+    width: 170px;
+    padding: 40px 20px 10px;
+    text-align: center;
+    background-color: #EEEEFF;
 }
-
 
 .pri-icon {
-  height: 80px;
-  display: flex;
-  justify-content: center;
+    height: 80px;
+    display: flex;
+    justify-content: center;
 }
 
-.pri-icon svg {
-  fill: #B4B4B4;
+.pri-icon-img {
+    height: 75px;
+}
+
+.pri-check-img {
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pri-title {
-  font-size: 16px;
-  font-weight: 500;
-  margin: 25px 0 28px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 25px 0 28px;
 }
 
 .pri-priceAmount {
-  font-size: 32px;
-  color: #19A5E4;
-  margin-bottom: 6px;
+    font-size: 32px;
+    color: #19A5E4;
+    margin-bottom: 6px;
 }
 
 .pri-priceMonth {
-  font-size: 13px;
-  color: #B4B4B4;
-  margin-bottom: 50px;
-  height: 15px;
+    font-size: 13px;
+    color: #4A4A4A;
+    margin-bottom: 50px;
+    height: 15px;
 }
 
 .pri-line {
-  font-size: 16px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
+    font-size: 16px;
+    margin-bottom: 50px;
+    justify-content: center;
 }
 
