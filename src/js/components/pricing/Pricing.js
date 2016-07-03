@@ -5,6 +5,7 @@ import Footer from "../AppFooter"
 import SignUpElement from "../SignUpElement"
 import PricingTable from './PricingTable'
 import HumanHelpElement from "../HumanHelpElement"
+import PricingDescription from "./PricingDescription"
 
 export default class Pricing extends React.Component {
 
@@ -17,9 +18,10 @@ export default class Pricing extends React.Component {
                     <div style={{display:"inline-block", marginBottom:"5%"}}>
                         <HumanHelpElement title="Interested in our enterprise plan?" buttonLabel="Talk to us"/>
                     </div>
+                    <PricingDescription/>
                     <SignUpElement signUpTitle="" scrollMarker="bottom-signup-scroll-marker"/>
-                    <Footer/>
                 </div>
+                <Footer/>
             </MuiTheme>
         )
     }

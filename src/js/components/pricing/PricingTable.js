@@ -8,9 +8,7 @@ export default class Pricing extends React.Component {p
   render () {
     return (
       <div className="pri-root">
-        <div className="pri-sectionTitle">
-          Pricing
-        </div>
+        <h1 className="pri-sectionTitle">Pricing</h1>
         <div className="pri-table">
           <div className="pri-plan">
             <div className="pri-icon">
