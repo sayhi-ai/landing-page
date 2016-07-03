@@ -4,20 +4,10 @@ import TextField from "material-ui/TextField"
 import RaisedButton from "material-ui/RaisedButton"
 import FontIcon from "material-ui/FontIcon"
 import Scroll from "react-scroll"
-import HumanHelpElement from "./app/elements/HumanHelpElement"
 
 import "../../css/signuppage.css"
 
 export default class SignUpElement extends React.Component {
-    
-    loadHumanHelp() {
-        if (this.props.scrollMarker === "bottom-signup-scroll-marker") {
-            console.log("yes")
-            return (
-                <HumanHelpElement/>
-            )
-        }
-    }
     
     scrollToSignUp() {
         if (this.props.signUpTitle === "top-signup-scroll-marker-title") {
@@ -44,7 +34,7 @@ export default class SignUpElement extends React.Component {
             <PageContainer styles={styles} className="material-background">
                 <div className="outer">
                     <div className="middle">
-                        {this.loadHumanHelp()}
+                        {this.props.children}
                         <div className="login-wrapper text-center" zDepth={5}>
                             <Element name={this.props.scrollMarker}>
                             <div className="sup-title-div">

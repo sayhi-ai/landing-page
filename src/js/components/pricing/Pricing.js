@@ -10,7 +10,7 @@ export default class Pricing extends React.Component {
     render () {
         return (
             <MuiTheme>
-                <NavBar />
+                <NavBar inverted="false"/>
                 <PricingTable />
                 <SignUpElement signUpTitle="" scrollMarker="bottom-signup-scroll-marker"/>
                 <Footer/>

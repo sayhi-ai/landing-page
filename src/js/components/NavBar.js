@@ -1,45 +1,71 @@
 import React from "react"
 import { Link } from 'react-router'
+import Scroll from "react-scroll"
+import logo from "../../resources/img/logo.png"
 
 import "../../css/navbar.css"
-import Scroll from "react-scroll"
 
 export default class NavBar extends React.Component {
     constructor() {
         super()
-        
+        this.mounted = false // avoid calling on unmounted component
         this.state = {
             navbar: ""
         }
 
-        this.isFirefox = typeof InstallTrigger !== 'undefined';
+        this.isFirefox = typeof InstallTrigger !== 'undefined'
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll.bind(this));
+        window.addEventListener('scroll', this.handleScroll.bind(this))
+        this.mounted = true
     }
-
+    
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll.bind(this));
+        window.removeEventListener('scroll', this.handleScroll.bind(this))
+        this.mounted = false
     }
 
     handleScroll(event) {
-        let scrollTop = 0;
-        if (this.isFirefox) {
-            scrollTop = event.pageY;
-        } else {
-            scrollTop = event.srcElement.body.scrollTop
-        }
-        let itemTranslate = Math.min(0, scrollTop / 3 - 60)
+        if (this.mounted) {
+            let scrollTop = 0;
+            if (this.isFirefox) {
+                scrollTop = event.pageY;
+            } else {
+                scrollTop = event.srcElement.body.scrollTop
+            }
+            let itemTranslate = Math.min(0, scrollTop / 3 - 60)
+            console.log(itemTranslate, scrollTop)
 
-        if (itemTranslate == 0) {
-            this.setState({
-                navbar: "opaque-navbar"
-            });
-        } else {
-            this.setState({
-                navbar: ""
-            });
+            var titleStyle, linkStyle, logoStyle
+            if (this.props.inverted === "false") {
+                titleStyle = {color: "#19A5E4"}
+                linkStyle = {color: "#4A4A4A"}
+                logoStyle = {
+                    background: "transparent url(" + logo + ") no-repeat"
+                }
+            } else {
+                titleStyle = {}
+                linkStyle = {}
+                logoStyle = {}
+            }
+            
+            
+            if (itemTranslate == 0) {
+                this.setState({
+                    navbar: "opaque-navbar",
+                    titleStyle: {},
+                    linkStyle: {},
+                    logoStyle: {}
+                });
+            } else {
+                this.setState({
+                    navbar: "",
+                    titleStyle: titleStyle,
+                    linkStyle: linkStyle,
+                    logoStyle: logoStyle
+                });
+            }
         }
     }
 
@@ -56,14 +82,16 @@ export default class NavBar extends React.Component {
         return (
             <div className={"navbar noselect mui--z1 " + this.state.navbar} id="navbar">
                 <p className="navbar-left navbar-inline">
-                    <Link to="/">
-                        <span id="navbar-logo"></span>
+                    <Link to="/" style={this.state.titleStyle}>
+                        <span id="navbar-logo" style={this.state.logoStyle}></span>
                         <span className="header-font">sayHi.</span>
                         <span className="hero-font">ai</span>
                     </Link>
                 </p>
                 <p className="navbar-right navbar-inline">
-                    <a onClick={this.scrollToSignUp.bind(this)} className="navbar-current">Sign up</a>
+                    <a style={this.state.linkStyle}
+                       onClick={this.scrollToSignUp.bind(this)}
+                       className="navbar-current">Sign up</a>
                 </p>
             </div>
         )

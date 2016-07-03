@@ -8,6 +8,7 @@ import FutureFeaturesSection from "./FutureFeaturesSection"
 import ExampleUsesSection from "./ExampleUsesSection"
 import Footer from "../AppFooter"
 import SignUpElement from "../SignUpElement"
+import HumanHelpElement from "../HumanHelpElement"
 import Smooch from "smooch"
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -28,15 +29,17 @@ export default class Layout extends React.Component {
     
     render() {
         return (
-            <MuiTheme>
-                <NavBar/>
+            <MuiTheme>        
+                <NavBar inverted="true"/>
                 <Hero/>
                 <SignUpElement signUpTitle="top-signup-scroll-marker-title" scrollMarker=""/>
                 <VarietyCodeSection/>
                 <CleanCodeSection/>
                 <ExampleUsesSection/>
                 <FutureFeaturesSection/>
-                <SignUpElement signUpTitle="" scrollMarker="bottom-signup-scroll-marker"/>
+                <SignUpElement signUpTitle="" scrollMarker="bottom-signup-scroll-marker">
+                    <HumanHelpElement title="Got a question?" buttonLabel="Talk to a human"/>
+                </SignUpElement>
                 <Footer/>
             </MuiTheme>
         )
