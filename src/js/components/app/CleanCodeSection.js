@@ -1,6 +1,5 @@
 import React from "react"
 import PageContainer from "../PageContainer"
-import TextFit from "react-textfit"
 
 import "../../../css/cleancodepage.css"
 
@@ -129,15 +128,15 @@ export default class CleanCodeSection extends React.Component {
                             <div className="title-space title-grey">
                                 <h1>...into this!</h1>
                             </div>
-                        <div className="tr">
-                            <div className="inside ccp-typed-text text-center">
-                                <TextFit mode="multi" max={64}>
-                                    bot.say(<span className="dark-syntax">"Hi"</span>, <span className="dark-syntax">"bro"</span>);
-                                </TextFit>
+                            <div className="tr">
+                                <div className="inside ccp-typed-text text-center">
+                                    <div className="ccp-new-code">
+                                        bot.say(<span className="dark-syntax">"Hi"</span>, <span
+                                        className="dark-syntax">"bro"</span>);
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-
+                            <div>
                                 <div className="title-space placeholder">
                                     <h1>Job?</h1>
                                 </div>
@@ -145,6 +144,7 @@ export default class CleanCodeSection extends React.Component {
                         </div>
                     </div>
                 </div>
-            </PageContainer>)
+            </PageContainer>
+        )
     }
 }
