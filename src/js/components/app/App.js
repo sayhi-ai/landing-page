@@ -34,7 +34,6 @@ export default class Layout extends React.Component {
             <MuiTheme>
                 <Favicon url={favicon}/>
                 <NavBar/>
-                <MobileScrollButton/>
                 <Hero/>
                 <SignUpElement signUpTitle="top-signup-scroll-marker-title" scrollMarker=""/>
                 <VarietyCodeSection/>
