@@ -1,6 +1,6 @@
 import React from "react"
 import PageContainer from "../PageContainer"
-import WaveDivider from "./elements/WaveDivider"
+import TextFit from "react-textfit"
 
 import "../../../css/cleancodepage.css"
 
@@ -130,8 +130,10 @@ export default class CleanCodeSection extends React.Component {
                                 <h1>...into this!</h1>
                             </div>
                         <div className="tr">
-                            <div className="inside ccp-typed-text text-center new-code">
-                                bot.say(<span className="dark-syntax">"Hi"</span>, <span className="dark-syntax">"bro"</span>);
+                            <div className="inside ccp-typed-text text-center">
+                                <TextFit mode="single" max={64}>
+                                    bot.say(<span className="dark-syntax">"Hi"</span>, <span className="dark-syntax">"bro"</span>);
+                                </TextFit>
                             </div>
                         </div>
                         <div>

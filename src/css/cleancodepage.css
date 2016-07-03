@@ -49,6 +49,7 @@ div.tr {
 .ccp-typed-text {
     font-family: Code-Font, sans-serif;
     color: white;
+    width: 35vw;
 }
 
 .code-block {
