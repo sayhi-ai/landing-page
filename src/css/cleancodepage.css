@@ -39,8 +39,11 @@ div.tr {
     font-size: 1.3em;
 }
 
-.new-code {
+.ccp-new-code {
     font-size: 3em;
+    width: 100vw;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 /**
@@ -142,10 +145,18 @@ pre {
     }
 
 
-    .new-code {
-        font-size: 2em;
+    .ccp-new-code {
+        font-size: 1.2em;
+        width: 30vw;
     }
 
+}
+
+@media screen and (min-width: 950px) {
+    .ccp-new-code {
+        font-size: 1.5em;
+        width: 30vw;
+    }
 }
 
 @media screen and (min-width: 1220px) {
@@ -156,7 +167,8 @@ pre {
     }
 
 
-    .new-code {
-        font-size: 3.5em;
+    .ccp-new-code {
+        font-size: 2em;
+        width: 30vw;
     }
 }
