@@ -67,13 +67,13 @@ export default class ExampleUsesSection extends React.Component {
         }
         
         let animationText;
-        if (type == "style") {
+        if (type === "style") {
             this.scrollToText()
             animationText = this.handleTextAnimation(this.currentText, content)
         } else if(content !== "") {
             this.currentText = content
         }
-        
+
         const {stepIndex} = this.state
         if (!this.state.loading && animationText) {
             this.dummyAsync(() => this.setState({
@@ -92,7 +92,8 @@ export default class ExampleUsesSection extends React.Component {
                         <span className="eu-typed-text blinking-cursor">|</span>
                     </div>
             }))
-        } else if (!this.state.loading) {
+        } else if (!this.state.loading && type !== "done") {
+            console.log("2")
             this.dummyAsync(() => this.setState({
                 loading: false,
                 stepIndex: stepIndex + 1,
@@ -101,7 +102,7 @@ export default class ExampleUsesSection extends React.Component {
                 hasHow: type == "style",
                 what: type != "style" ? content : this.state.what
             }))
-        } else if(type === "done") {
+        } else if (!this.state.loading && type === "done") {
             this.dummyAsync(() => this.setState({
                 loading: false,
                 stepIndex: 0,
@@ -151,7 +152,7 @@ export default class ExampleUsesSection extends React.Component {
                 break
         }
     }
-
+    
     getStepContent(stepIndex) {
         let style = {
             margin: "5% 0",
@@ -192,7 +193,6 @@ export default class ExampleUsesSection extends React.Component {
     }
 
     animateText(text) {
-        console.log(this.refs["type-writer"])
         this.setState({
             typeAnimation:
                 <div>
