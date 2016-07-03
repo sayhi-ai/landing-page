@@ -2622,7 +2622,6 @@ input[type="search"] {
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
   margin-left: -20px;
-  margin-top: 4px \9;
 }
 .radio + .radio,
 .checkbox + .checkbox {

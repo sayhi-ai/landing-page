@@ -15,6 +15,7 @@ import "../css/typist.css"
 
 // import components
 import App from "./components/app/App"
+import Pricing from "./components/pricing/Pricing"
 
 // Copy the index.html file
 require('file?name=[name].[ext]!../index.html');
@@ -22,5 +23,6 @@ require('file?name=[name].[ext]!../index.html');
 ReactDOM.render((
     <Router history={browserHistory}>
         <Route path="/" component={App}/>
+        <Route path="pricing" component={Pricing}/>
     </Router>), document.getElementById('root')
 );
