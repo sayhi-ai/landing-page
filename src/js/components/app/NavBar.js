@@ -8,7 +8,6 @@ import "../../../css/navbar.css"
 export default class NavBar extends React.Component {
     constructor() {
         super()
-        this.mounted = false // avoid calling on unmounted component
         this.state = {
             navbar: ""
         }
@@ -18,52 +17,48 @@ export default class NavBar extends React.Component {
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll.bind(this))
-        this.mounted = true
     }
     
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll.bind(this))
-        this.mounted = false
     }
 
     handleScroll(event) {
-        if (this.mounted) {
-            let scrollTop = 0;
-            if (this.isFirefox) {
-                scrollTop = event.pageY;
-            } else {
-                scrollTop = event.srcElement.body.scrollTop
-            }
-            let itemTranslate = Math.min(0, scrollTop / 3 - 60)
+        let scrollTop = 0;
+        if (this.isFirefox) {
+            scrollTop = event.pageY;
+        } else {
+            scrollTop = event.srcElement.body.scrollTop
+        }
+        let itemTranslate = Math.min(0, scrollTop / 3 - 60)
 
-            var titleStyle, linkStyle, logoStyle
-            if (this.props.inverted === "false") {
-                titleStyle = {color: "#19A5E4"}
-                linkStyle = {color: "#4A4A4A"}
-                logoStyle = {
-                    backgroundImage: "url(" + logo + ")"
-                }
-            } else {
-                titleStyle = {}
-                linkStyle = {}
-                logoStyle = {}
+        var titleStyle, linkStyle, logoStyle
+        if (this.props.inverted === "false") {
+            titleStyle = {color: "#19A5E4"}
+            linkStyle = {color: "#4A4A4A"}
+            logoStyle = {
+                backgroundImage: "url(" + logo + ")"
             }
+        } else {
+            titleStyle = {}
+            linkStyle = {}
+            logoStyle = {}
+        }
 
-            if (itemTranslate == 0) {
-                this.setState({
-                    navbar: "opaque-navbar",
-                    titleStyle: {},
-                    linkStyle: {},
-                    logoStyle: {}
-                });
-            } else {
-                this.setState({
-                    navbar: "",
-                    titleStyle: titleStyle,
-                    linkStyle: linkStyle,
-                    logoStyle: logoStyle
-                });
-            }
+        if (itemTranslate == 0) {
+            this.setState({
+                navbar: "opaque-navbar",
+                titleStyle: {},
+                linkStyle: {},
+                logoStyle: {}
+            });
+        } else {
+            this.setState({
+                navbar: "",
+                titleStyle: titleStyle,
+                linkStyle: linkStyle,
+                logoStyle: logoStyle
+            });
         }
     }
 

@@ -16,10 +16,6 @@ export default class ExampleUsesSection extends React.Component {
         this.exampleSeen = false
         this.currentText = null
         this.state = {
-            typeAnimation:
-                <div>
-                    <span className="eu-typed-text blinking-cursor">|</span>
-                </div>,
             loading: false,
             finished: false,
             stepIndex: 0,
@@ -27,7 +23,7 @@ export default class ExampleUsesSection extends React.Component {
             what: "\"\"",
             how: ""
         }
-        
+
         this.isFirefox = typeof InstallTrigger !== 'undefined'
     }
 
@@ -50,7 +46,7 @@ export default class ExampleUsesSection extends React.Component {
 
             if (scrollTop >= 1600) {
                 this.exampleSeen = true;
-                this.animateText("Example usages")
+                this.animateTextForward("Example usages")
             }
         }
     }
@@ -65,7 +61,7 @@ export default class ExampleUsesSection extends React.Component {
         if (!this.isFirefox) {
             event.preventDefault()
         }
-        
+
         let animationText;
         if (type === "style") {
             this.scrollToText()
@@ -85,15 +81,14 @@ export default class ExampleUsesSection extends React.Component {
                 what: type != "style" ? content : this.state.what,
                 typeAnimation:
                     <div>
-                        {TypeWriter.reset}
-                        <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
-                            {animationText}
+                        <TypeWriter typing={-1} onTypingEnd={this.animateTextForward.bind(this, animationText)}
+                                    className="eu-typed-text">
+                            {this.state.currentAnimationText}
                         </TypeWriter>
                         <span className="eu-typed-text blinking-cursor">|</span>
                     </div>
             }))
-        } else if (!this.state.loading && type !== "done") {
-            console.log("2")
+        } else if (!this.state.loading && type !== "bye") {
             this.dummyAsync(() => this.setState({
                 loading: false,
                 stepIndex: stepIndex + 1,
@@ -102,7 +97,7 @@ export default class ExampleUsesSection extends React.Component {
                 hasHow: type == "style",
                 what: type != "style" ? content : this.state.what
             }))
-        } else if (!this.state.loading && type === "done") {
+        } else if (!this.state.loading && type === "bye") {
             this.dummyAsync(() => this.setState({
                 loading: false,
                 stepIndex: 0,
@@ -117,42 +112,41 @@ export default class ExampleUsesSection extends React.Component {
     handleTextAnimation(contentParam, personaParam) {
         let content = contentParam.replace(/['"]+/g, '')
         let persona = personaParam.replace(/['"]+/g, '')
-        console.log("content: " + content + "  " +  persona)
 
         switch(content) {
             case "Hi":
                 switch(persona) {
                     case "Neutral":
-                        return "Hello World1"
-                    case "HanSolo":
-                        return "Hello World2"
-                    case "Bro":
-                        return "Hello World3"
+                        return "Hi there."
+                    case "Yoda":
+                        return "Welcome padawan."
+                    case "bro":
+                        return "Sup dude."
                 }
                 break
             case "ItemCreated":
                 switch(persona) {
                     case "Neutral":
-                        return "Hello World4"
-                    case "HanSolo":
-                        return "Hello World5"
-                    case "Bro":
-                        return "Hello World6"
+                        return "The item was created."
+                    case "Yoda":
+                        return "The item, created I have."
+                    case "bro":
+                        return "Dude, I created the item for you."
                 }
                 break
-            case "Done":
+            case "Bye":
                 switch(persona) {
                     case "Neutral":
-                        return "Hello World7"
-                    case "HanSolo":
-                        return "Hello World8"
-                    case "Bro":
-                        return "Hello World9"
+                        return "Good bye."
+                    case "Yoda":
+                        return "May the force be with you."
+                    case "bro":
+                        return "Peace out, man!"
                 }
                 break
         }
     }
-    
+
     getStepContent(stepIndex) {
         let style = {
             margin: "5% 0",
@@ -165,7 +159,7 @@ export default class ExampleUsesSection extends React.Component {
                         <ContentButton style={style} title='"Hi"' handleClick={this.handleNext.bind(this, '"Hi"')}/>
                         <ContentButton style={style} title='"Item Created"'
                                        handleClick={this.handleNext.bind(this, '"ItemCreated"')}/>
-                        <ContentButton style={style} title='"Done"' handleClick={this.handleNext.bind(this, '"Done"')}/>
+                        <ContentButton style={style} title='"Bye"' handleClick={this.handleNext.bind(this, '"Bye"')}/>
                     </div>
                 );
             case 1:
@@ -173,10 +167,10 @@ export default class ExampleUsesSection extends React.Component {
                     <div className="eu-button-container">
                         <ContentButton style={style} title='Neutral' font="Header-Font"
                                        handleClick={this.handleNext.bind(this, '"Neutral"', "style")}/>
-                        <ContentButton style={style} title='Han Solo' font="Star-Wars" fontSize="1.7em"
-                                       handleClick={this.handleNext.bind(this, '"HanSolo"', "style")}/>
+                        <ContentButton style={style} title='Yoda' font="Star-Wars" fontSize="1.7em"
+                                       handleClick={this.handleNext.bind(this, '"Yoda"', "style")}/>
                         <ContentButton style={style} title='BRO' font="Varsity" fontSize="3em"
-                                       handleClick={this.handleNext.bind(this, '"Bro"', "style")}/>
+                                       handleClick={this.handleNext.bind(this, '"bro"', "style")}/>
                     </div>
                 );
             case 2:
@@ -184,26 +178,37 @@ export default class ExampleUsesSection extends React.Component {
                     <div className="eu-button-container">
                         <ContentButton style={style} title='Restart'
                                        src={restart} font="Header-Font"
-                                       handleClick={this.handleNext.bind(this, '""', "done")}/>
+                                       handleClick={this.handleNext.bind(this, '""', "bye")}/>
                     </div>
-                )
+                );
             default:
                 return 'You\'re a long way from home sonny jim!'
         }
     }
 
-    animateText(text) {
+    animateTextForward(text) {
         this.setState({
+            currentAnimationText: text,
             typeAnimation:
                 <div>
-                    {TypeWriter.reset}
-                    <TypeWriter typing={1} className="eu-typed-text" ref={TypeWriter.reset}>
+                    <TypeWriter typing={1} className="eu-typed-text">
                         {text}
                     </TypeWriter>
                     <span className="eu-typed-text blinking-cursor">|</span>
                 </div>
         })
     }
+
+    // animateTextStopCursor() {
+    //     this.setState({
+    //         typeAnimation:
+    //             <div>
+    //                 <TypeWriter typing={1} className="eu-typed-text">
+    //                     {this.state.currentAnimationText}
+    //                 </TypeWriter>
+    //             </div>
+    //     })
+    // }
 
     scrollToText() {
         let scroller = Scroll.scroller;
@@ -241,8 +246,8 @@ export default class ExampleUsesSection extends React.Component {
                             </div>
                             <div className="eu-example-features">
                                 <TextFit mode="single" perfectFit={true} forceSingleModeWidth={true} max={64}>
-                                bot.<span className="accent-color">say</span>(
-                                <span className="orange-syntax">{this.state.what}</span>
+                                    bot.<span className="accent-color">say</span>(
+                                    <span className="orange-syntax">{this.state.what}</span>
                                     <span style={this.state.hasHow ? {display: "inline-block"} : {display: "none"}}>,
                                         <span className="orange-syntax">{this.state.how}</span>
                                     </span>);
@@ -252,7 +257,7 @@ export default class ExampleUsesSection extends React.Component {
                                 <Stepper activeStep={this.state.stepIndex} style={{width: "100%", margin: 'auto'}}
                                          orientation="horizontal">
                                     <Step>
-                                        <StepLabel style={styles.stepper}>Choose a text</StepLabel>
+                                        <StepLabel style={styles.stepper}>Choose a text below</StepLabel>
                                     </Step>
                                     <Step>
                                         <StepLabel style={styles.stepper}>Choose a persona</StepLabel>

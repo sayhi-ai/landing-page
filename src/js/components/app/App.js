@@ -16,7 +16,7 @@ export default class App extends React.Component {
         Smooch.init({
             appToken: "3d081wby5cpnrvud7dw9vbwrm",
             customText: {
-                headerText: 'How can we help?',
+                headerText: 'Got a question?',
                 inputPlaceholder: 'Type a message...',
                 sendButtonText: 'Send'
             },
