@@ -54,7 +54,7 @@
     "react-tap-event-plugin": "^0.2.2",
     "react-textfit": "^0.1.8",
     "react-typewriter": "^0.4.1",
-    "request": "^2.65.0",
+    "request": "2.65.0",
     "scroll-behavior": "^0.7.0",
     "smooch": "^2.8.1",
     "style-loader": "^0.13.1",
