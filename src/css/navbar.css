@@ -39,6 +39,10 @@
     transition: padding 0.5s;
 }
 
+.navbar-logo-hover:hover {
+    cursor: pointer;
+}
+
 .navbar-inline > a {
     color: #626262;
     display: inline-block;

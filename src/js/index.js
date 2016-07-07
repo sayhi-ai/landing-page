@@ -45,7 +45,7 @@ require('file?name=[name].[ext]!../index.html');
 // })
 
 ReactDOM.render(
-    <Router history={browserHistory}>
+    <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={HomeView} />
             <Route path='pricing' component={PricingView} />

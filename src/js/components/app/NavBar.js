@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'react-router'
+import { IndexLink, Link } from 'react-router'
 import Scroll from "react-scroll"
 import logo from "../../../resources/img/logo.png"
 
@@ -75,11 +75,11 @@ export default class NavBar extends React.Component {
         return (
             <div className={"navbar noselect mui--z1 " + this.state.navbar} id="navbar">
                 <p className="navbar-left navbar-inline">
-                    <Link to="/" style={this.state.titleStyle}>
-                        <span id="navbar-logo" style={this.state.logoStyle}></span>
-                        <span className="header-font">sayHi.</span>
-                        <span className="hero-font">ai</span>
-                    </Link>
+                    <IndexLink to="/" style={this.state.titleStyle}>
+                        <span className="navbar-logo-hover" id="navbar-logo" style={this.state.logoStyle}></span>
+                        <span className="navbar-logo-hover header-font">sayHi.</span>
+                        <span className="navbar-logo-hover hero-font">ai</span>
+                    </IndexLink>
                 </p>
                 <p className="navbar-right navbar-inline">
                     <Link to="pricing" style={this.state.linkStyle}
