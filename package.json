@@ -1,24 +1,28 @@
 {
   "name": "landing-page",
   "version": "1.0.0",
-  "description": "A landing page for makeyourbot.",
+  "description": "A landing page for sayhi.ai.",
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/makeyourbot/landing-page"
+    "url": "git+https://bitbucket.org/sayhi-ai/landing-page"
   },
   "keywords": [
-    "make",
-    "your",
-    "bot",
-    "cool"
+    "conversational", "bots", "natural", "language", "human", "conversation", "say", "hi",
+    "ai", "artificial", "intelligence", "answers", "responses", "api", "make", "your", "bot", "build",
+    "tool", "persona", "for"
   ],
-  "author": "makeyourbot",
+  "tags": [
+    "conversational", "bots", "natural", "language", "human", "conversation", "say", "hi",
+    "ai", "artificial", "intelligence", "answers", "responses", "api", "make", "your", "bot", "build",
+    "tool", "persona", "for"
+  ],
+  "author": "sayhi-ai",
   "license": "GPL",
   "bugs": {
     "url": "ttps://bitbucket.org/makeyourbot/landing-page/issues"
   },
-  "homepage": "http://makeyourbot.cool",
+  "homepage": "https://sayhi.ai",
   "engines": {
     "npm": ">=3.0.0",
     "node": ">=5.0.0"
@@ -76,9 +80,6 @@
     "css-loader": "^0.23.1",
     "eslint": "^2.11.1",
     "eslint-plugin-react": "^5.1.1",
-    "gh-pages": "^0.11.0",
-    "gh-pages-deploy": "^0.4.2",
-    "jquery": "^3.0.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "node-sass": "^3.8.0",
