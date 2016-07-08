@@ -12,15 +12,7 @@ module.exports = {
             {test: /\.svg$/, loader: "svg-inline"},
             {test: /load-image/, loader: 'imports?define=>false'},
             {test: /\.json$/, loader: "json-loader"},
-            {
-                test: /\.jsx?$/,
-                exclude: /(node_modules)/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015'],
-                    plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
-                }
-            }
+            {test: /\.jsx?$/, exclude: /(node_modules)/, loader: 'babel-loader'}
         ]
     },
     output: {
