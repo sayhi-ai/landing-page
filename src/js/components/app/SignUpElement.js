@@ -55,17 +55,9 @@ export default class SignUpElement extends React.Component {
 
     handleRequestClose = () => {
         this.setState({
-            open: false,
+            open: false
         });
     };
-
-    loadHumanHelp() {
-        if (this.props.scrollMarker === "bottom-signup-scroll-marker") {
-            return (
-                <HumanHelpElement/>
-            )
-        }
-    }
 
     scrollToSignUp() {
         if (this.props.signUpTitle === "top-signup-scroll-marker-title") {

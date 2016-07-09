@@ -191,7 +191,8 @@ export default class ExampleUsesSection extends React.Component {
             currentAnimationText: text,
             typeAnimation:
                 <div>
-                    <TypeWriter typing={1} className="eu-typed-text">
+                    <TypeWriter typing={1} className="eu-typed-text"
+                                onTypingEnd={this.animateTextStopCursor.bind(this)}>
                         {text}
                     </TypeWriter>
                     <span className="eu-typed-text blinking-cursor">|</span>
@@ -199,16 +200,17 @@ export default class ExampleUsesSection extends React.Component {
         })
     }
 
-    // animateTextStopCursor() {
-    //     this.setState({
-    //         typeAnimation:
-    //             <div>
-    //                 <TypeWriter typing={1} className="eu-typed-text">
-    //                     {this.state.currentAnimationText}
-    //                 </TypeWriter>
-    //             </div>
-    //     })
-    // }
+    animateTextStopCursor() {
+        setTimeout(() =>
+            this.setState({
+                typeAnimation:
+                    <div>
+                        <TypeWriter typing={1} className="eu-typed-text">
+                            {this.state.currentAnimationText}
+                        </TypeWriter>
+                    </div>
+            }), 1000)
+    }
 
     scrollToText() {
         let scroller = Scroll.scroller;
