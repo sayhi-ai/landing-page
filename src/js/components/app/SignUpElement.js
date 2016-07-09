@@ -109,7 +109,7 @@ export default class SignUpElement extends React.Component {
                                                       fullWidth={true}
                                                       labelPosition="before" icon={
                                                       <FontIcon style={{marginRight: "6px"}}
-                                                       className="material-icons">send</FontIcon>
+                                                       className="material-icons"/>
                                                       }/>
                                     </div>
                                     <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true">
