@@ -25,11 +25,18 @@ export default class App extends React.Component {
         
         injectTapEventPlugin();
     }
-    
+
     render () {
+        let inverted = false
+        React.Children.map((this.props.children), (child) => {
+            if (child.type.name === "Layout") {
+                inverted = true
+            }
+        })
+
         return (
             <MuiTheme>
-                <NavBar inverted="true"/>
+                <NavBar inverted={inverted.toString()}/>
                 {this.props.children}
                 <Footer/>
             </MuiTheme>
