@@ -20,35 +20,17 @@ import "../css/typist.css"
 import App from "./components/app/App"
 import HomeView from "./components/home/HomeView"
 import PricingView from "./components/pricing/PricingView"
+import GettingStartedView from "./components/gettingstarted/GettingStartedView"
 import TermsView from "./components/terms/TermsView"
 
 // Copy the index.html file
 require('file?name=[name].[ext]!../index.html');
 
-// loadAnalytics()
-//
-// const userId = cookies.get('sayhi-ai_user_id')
-// if (userId) {
-//     analytics.identify(userId, {
-//         'Product': 'Homepage'
-//     }, {
-//         integrations: {
-//             'All': false,
-//             'Mixpanel': true
-//         }
-//     })
-// }
-
-// browserHistory.listen((location) => {
-//     analytics.page()
-//     analytics.track(`view homepage: ${location.pathname}`)
-// })
-
 ReactDOM.render(
     <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={HomeView} />
-            <Route path='pricing' component={PricingView} />
+            <Route path='getting-started' component={GettingStartedView} />
             <Route path='terms' component={TermsView} />
         </Route>
     </Router>,

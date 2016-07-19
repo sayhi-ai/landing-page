@@ -75,8 +75,8 @@ export default class NavBar extends React.Component {
                     </Link>
                 </p>
                 <p className="navbar-right navbar-inline">
-                    <Link to="pricing" style={linkStyle}
-                          className="navbar-current">Pricing</Link>
+                    <Link to="getting-started" style={linkStyle}
+                          className="navbar-current">Getting Started</Link>
                     <a style={linkStyle}
                        onClick={this.scrollToSignUp.bind(this)}
                        className="navbar-current">Sign up</a>

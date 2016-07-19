@@ -11,20 +11,21 @@ export default class AppFooter extends React.Component {
                 <FooterSection type="middle">
                     <FooterDropDownSection title="Product">
                         <FooterLinkList className="f-footer-element">
-                            <Link to="pricing">Pricing</Link>
+                            <Link to="getting-started">Getting Started</Link>
                             <Link to="terms">Terms</Link>
                         </FooterLinkList>
                     </FooterDropDownSection>
                     <FooterDropDownSection title="Company">
                         <FooterLinkList className="f-footer-element">
                             <Link to="team">Team</Link>
-                            <Link to="imprint">Imprint</Link>
+                            <Link to="imprint">Legal</Link>
                         </FooterLinkList>
                     </FooterDropDownSection>
                     <FooterDropDownSection title="Social">
                         <FooterLinkList className="f-footer-element">
                             <Link to="twitter">Twitter</Link>
                             <Link to="facebook">Facebook</Link>
+                            <a href="https://github.com/sayhi-ai">GitHub</a>
                         </FooterLinkList>
                     </FooterDropDownSection>
                 </FooterSection>
