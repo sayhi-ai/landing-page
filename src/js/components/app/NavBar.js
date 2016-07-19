@@ -77,6 +77,9 @@ export default class NavBar extends React.Component {
                 <p className="navbar-right navbar-inline">
                     <Link to="getting-started" style={linkStyle}
                           className="navbar-current">Getting Started</Link>
+                    <a style={linkStyle} 
+                       href="https://dashboard.sayhi.ai" 
+                       className="navbar-current">Login</a>
                     <a style={linkStyle}
                        onClick={this.scrollToSignUp.bind(this)}
                        className="navbar-current">Sign up</a>
