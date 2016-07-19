@@ -9,27 +9,11 @@ export default class NavBar extends React.Component {
     constructor(props) {
         super(props)
 
-        var titleStyle, linkStyle, logoStyle
-        if (this.props.inverted === "false") {
-            titleStyle = {color: "#19A5E4"}
-            linkStyle = {color: "#4A4A4A"}
-            logoStyle = {
-                backgroundImage: "url(" + logo + ")"
-            }
-        } else {
-            titleStyle = {}
-            linkStyle = {}
-            logoStyle = {}
-        }
-
-        this.state = {
-            navbar: "",
-            titleStyle: titleStyle,
-            linkStyle: linkStyle,
-            logoStyle: logoStyle
-        }
-
         this.isFirefox = typeof InstallTrigger !== 'undefined'
+        
+        this.state = {
+            navbar: ""
+        }
     }
 
     componentDidMount() {
@@ -49,32 +33,13 @@ export default class NavBar extends React.Component {
         }
         let itemTranslate = Math.min(0, scrollTop / 3 - 60)
 
-        var titleStyle, linkStyle, logoStyle
-        if (this.props.inverted === "false") {
-            titleStyle = {color: "#19A5E4"}
-            linkStyle = {color: "#4A4A4A"}
-            logoStyle = {
-                backgroundImage: "url(" + logo + ")"
-            }
-        } else {
-            titleStyle = {}
-            linkStyle = {}
-            logoStyle = {}
-        }
-
         if (itemTranslate == 0) {
             this.setState({
-                navbar: "opaque-navbar",
-                titleStyle: {},
-                linkStyle: {},
-                logoStyle: {}
+                navbar: "opaque-navbar"
             });
         } else {
             this.setState({
-                navbar: "",
-                titleStyle: titleStyle,
-                linkStyle: linkStyle,
-                logoStyle: logoStyle
+                navbar: ""
             });
         }
     }
@@ -89,19 +54,30 @@ export default class NavBar extends React.Component {
     }
 
     render() {
+        let titleStyle, linkStyle, logoStyle
+        if (this.props.inverted) {
+            titleStyle = {}
+            linkStyle = {}
+            logoStyle = {}
+        } else {
+            titleStyle = {color: "#19A5E4"}
+            linkStyle = {color: "#4A4A4A"}
+            logoStyle = {backgroundImage: "url(" + logo + ")"}
+        }
+        
         return (
             <div className={"navbar noselect mui--z1 " + this.state.navbar} id="navbar">
                 <p className="navbar-left navbar-inline">
-                    <Link to="/" style={this.state.titleStyle}>
-                        <span className="navbar-logo-hover" id="navbar-logo" style={this.state.logoStyle}></span>
+                    <Link to="/" style={titleStyle}>
+                        <span className="navbar-logo-hover" id="navbar-logo" style={logoStyle}></span>
                         <span className="navbar-logo-hover header-font">sayHi.</span>
                         <span className="navbar-logo-hover hero-font">ai</span>
                     </Link>
                 </p>
                 <p className="navbar-right navbar-inline">
-                    <Link to="pricing" style={this.state.linkStyle}
+                    <Link to="pricing" style={linkStyle}
                           className="navbar-current">Pricing</Link>
-                    <a style={this.state.linkStyle}
+                    <a style={linkStyle}
                        onClick={this.scrollToSignUp.bind(this)}
                        className="navbar-current">Sign up</a>
                 </p>

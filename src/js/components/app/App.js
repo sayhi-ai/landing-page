@@ -36,7 +36,7 @@ export default class App extends React.Component {
 
         return (
             <MuiTheme>
-                <NavBar inverted={inverted.toString()}/>
+                <NavBar inverted={inverted}/>
                 {this.props.children}
                 <Footer/>
             </MuiTheme>
