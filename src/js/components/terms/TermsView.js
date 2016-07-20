@@ -14,7 +14,7 @@ export default class Terms extends React.Component {
         
         return (
             <PageContainer styles={styles} className="terms-root">
-                <Paper className="terms-paper">
+                <Paper className="terms-paper" zDepth={5}>
                     <h3>Terms & Conditions</h3>
                 <div className="terms-description">
                     <h5>Welcome to sayHi.ai!</h5>

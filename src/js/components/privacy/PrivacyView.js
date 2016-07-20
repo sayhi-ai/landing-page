@@ -14,7 +14,7 @@ export default class PrivacyView extends React.Component {
 
         return (
             <PageContainer styles={styles} className="terms-root">
-                <Paper className="terms-paper">
+                <Paper className="terms-paper" zDepth={5}>
                     <h3>Privacy Policy</h3>
                     <div className="terms-description">
                         <div>
