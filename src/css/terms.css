@@ -1,9 +1,20 @@
 .terms-root {
-    text-align: center;
+    background-color: #F5F5F5;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.terms-paper {
     margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    width:70vw;
 }
 
 .terms-description {
     display: inline-block;
-    width:60vw;
+    text-align: left;
+    font-family: Body-Font, sans-serif;
 }
