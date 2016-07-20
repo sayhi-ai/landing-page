@@ -20,7 +20,7 @@ export default class Terms extends React.Component {
                     <h5>Welcome to sayHi.ai!</h5>
                     <div>
                         These terms and conditions outline the rules and regulations for the use of 
-                        sayHi.ai's Website. sayHi.ai is located at:
+                        sayHi.ai's website. sayHi.ai is located at:
                     <br/><br/>
                         Leopoldstr. 44<br/>
                         76133 Karlsruhe<br/>
