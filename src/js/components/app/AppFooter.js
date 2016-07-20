@@ -19,7 +19,7 @@ export default class AppFooter extends React.Component {
                     <FooterDropDownSection title="Company">
                         <FooterLinkList className="f-footer-element">
                             <Link to="team">Team</Link>
-                            <Link to="imprint">Legal</Link>
+                            <Link to="legal">Legal</Link>
                         </FooterLinkList>
                     </FooterDropDownSection>
                     <FooterDropDownSection title="Social">

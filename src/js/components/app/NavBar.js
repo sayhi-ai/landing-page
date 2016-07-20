@@ -59,7 +59,7 @@ export default class NavBar extends React.Component {
             titleStyle = {}
             linkStyle = {}
             logoStyle = {}
-        } else {
+        } else if (this.state.navbar === "") {
             titleStyle = {color: "#19A5E4"}
             linkStyle = {color: "#4A4A4A"}
             logoStyle = {backgroundImage: "url(" + logo + ")"}
