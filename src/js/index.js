@@ -22,6 +22,7 @@ import HomeView from "./components/home/HomeView"
 import PricingView from "./components/pricing/PricingView"
 import GettingStartedView from "./components/gettingstarted/GettingStartedView"
 import TermsView from "./components/terms/TermsView"
+import PrivacyView from "./components/privacy/PrivacyView"
 
 // Copy the index.html file
 require('file?name=[name].[ext]!../index.html');
@@ -32,6 +33,7 @@ ReactDOM.render(
             <IndexRoute component={HomeView} />
             <Route path='getting-started' component={GettingStartedView} />
             <Route path='terms' component={TermsView} />
+            <Route path='privacy' component={PrivacyView} />
         </Route>
     </Router>,
     document.getElementById('root')
