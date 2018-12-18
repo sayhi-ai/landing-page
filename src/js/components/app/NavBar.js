@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from 'react-router'
 import Scroll from "react-scroll"
 import logo from "../../../resources/img/logo.png"
-
 import "../../../css/navbar.css"
 
 export default class NavBar extends React.Component {
@@ -78,7 +77,7 @@ export default class NavBar extends React.Component {
                     <Link to="getting-started" style={linkStyle}
                           className="navbar-current">Getting Started</Link>
                     <a style={linkStyle} 
-                       href="https://dashboard.sayhi.ai" 
+                       href="https://dashboard.sayhi-ai.julianbrendl.com"  // In case this gets ever used again, I was lazy
                        className="navbar-current">Login</a>
                     <a style={linkStyle}
                        onClick={this.scrollToSignUp.bind(this)}
